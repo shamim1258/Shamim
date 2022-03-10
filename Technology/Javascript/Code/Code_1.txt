@@ -1,0 +1,16 @@
+Commonly Used Code :
+--------------------
+
+To stop form submit when enter key pressed on input type field
+
+Code -
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+
+-------------------------------------------------------------------------
