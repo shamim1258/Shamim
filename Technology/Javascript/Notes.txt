@@ -1,2 +1,8 @@
 Javascript Notes :
 ------------------
+
+Variables :
+-----------
+
+To declare - var or let
+variables don't have any specific types and takes the type of its values
