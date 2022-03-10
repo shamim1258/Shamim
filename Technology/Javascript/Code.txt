@@ -1,0 +1,273 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="container">
+        <input class="btn btn-primary" type="submit" value="Update Asset/Attribute" style="float: right;">
+        <br><br>
+        <table border=0 height=auto class="table table-bordered table-hover">
+            <thead class="table-dark" style="background-color:lightgray;">
+            <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Technical Name</th>
+                <th scope="col">Product Type</th>
+                <th scope="col">Asset Number</th>
+                <th scope="col">Status</th>
+                <th scope="col">Port Id</th>
+                <th scope="col">Active</th>
+                <th scope="col">Inactive</th>
+            </tr>
+            </thead>
+
+            {% for l1 in asset_l1 %}
+                <div my-data="{{l1.4}}" ></div>
+                <tr style="font-weight:regular" class="header">
+                    <td>
+                        {% if l1.9 == 'Y' %}
+                            <span>▲</span>
+                        {% else %}
+                            <label>●</label>
+                        {% endif %}
+                        {{ l1.0 }}
+                    </td>
+                    <td> {{ l1.1 }} </td>
+                    <td> {{ l1.2 }} </td>
+                    <td class="gotoattr">
+                        <a href="#attribute_section" value="{{l1.3}}" onclick="showDetails(this)" >{{ l1.3 }}</a>
+                    </td>
+                    <td> {{ l1.5 }} </td>
+                    <td> {{ l1.6 }} </td>
+                    {% if l1.10 == 'Y' %}
+                        <td>
+                            <input type="radio" name={{l1.4}} value="active"/>
+                        </td>
+                        <td>
+                            <input type="radio" name={{l1.4}} value="inactive"/>
+                        </td>
+                    {% else %}
+                        <td>
+                            <input type="radio" name={{l1.0}} value="active" disabled/>
+                        </td>
+                        <td>
+                            <input type="radio" name={{l1.0}} value="inactive" disabled/>
+                        </td>
+                    {% endif %}
+                </tr>
+                {% for l2 in asset_l2 %}
+                    {% if l2.7 == l1.4 %}
+                    <tr class="level2">
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;
+                        {% if l2.9 == 'Y' %}
+                            <span>▲</span>
+                        {% else %}
+                            <label>●</label>
+                        {% endif %}
+                        {{ l2.0 }}
+                    </td>
+                    <td> {{ l2.1 }} </td>
+                    <td> {{ l2.2 }} </td>
+                    <td>
+                        <a href="#attribute_section" value="{{l2.3}}" onclick="showDetails(this)" >{{ l2.3 }}</a>
+                    </td>
+                    <td> {{ l2.5 }} </td>
+                    <td> {{ l2.6 }} </td>
+                    {% if l2.11 == 'Y' %}
+                        <td>
+                            <input type="radio" name={{l2.0}} value="active"/>
+                        </td>
+                        <td>
+                            <input type="radio" name={{l2.0}} value="inactive"/>
+                        </td>
+                    {% else %}
+                        <td>
+                            <input type="radio" name={{l2.0}} value="active" disabled/>
+                        </td>
+                        <td>
+                            <input type="radio" name={{l2.0}} value="inactive" disabled/>
+                        </td>
+                    {% endif %}
+                    </tr>
+                    {% for l3 in asset_l3 %}
+                        <tr>
+                        {% if l3.7 == l2.4 %}
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>●</label>{{ l3.0 }}
+                        </td>
+                        <td> {{ l3.1 }} </td>
+                        <td> {{ l3.2 }} </td>
+                        <td>
+                            <a href="#attribute_section" value="{{l3.3}}" onclick="showDetails(this)" >{{ l3.3 }}</a>
+                        </td>
+                        <td> {{ l3.5 }} </td>
+                        <td> {{ l3.6 }} </td>
+                        {% if l2.11 == 'Y' %}
+                            <td>
+                                <input type="radio" name={{l3.0}} value="active"/>
+                            </td>
+                            <td>
+                                <input type="radio" name={{l3.0}} value="inactive"/>
+                            </td>
+                        {% else %}
+                            <td>
+                                <input type="radio" name={{l3.0}} value="active" disabled/>
+                            </td>
+                            <td>
+                                <input type="radio" name={{l3.0}} value="inactive" disabled/>
+                            </td>
+                        {% endif %}
+                        {% endif %}
+                        </tr>
+                    {% endfor %}
+
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            {% endfor %}
+            </table>
+            <input class="btn btn-primary" type="submit" value="Update Asset/Attribute" style="float: right;">
+            <br>
+                <label for="myInput">Search Asset :</label>
+                <input id='myInput' onkeyup='searchTable("","")' type='text'>
+                <label for="myInput2">Search Attribute :</label>
+                <input id='myInput2' onkeyup='searchTable("","")' type='text'>
+                <br>
+                <table id="myTable" class="table table-bordered table-hover">
+                    <thead class="table-dark" style="background-color:lightgray;">
+                        <tr id='tableHeader'>
+                            <th scope="col">Asset Number</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Attribute</th>
+                            <th scope="col">Value</th>
+                            <th scope="col">New Value</th>
+                        </tr>
+                    </thead>
+                    {% for rec in attr %}
+                        <tr style="font-weight:regular" class="header">
+                            <td>{{ rec.16 }}</td>
+                            <td>{{ rec.5 }}</td>
+                            <td>{{ rec.10 }}</td>
+                            <td>{{ rec.14 }}</td>
+                            <td >
+                                <SELECT class='select' id="cold_0_2" name="attr_select">
+                                    {% for val in attr_val %}
+                                        {% if rec.10 == val.2 %}
+                                            <option hidden disabled selected>Select New Value</option>
+                                            <OPTION value='{{rec.9}}:{{rec.14}}:{{val.6}}'>
+                                                {{val.6}}
+                                            </OPTION>
+                                        {% endif %}
+                                    {% endfor %}
+                                </SELECT>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+        </div>
+        </form>
+    </div>
+
+<script>
+
+    $(document).ready(function() {
+        $(window).keydown(function(event){
+            if(event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+            }
+        });
+    });
+
+    // to show expand and collapse of multilevel products when clicked on record
+    $(document).ready(function(){
+        $('tr.header').click(function(){
+            $(this).find('span').text(function(_, value){return value=='▼'?'▲':'▼'});
+            $(this).nextUntil('tr.header').slideToggle(100, function(){
+            });
+        });
+        $('tr.level2').click(function(){
+            $(this).find('span').text(function(_, value){return value=='▼'?'▲':'▼'});
+            $(this).nextUntil('tr.level2,tr.header').slideToggle(100, function(){
+            });
+        });
+    });
+
+    function showDetails(a){
+        let value;
+        // value = a.getAttribute("value");
+        value= a.getAttribute("value");
+        // console.log('showDetails fun::'+value);
+        searchTable(value,"");
+        document.getElementById("myInput").value = value;
+    }
+
+    function searchTable(asset_num, attr_name) {
+        // console.log('searchTable fun::'+asset_num+'::'+attr_name);
+        var found = false;
+        var found2 = false;
+        var input1, input2, filter, filter2, table, tr, td, i, j;
+        input1 = document.getElementById("myInput");
+        input2 = document.getElementById("myInput2");
+        if (asset_num == "") {
+            filter = input1.value.toUpperCase();
+        }
+        else {
+            filter = asset_num;
+        }
+        if (attr_name == "") {
+            filter2 = input2.value.toUpperCase();
+        }
+        else {
+            filter2 = attr_name;
+        }
+        console.log('filter::'+filter+'filter2::'+filter2);
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td");
+            for (j = 0; j < td.length; j++) {
+                if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    if (j==0 || j==1) {
+                        // console.log('index1'+td[j].innerHTML.toUpperCase().indexOf(filter))
+                        found = true;
+                    }
+                }
+                if (found) {
+                    if (j==2) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter2) > -1) {
+                            // console.log('index2'+td[j].innerHTML.toUpperCase().indexOf(filter2));
+                            found2 = true;
+                        }
+                    }
+                }
+            }
+            if (found) {
+
+                if (found2) {
+                    // console.log('found::'+found+'found2::'+found2);
+                    tr[i].style.display = "";
+                    found2 = false;
+                }
+                else if(tr[i].id != 'tableHeader') {
+                    tr[i].style.display = "none";
+                }
+                found = false;
+            }
+            else if(tr[i].id != 'tableHeader') {
+                tr[i].style.display = "none";
+            }
+        }
+        filter = ""
+        asset_num = ""
+    }
+
+</script>
+
+{% endblock %}
