@@ -1,0 +1,8 @@
+Sharing S3 files across Account :
+---------------------------------
+
+Story Description - 
+  Whenever new file is created in source bucket it should automatically send to destination AWS account S3 bucket.
+  
+Design -
+  
