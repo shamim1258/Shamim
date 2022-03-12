@@ -1,0 +1,27 @@
+--Get all table names
+SELECT t.table_name, t.tablespace_name, t.max_trans
+FROM all_tables t where t.table_name like 'CX%';
+
+--udpate
+UPDATE SIEBEL.S_ASSET SET STATUS_CD = 'Inactive', LAST_UPD = SYSDATE WHERE ROW_ID = '2-KL066F2';
+
+--create table
+create table temp_table (id VARCHAR2(50), ou_num VARCHAR2(50));
+
+-pl/sql
+set serveroutput on;
+declare
+ord_num varchar2(100) := ''; status varchar2(100) := 'Cancelled';
+cursor c1 is 
+	SELECT ACT.ROW_ID
+	FROM SIEBEL.S_EVT_ACT ACT JOIN SIEBEL.S_ORG_EXT ACC ON ACC.ROW_ID = ACT.TARGET_OU_ID
+	WHERE ACT.EVT_STAT_CD IN ('Queued','Declined','Invalid','In Progress') AND ACT.TODO_CD NOT IN ('Document') --AND ACT.TODO_CD = 'Document' --AND ACT.X_SS_TEMPLATE = 'DiscountEnding'
+	AND (ACC.X_BASE_CANCEL_FLG = 'Y' OR ACC.X_CANCEL_QUOTE_FLG = 'Y' OR ACT.X_KPN_ENG_FLAG = 'Y' OR ACC.X_FIBRE_FLG = 'Y') AND ACT.X_KPN_STREAMSERVE IS NOT NULL
+	AND ROWNUM<5;
+begin
+	for rec in c1 loop
+		Update siebel.S_EVT_ACT set EVT_STAT_CD='Unscheduled' ,last_upd=sysdate where row_id = rec.ROW_ID;
+		commit;
+		DBMS_OUTPUT.PUT_LINE('Activity Id : ' || rec.ROW_ID || ' has been inactivted');
+	end loop; 
+end;
