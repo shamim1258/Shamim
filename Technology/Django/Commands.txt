@@ -1,0 +1,10 @@
+Django Commands :
+-----------------
+
+django-admin startproject Notes
+python manage.py startapp shp
+python manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+Python manage.py createsuperuser
+Python manage.py collectstatic
