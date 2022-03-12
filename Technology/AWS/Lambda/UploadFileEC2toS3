@@ -1,0 +1,37 @@
+import boto3
+import datetime
+import smtplib
+import logging
+import os
+from os import path
+
+import json
+
+def lambda_handler(event, context):
+	check_param = 'default'
+	check_param = UploadFileToS3().uploadfile()
+	return {
+		'statusCode': 200,
+		'body': json.dumps(check_param)
+	}
+	
+class UploadFileToS3:
+	
+	def __init__(self):
+		#self.output_file_basepath = '/var/lib/docker/overlay2/4a3e53883cb8199c58c19ea3674e3313308afb00375c43a84eaf24278cfb6e70/merged/code/aws_tools/'
+		self.output_file_basepath = '/code/aws_tools/'
+		print ("Check path :", self.output_file_basepath)
+		print ("File exists:",path.exists(self.output_file_basepath))
+		self.output_file_name = 'db.sqlite3'
+		self.output_file = self.output_file_basepath + self.output_file_name
+		self.s3_bucket_name = 'voip-update-output'g
+	
+	def uploadfile(self):
+		try:
+			print("Output File :: ",self.output_file)
+			print("Output basepath :: ",self.output_file_basepath)
+			print("File name :: ",self.output_file_name)
+			s3 = boto3.resource('s3')
+			s3.Bucket(self.s3_bucket_name).upload_file(self.output_file, self.output_file_name, ExtraArgs={'ServerSideEncryption': 'AES256'})
+		except Exception as err:
+			logging.exception(err)
