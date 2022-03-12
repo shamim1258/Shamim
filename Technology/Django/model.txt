@@ -1,0 +1,18 @@
+Models :
+--------
+
+#Save record in asset model
+from .models import asset
+record = asset(Customer_Number=cust_num, Account_Id=i[0],Asset_Number=i[1],Asset_Id=i[2],
+                           Asset_Status=i[3], Product_Name=i[4],Product_Id=i[5], Product_Type=i[6])
+record.save()
+
+#Update model asset record
+asset.objects.filter(Asset_Id=asset).update(Asset_Action=status)
+
+#Check values record in asset model
+all_stores = asset.objects.all()
+for rec in all_stores:
+	print("rec::", all_stores.values())
+get_asset_model = asset_model.objects.filter(Account_Id=AccountId, Product_Name__in=['Fox Sports 001','Sport1 pakket 001','Kids pakket 001'])
+        print("ssss:::", get_asset_model.values_list('Asset_Id')[0])
