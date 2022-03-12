@@ -9,3 +9,6 @@ AWS Topics :
     - Parameter Store
     - Policy
     - Security Group
+    - Lambda function
+        - sharing files across account
+        - send email
