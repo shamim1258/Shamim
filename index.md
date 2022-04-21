@@ -11,4 +11,4 @@ Check again
 [abc](README.md)
 
 [this subtext](Personal/shamim_notes.md)
-[this subtext](Personal/shamim_notes.md)
+[abc](Personal/shamim_notes.md)
