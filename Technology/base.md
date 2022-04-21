@@ -1,1 +1,1 @@
-[AWS]('AWS\base.md')
+[AWS]('AWS/base.md')
