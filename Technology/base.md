@@ -1,1 +1,4 @@
-[AWS]('AWS/base.md')
+[AWS](AWS/base.md)
+[Python](Python/base.md)
+[Django](Django/base.md)
+[Shell scripting](shell_scripting/base.md)
