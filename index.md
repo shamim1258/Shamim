@@ -1,19 +1,8 @@
-# This is index md file
-## Testing the flow
+# My Documentation
 
-Links
-[link](https://github.com/shamim1258/Shamim/tree/main/Personal/shamim_notes.md)
 
-Relative Links
-[a relative link](README.md)
-
-Check again
-[abc](README.md)
-
-[this subtext](Personal/shamim_notes.md)
-[abc](Personal/shamim_notes.md)
-
-[newlink](test.md)
-
-[Path Link](Personal)
-[Path Link](Personal/)
+[Personal](Personal/base.md)
+[Technologies](Technologies/base.md)
+[Technologies](Technologies/Python/base.md)
+[Technologies](Technologies/Django/base.md)
+[Technologies](Technologies/AWS/base.md)
