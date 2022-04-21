@@ -8,7 +8,9 @@
   
   
   <body>
-      <h1>Welcome to Github Pages..02</h1>
+      <h1>Welcome to Github Pages..03</h1>
+    {{ site.baseurl }}
+    {{ site.url }}
     {% assign doclist = site.pages | sort: 'url'  %}
     <ul>
        {% for doc in doclist %}
