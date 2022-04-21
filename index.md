@@ -14,3 +14,6 @@ Check again
 [abc](Personal/shamim_notes.md)
 
 [newlink](test.md)
+
+[Path Link](Personal)
+[Path Link](Personal/)
