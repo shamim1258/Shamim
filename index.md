@@ -6,6 +6,8 @@ Links
 
 Relative Links
 [a relative link](README.md)
-[a relative link](https://github.com/shamim1258/Shamim/tree/main/Personal/MyNotes.md)
+
+Check again
+[abc](README.md)
 
 [this subtext](Personal/shamim_notes.md)
