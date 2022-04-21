@@ -14,7 +14,26 @@
       repo: 'https://api.github.com/repos/shamim1258/Shamim/contents',
       loadSidebar: true,
     }
+    
+    
+    
+  const fs = require("fs");
+  
+let directory_name = "example_dir";
+  
+// Function to get current filenames
+// in directory
+let filenames = fs.readdirSync('Personal');
+  
+console.log("\nFilenames in directory:");
+filenames.forEach((file) => {
+    console.log("File:", file);
+});
+    
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  
+  
+  
 </body>
 </html>
