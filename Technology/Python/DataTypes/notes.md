@@ -20,6 +20,7 @@ Scope wise variables types
 
 [Private](Private)
 [Private](private)
+[Private](#private)
 
 ## Text
   
