@@ -21,6 +21,6 @@ Convert data-type - str(123)
     List is like array but item can of different data-types.
     Uses - []
     
-  ### Tuble
+### Tuble
     Tuple are immutable i.e. cannot be modified after it is created.
     Uses - ()
