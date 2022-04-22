@@ -1,6 +1,5 @@
 ### Difference Between
 
-| S No | Difference | Element1 | Element2 | Element3 |
+| S No | Differences | List | Tuple | Dict |
 |---|---|---|---|---|
-| - | * | List | Tuple | Dict |
 | 1 | Data Types | Ordered | Ordered | Unordered |
