@@ -18,6 +18,8 @@ Scope wise variables types
 - [Protected](Protected)
 - [Private](#Private)
 
+[Private](#Private)
+
 ## Text
   
 ## Sequence
@@ -40,4 +42,4 @@ Global variables are public variables that are defined in the global scope. To u
 Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
 
 ## Private
-Private attributes are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
+Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
