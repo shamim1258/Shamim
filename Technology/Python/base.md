@@ -1,6 +1,6 @@
 ### Overview of Python :
 
-[Data Types](data_types/notes.md)  
+[Data Types](DataTypes/notes.md)  
 [Functions](functions.md)  
 [Classes](class.md)  
 [Libraries Packages](libraries.md)  
