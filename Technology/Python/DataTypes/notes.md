@@ -45,6 +45,9 @@ Protected attributes are attributes defined with an underscore prefixed to their
 ## Private
 Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
 
+## #Private
+Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
+
 # Other types or objects
 
 ### Self
