@@ -16,7 +16,7 @@ Convert data-type - str(123)
 Scope wise variables types
 - [Global](#Global)
 - [Protected](Protected)
-- [Private](#Private)
+- [Private](##Private)
 
 [Private](Private)
 [Private](private)
