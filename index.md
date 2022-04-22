@@ -3,6 +3,6 @@
 
 [Personal](Personal/base.md)  
 [Technology](Technology/base.md)  
-[Technologies](Technology/Python/base.md) 
-[Technologies](Technology/Django/base.md) 
-[Technologies](Technology/AWS/base.md)  
+[Python Notes](Technology/Python/base.md)  
+[Django Notes](Technology/Django/base.md)  
+[AWS Notes](Technology/AWS/base.md)  
