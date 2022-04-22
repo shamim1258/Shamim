@@ -18,7 +18,8 @@ Scope wise variables types
 - [Protected](Protected)
 - [Private](#Private)
 
-[Private](#Private)
+[Private](Private)
+[Private](private)
 
 ## Text
   
@@ -43,3 +44,11 @@ Protected attributes are attributes defined with an underscore prefixed to their
 
 ## Private
 Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
+
+# Other types or objects
+
+### Self
+Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
+
+### __init__
+__init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them.
