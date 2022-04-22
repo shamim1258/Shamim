@@ -4,5 +4,6 @@
 |---|---|---|---|---|
 | 1 | Data Types | Ordered | Ordered | Unordered |
 | 2 | Items Data Types | different | different | different |
-| 3 | Syntax | ``` var = ['a',123] ``` | different | different |
+| 3 | Mutable | mutable | immutable | 
+| 4 | Syntax | ``` var = ['a',123] ``` | different | different |
 
