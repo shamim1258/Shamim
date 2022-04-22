@@ -13,6 +13,11 @@ Convert data-type - str(123)
 - [Boolean](#Boolean)    : bool
 - [Binary](#Binary)    : bytes, bytearray, memoryview
 
+Scope wise variables types
+- [Global](#Global)
+- [Protected](#Protected)
+- [Private](#Private)
+
 ## Text
   
 ## Sequence
@@ -26,3 +31,13 @@ Convert data-type - str(123)
     
 ### &emsp;Range
 &emsp;&emsp; This is range section.
+
+# Variable scopes
+## Global
+Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
+
+## Protected
+Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
+
+## Private
+Private attributes are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
