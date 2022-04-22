@@ -24,5 +24,5 @@ Convert data-type - str(123)
     Tuple are immutable i.e. cannot be modified after it is created.
     Uses - ()
     
-&emsp;### Range
+### &emsp;Range
 &emsp;&emsp; This is range section.
