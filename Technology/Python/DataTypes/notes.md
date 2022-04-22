@@ -15,7 +15,7 @@ Convert data-type - str(123)
 
 Scope wise variables types
 - [Global](#Global)
-- [Protected](#Protected)
+- [Protected](Protected)
 - [Private](#Private)
 
 ## Text
@@ -33,10 +33,10 @@ Scope wise variables types
 &emsp;&emsp; This is range section.
 
 # Variable scopes
-## Global
+# Global
 Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
 
-## Protected
+# Protected
 Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
 
 ## Private
