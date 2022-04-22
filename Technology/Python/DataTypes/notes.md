@@ -5,12 +5,22 @@ Python sets the variable type based on the value that is assigned to it.
 Use ```type()``` function to get the data-type of any variable.
 Convert data-type - str(123)
 
-- [Link to Header](#Text)    : str
-- [Link to Header](#Numeric)    : int, float, complex
-- [Link to Header](#Sequence)    : list, tuple, range
-- [Link to Header](#Mapping)    : dict
-- [Link to Header](#Set)    : set, frozenset
-- [Link to Header](#Boolean)    : bool
-- [Link to Header](#Binary)    : bytes, bytearray, memoryview
+- [Text](#Text)    : str
+- [Numeric](#Numeric)    : int, float, complex
+- [Sequence](#Sequence)    : list, tuple, range
+- [Mappingr](#Mapping)    : dict
+- [Set](#Set)    : set, frozenset
+- [Boolean](#Boolean)    : bool
+- [Binary](#Binary)    : bytes, bytearray, memoryview
 
 ## Text
+  
+  
+## Sequence
+  ### List
+    List is like array but item can of different data-types.
+    Uses - []
+    
+  ### Tuble
+    Tuple are immutable i.e. cannot be modified after it is created.
+    Uses - ()
