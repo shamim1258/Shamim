@@ -7,4 +7,4 @@
 [Django Notes](Technology/Django/base.md)  
 [AWS Notes](Technology/AWS/base.md)  
 
-[Questions](Interview/questions.md)  
+[Questions](Interview/Questions/base.md)  
