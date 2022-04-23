@@ -1,5 +1,8 @@
 # Python Preperation Questions
 
+Text[Python](Shamim/Technology/Python/base.md)
+Text[Python2](/../../Technology/Python/base.md)
+
 1. How is memory managed in Python? 
 <details><summary>Text[Python](Shamim/Technology/Python/base.md)
   Text[Python2](/../../Technology/Python/base.md)</summary>
