@@ -50,4 +50,7 @@ Self is used to represent the instance of the class. With this keyword, you can 
 ### __init__
 __init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them.
 
-### 
+### docstring
+Represented with triple quotation marks used for documents. _/_/doc_/_ attribute.
+
+Syntax ``` ''' This is doc string. '''  ```
