@@ -18,6 +18,8 @@ Scope wise variables types
 - [Protected](#protected)
 - [Private](#private)
 
+Check the [operations](#operations) on data-types.
+
 ## Text
   
 ## Sequence
@@ -34,23 +36,28 @@ Scope wise variables types
 
 # Variable scopes
 ### &emsp;Global
-Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
+&emsp;&emsp;Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
 
 ### &emsp;Protected
-Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
+&emsp;&emsp;Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
 
 ### &emsp;Private
-Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
+&emsp;&emsp;Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
 
-# Other types or objects
+# Other objects Types
 
-### Self
-Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
+### &emsp;self
+&emsp;&emsp;Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
 
-### __init__
-__init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them.
+### &emsp;__init__
+&emsp;&emsp;__init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them.
 
-### docstring
-Represented with triple quotation marks used for documents. _/_/doc_/_ attribute.
-
+### &emsp;docstring
+&emsp;&emsp;Represented with triple quotation marks used for documents. __doc__ attribute.
 Syntax ``` ''' This is doc string. '''  ```
+
+# Operations
+
+### &emsp;Slicing
+&emsp;&emsp;Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is number of items and step is 1.  
+Slicing can be done on strings, arrays, lists, and tuples.
