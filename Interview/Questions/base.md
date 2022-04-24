@@ -7,3 +7,5 @@
 
 [HTML Python Questions Preperations](python_ques.html)  
 [Python New Link](python_ques.md)  
+[Python New Link](python_ques.md)  
+[Python New Link](python_ques.md)  
