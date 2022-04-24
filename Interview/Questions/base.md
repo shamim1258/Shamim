@@ -6,3 +6,4 @@
 [Shell Scripting Questions Preperations](python_ques.md)    
 
 [HTML Python Questions Preperations](python_ques.html)  
+[Python New Link](python_ques.md)  
