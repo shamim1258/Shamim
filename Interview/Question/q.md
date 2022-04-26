@@ -5,6 +5,7 @@ Text[Python2](../../Technology/Python/base.md)
 
 
 1. How is memory managed in Python? 
+[Python](../../Technology/Python/base.md) [Python2](../../Technology/Python/base.md) 
 <details><summary>Text[Python]((../../Technology/Python/base.md)
   Text[Python2](/../../Technology/Python/base.md)
   <a href="https://shamim1258.github.io/Shamim/Technology/Python/base.md">Python Details Link Href</a>
