@@ -8,3 +8,7 @@
 [Python New Link](python_ques.md)  
 [Python New Link](python_ques.md)  
 [Python New Link](python_ques.md)  
+
+
+[New Link](python_ques.md)  
+[New Link](python_ques.md)  
