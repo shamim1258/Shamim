@@ -5,10 +5,3 @@
 [AWS Questions Preperations](python_ques.md)  
 [Shell Scripting Questions Preperations](python_ques.md)    
 
-[Python New Link](python_ques.md)  
-[Python New Link](python_ques.md)  
-[Python New Link](python_ques.md)  
-
-
-[New Link](python_ques.md)  
-[New Link](python_ques.md)  
