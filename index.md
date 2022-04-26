@@ -9,3 +9,6 @@
 
 [Questions](Interview/Questions/base.md)  
 [New Question](Interview/Question/base.md)  
+
+[B](Interview/Question/b.md) 
+[Q](Interview/Question/q.md) 
