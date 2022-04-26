@@ -8,3 +8,4 @@
 [AWS Notes](Technology/AWS/base.md)  
 
 [Questions](Interview/Questions/base.md)  
+[New Question](Interview/Question/base.md)  
