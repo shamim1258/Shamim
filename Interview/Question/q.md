@@ -3,15 +3,6 @@
 Text[Python](Shamim/Technology/Python/base.md)
 Text[Python2](../../Technology/Python/base.md)
 
-{% site.github.public_repositories %}
-{% site.github.Shamim %}
-{% site.github.shamim1258 %}
-
-{% for repo in site.github.public_repositories %}
-[{{ repo.Shamim }}]({{ repo.html_url }})
-: {{ repo.description }}
-{% endfor %}
-
 
 1. How is memory managed in Python? 
 <details><summary>Text[Python]((../../Technology/Python/base.md)
