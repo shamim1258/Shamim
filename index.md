@@ -1,6 +1,4 @@
 # My Documentation
-## mmmmmmmmmmmmmmmmmmmmmmmm
-
 
 [Personal](Personal/base.md)  
 [Technology](Technology/base.md)  
@@ -8,8 +6,4 @@
 [Django Notes](Technology/Django/base.md)  
 [AWS Notes](Technology/AWS/base.md)  
 
-[Questions](Interview/Questions/base.md)  
-[New Question](Interview/Question/base.md)  
-
-[Bbbbbb](Interview/Question/b.md) 
-[Qqqqqqq](Interview/Question/q.md) 
+[Python Question](Interview/Question/base.md)  
