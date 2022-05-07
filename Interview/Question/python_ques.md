@@ -15,11 +15,10 @@ Additionally, Python has an in-built garbage collection to recycle the unused me
 6. What is lambda in Python? Why is it used?
 7. What are generators in Python?
 8. What is the difference between .py and .pyc files?
-&emsp;<details><summary>Click here</summary>
+&emsp;
 .py files contain the source code of a program. Whereas, .pyc file contains the bytecode of your program. We get bytecode after compilation of .py file (source code). .pyc files are not created for all the files that you run. It is only created for the files that you import.
 Before executing a python program python interpreter checks for the compiled files. If the file is present, the virtual machine executes it. If not found, it checks for .py file. If found, compiles it to .pyc file and then python virtual machine executes it.
 Having .pyc file saves you the compilation time.
-</details>
 
 9. Explain split() and join() functions in Python?
 10. What does \*args and \*\*kwargs mean?
