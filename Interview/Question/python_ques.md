@@ -40,7 +40,8 @@ Having .pyc file saves you the compilation time.
 &emsp;<details>This is done by using a method called issubclass() provided by python. The method tells us if any class is a child of another class by returning true or false accordingly.
   
 ## Python Libraries
-
+1. Differentiate between a package and a module in python?
+### Pandas
 1. What do you know about pandas?
 2. Define pandas dataframe?
 3. How will you combine different pandas dataframes?
@@ -67,3 +68,7 @@ print (df)
 #To add new column fourth
 df['fourth']=df['first']+info['third']    
 print (df) 
+
+### Numpy
+6. What do you understand by NumPy?
+7. How are NumPy arrays advantageous over python lists?
