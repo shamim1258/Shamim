@@ -67,8 +67,10 @@ df['third']=pd.Series([10,20,30],index=['a','b','c'])
 print (df)    
 #To add new column fourth
 df['fourth']=df['first']+info['third']    
-print (df) 
+print (df)  
 
+  
 ### Numpy
-6. What do you understand by NumPy?
-7. How are NumPy arrays advantageous over python lists?
+  
+1. What do you understand by NumPy?
+2. How are NumPy arrays advantageous over python lists?
