@@ -5,7 +5,7 @@ Python sets the variable type based on the value that is assigned to it.
 Use ```type()``` function to get the data-type of any variable.
 Convert data-type - ```str(123)```.
 
-- [Text](#text)    : str
+- [Text](#text)    : [str](#str)
 - [Numeric](#numeric)    : [int](#int), [float](#float), complex
 - [Sequence](#sequence)    : list, tuple, range
 - [Mappingr](#mapping)    : dict
@@ -21,10 +21,13 @@ Scope wise variables types
 Check the [operations](#operations) on data-types.
 
 ## Text
+### &emsp;str
+- &emsp;&emsp;Strings are sequences of character data
+
 
 ## Numeric
 ### &emsp;int
-- &emsp;&emsp;In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has.
+- In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has.
 
 ### &emsp;float
 &emsp;&emsp;- float values are specified with a decimal point.
