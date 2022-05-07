@@ -13,7 +13,7 @@ Convert data-type - ```str(123)```.
 - [Boolean](#boolean)    : bool
 - [Binary](#binary)    : bytes, bytearray, memoryview
 
-[Scope](#variable_scopes) wise variables types
+[Scope](#variable-scopes) wise variables types
 - Global
 - Protected
 - Private
