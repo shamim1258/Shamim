@@ -1,12 +1,12 @@
 # Python Data Types :
 
-Data type tells about type of value it can hold and also what operations can be performed on that value.
+Data type tells about type of value it can hold and also what [operations](#operations) can be performed on that value.
 Python sets the variable type based on the value that is assigned to it.
 Use ```type()``` function to get the data-type of any variable.
-Convert data-type - str(123)
+Convert data-type - ```str(123)```.
 
 - [Text](#text)    : str
-- [Numeric](#numeric)    : int, float, complex
+- [Numeric](#numeric)    : [int](#int), [float](#float), complex
 - [Sequence](#sequence)    : list, tuple, range
 - [Mappingr](#mapping)    : dict
 - [Set](#set)    : set, frozenset
@@ -21,14 +21,22 @@ Scope wise variables types
 Check the [operations](#operations) on data-types.
 
 ## Text
-  
+
+## Numeric
+### &emsp;int
+- &emsp;&emsp;In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has.
+
+### &emsp;float
+&emsp;&emsp;- float values are specified with a decimal point.
+
+
 ## Sequence
-  ### List
-    List is like array but item can of different data-types.
+### &emsp;List
+    &emsp;&emsp;List is like array but item can of different data-types.
     Uses - []
     
-### Tuble
-    Tuple are immutable i.e. cannot be modified after it is created.
+### &emsp;Tuble
+    &emsp;&emsp;Tuple are immutable i.e. cannot be modified after it is created.
     Uses - ()
     
 ### &emsp;Range
