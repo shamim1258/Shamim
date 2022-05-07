@@ -40,6 +40,11 @@ foo\nbar```
 ### &emsp;List
 - List is like array but item can of different data-types.
 - Uses - []
+
+## Boolean
+### &emsp;bool
+- Boolean type have 2 values -```True or False```.
+
     
 ### &emsp;Tuble
 - Tuple are immutable i.e. cannot be modified after it is created.
