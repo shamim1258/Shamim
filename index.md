@@ -1,9 +1,10 @@
 # My Documentation
 
-[Personal](Personal/base.md)  
 [Technology](Technology/base.md)  
 [Python Notes](Technology/Python/base.md)  
 [Django Notes](Technology/Django/base.md)  
 [AWS Notes](Technology/AWS/base.md)  
+[Shell Script Notes](Technology/Shell/base.md)  
+[Git Notes](Technology/Git/base.md)  
 
-[Python Question](Interview/Question/base.md)  
+[Question](Interview/Question/base.md)  
