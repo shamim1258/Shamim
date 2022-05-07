@@ -5,24 +5,24 @@ Python sets the variable type based on the value that is assigned to it.
 Use ```type()``` function to get the data-type of any variable.
 Convert data-type - ```str(123)```.
 
-- [Text](#text)    : [str](#str)
-- [Numeric](#numeric)    : [int](#int), [float](#float), complex
+- [Text](#text)    : str
+- [Numeric](#numeric)    : int, float, complex
 - [Sequence](#sequence)    : list, tuple, range
 - [Mappingr](#mapping)    : dict
 - [Set](#set)    : set, frozenset
 - [Boolean](#boolean)    : bool
 - [Binary](#binary)    : bytes, bytearray, memoryview
 
-Scope wise variables types
-- [Global](#global)
-- [Protected](#protected)
-- [Private](#private)
+[Scope](#variable_scopes) wise variables types
+- Global
+- Protected
+- Private
 
 Check the [operations](#operations) on data-types.
 
 ## Text
 ### &emsp;str
-- &emsp;&emsp;Strings are sequences of character data
+- Strings are sequences of character data
 
 
 ## Numeric
