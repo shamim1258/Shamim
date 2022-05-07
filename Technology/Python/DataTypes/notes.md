@@ -22,7 +22,8 @@ Check the [operations](#operations) on data-types.
 
 ## Text
 ### &emsp;str
-- Strings are sequences of character data
+- Strings are sequences of character data.
+- Interpreting a character or sequence of characters within a string differently use ```\``` as Escape Sequences.
 
 
 ## Numeric
