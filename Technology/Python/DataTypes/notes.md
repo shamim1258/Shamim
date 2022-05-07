@@ -30,45 +30,45 @@ Check the [operations](#operations) on data-types.
 - In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has.
 
 ### &emsp;float
-&emsp;&emsp;- float values are specified with a decimal point.
+- float values are specified with a decimal point.
 
 
 ## Sequence
 ### &emsp;List
-    &emsp;&emsp;List is like array but item can of different data-types.
-    Uses - []
+- List is like array but item can of different data-types.
+- Uses - []
     
 ### &emsp;Tuble
-    &emsp;&emsp;Tuple are immutable i.e. cannot be modified after it is created.
-    Uses - ()
+- Tuple are immutable i.e. cannot be modified after it is created.
+- Uses - ()
     
 ### &emsp;Range
-&emsp;&emsp; This is range section.
+- This is range section.
 
 # Variable scopes
 ### &emsp;Global
-&emsp;&emsp;Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
+- Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
 
 ### &emsp;Protected
-&emsp;&emsp;Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
+- Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
 
 ### &emsp;Private
-&emsp;&emsp;Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
+- Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
 
 # Other objects Types
 
 ### &emsp;self
-&emsp;&emsp;Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
+- Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
 
 ### &emsp;__init__
-&emsp;&emsp;__init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them.
+- __init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them.
 
 ### &emsp;docstring
-&emsp;&emsp;Represented with triple quotation marks used for documents. __doc__ attribute.
+- Represented with triple quotation marks used for documents. __doc__ attribute.
 Syntax ``` ''' This is doc string. '''  ```
 
 # Operations
 
 ### &emsp;Slicing
-&emsp;&emsp;Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is number of items and step is 1.  
+- Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is number of items and step is 1.  
 Slicing can be done on strings, arrays, lists, and tuples.
