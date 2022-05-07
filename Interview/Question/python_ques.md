@@ -1,5 +1,7 @@
 # Python Preperation Questions
 
+## Python Basic
+
 1. How is memory managed in Python?  
 [Python](../../Technology/Python/base.md) [Python2](../../Technology/Python/base.md) 
 &emsp;<details>
@@ -21,6 +23,9 @@ Having .pyc file saves you the compilation time.
 
 9. Explain split() and join() functions in Python?
 10. What does \*args and \*\*kwargs mean?
+  
+## Python Class
+
 11. How does inheritance work in class?
 12. Are access specifiers used in python?
 &emsp;<details>Python does not make use of access specifiers specifically like private, public, protected, etc. However, it does not derive this from any variables. It has the concept of imitating the behaviour of variables by making use of a single (protected) or double underscore (private) as prefixed to the variable names. By default, the variables without prefixed underscores are public.</details>
@@ -34,3 +39,17 @@ Having .pyc file saves you the compilation time.
 15. How will you check if a class is a child of another class?
 &emsp;<details>This is done by using a method called issubclass() provided by python. The method tells us if any class is a child of another class by returning true or false accordingly.
   
+## Python Libraries
+
+16. What do you know about pandas?
+17. Define pandas dataframe?
+18. How will you combine different pandas dataframes?
+&emsp;<details>The dataframes can be combines using the below approaches:
+
+append() method: This is used to stack the dataframes horizontally. Syntax:
+df1.append(df2)
+concat() method: This is used to stack dataframes vertically. This is best used when the dataframes have the same columns and similar fields. Syntax:
+pd.concat([df1, df2]) 
+join() method: This is used for extracting data from various dataframes having one or more common columns.
+df1.join(df2)
+
