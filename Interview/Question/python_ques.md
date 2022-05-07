@@ -23,7 +23,7 @@ Having .pyc file saves you the compilation time.
 10. What does \*args and \*\*kwargs mean?
 11. How does inheritance work in class?
 12. Are access specifiers used in python?
-&emsp;<details>Python does not make use of access specifiers specifically like private, public, protected, etc. However, it does not derive this from any variables. It has the concept of imitating the behaviour of variables by making use of a single (protected) or double underscore (private) as prefixed to the variable names. By default, the variables without prefixed underscores are public.
+&emsp;<details>Python does not make use of access specifiers specifically like private, public, protected, etc. However, it does not derive this from any variables. It has the concept of imitating the behaviour of variables by making use of a single (protected) or double underscore (private) as prefixed to the variable names. By default, the variables without prefixed underscores are public.</details>
 
 13. Why is finalize used?
 &emsp;<details>Finalize method is used for freeing up the unmanaged resources and clean up before the garbage collection method is invoked. This helps in performing memory management tasks.
