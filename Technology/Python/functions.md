@@ -5,12 +5,10 @@
 ### Math
   -  ```max()```&emsp;- Returns the largest of the given arguments or items in an iterable.
   -  ```min()```&emsp;- Returns the smallest of the given arguments or items in an iterable.
-
 ### Type Conversion
   -  ```str()```&emsp;- Returns a string version of an object.
   -  ```ord()```&emsp;- Returns integer representation of a character.
   -  ```type()```&emsp;- Returns the type of an object or creates a new type object.
-
 ### Iterables and Iterators
   -  ```all()```&emsp;- Returns True if all elements of an iterable are true.
   -  ```len()```&emsp;- Returns the length of an object.
