@@ -1,4 +1,4 @@
-| Coding Syntax | Description | Comment |
-|---|---|---|
-|  # | Heading  | ##-Sub-Heading |
-|  ```test``` | format-coding | ``` |
+| Coding Syntax | Description | Sample | Comment |
+|---|---|---|---|
+|  # | Heading  | #Sample | ##-Sub-Heading |
+|  \`\`\`test\`\`\` | format-coding | ```test``` | |
