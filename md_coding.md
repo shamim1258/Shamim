@@ -2,3 +2,7 @@
 1. \#           -     Heading
 2. \#\#          -     Sub-heading
 3. \`\`\`text\`\`\`  -     format coding
+| Coding Syntax | Description |
+|---|---|
+|  # | Heading  |
+|  \# | Heading  |
