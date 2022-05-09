@@ -1,10 +1,4 @@
-0. Coding      -     Description
-1. \#           -     Heading
-2. \#\#          -     Sub-heading
-3. \`\`\`text\`\`\`  -     format coding
-
-
-| Coding Syntax | Description |
-|---|---|
-|  # | Heading  |
-|  \# | Heading  |
+| Coding Syntax | Description | Comment |
+|---|---|---|
+|  # | Heading  | ##-Sub-Heading |
+|  ```test``` | format-coding | ``` |
