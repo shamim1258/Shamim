@@ -21,8 +21,8 @@
   1. Move to projectName-> projectName -> urls.py and add below code in the header.
   ```from django.urls import include```
   2. Now in the list of URL patterns, you need to specify app name for including your app urls.  
-  ```from django.contrib import admin```
-  ```from django.urls import path, include```
+  ```from django.contrib import admin```  
+  ```from django.urls import path, include```  
   ```urlpatterns = [
   path('admin/', admin.site.urls),
   path('', include("projectApp.urls")),
