@@ -1,6 +1,9 @@
 # Django
 
-Django is a Python-based web framework which allows you to quickly create web application without all of the installation or dependency problems that you normally will find with other frameworks.
+- Django is a Python-based web framework which allows you to quickly create web application.
+- Django is a back-end server side web framework.
+- Based on MVT (Model View Template) design pattern.
+- Open source.
 
 ## Benefits
     1. Django is a rapid web development framework.
