@@ -22,11 +22,8 @@
   ```from django.urls import include```
   2. Now in the list of URL patterns, you need to specify app name for including your app urls.
   ```from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-	path('admin/', admin.site.urls),
-	# Enter the app name in following syntax for this to work
-	path('', include("projectApp.urls")),
-]
-```
+  from django.urls import path, include
+  urlpatterns = [
+  path('admin/', admin.site.urls),
+  path('', include("projectApp.urls")),
+  ]```
