@@ -12,5 +12,5 @@
     
 ## Links
 [Django Architecture](#architecture)  
-[Django Installation](#installation)  
+[Django Installation](installation.md)  
 [Working on Projects](#project)
