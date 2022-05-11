@@ -4,6 +4,7 @@
 - Django is a back-end server side web framework.
 - Based on MVT (Model View Template) design pattern.
 - Open source.
+- The main python files are used to link with each other to display our web page are settings.py, view.py, and urls.py.
 
 ## Benefits
     1. Django is a rapid web development framework.
@@ -15,16 +16,11 @@
 [Django Installation](installation.md)  
 [Working on Projects](project)  
 
-
-**Notes** :
-    The main python files are used to link with each other to display our web page are settings.py, view.py, and urls.py.  
-    
-
 ### MVT
 
 MVT stand for Model View Template.  
 MVT is generally very similar to that of MVC which is a Model, View, and Controller. he difference between MVC and MVT here is the Django itself does the work done by the controller part in the MVC architecture. Django does this work of controller by using templates.  
-Precisely, the template file is a mixture of HTML part and Django Template Language also known as [DTL](#DTL).  
+Precisely, the template file is a mixture of HTML part and Django Template Language also known as [DTL](###DTL).  
 Although Django follows MVC pattern but maintains it's own conventions. So, control is handled by the framework itself.
 
 - Model
