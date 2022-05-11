@@ -7,6 +7,7 @@
 [Shell Script Notes](Technology/Shell/base.md)  
 [Git Notes](Technology/Git/base.md)  
 
+[Difference Between](Technology/differences.md)  
 [Question](Interview/Question/base.md)  
 
 [Markdown Coding](md_coding.md)  
