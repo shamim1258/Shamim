@@ -1,6 +1,8 @@
 # Architecture
 
 Django is based on MVT (Model-View-Template) architecture. MVT is a software design pattern for developing a web application.
+MVT is generally very similar to that of MVC (Model-View_Controller) model.
+
 MVT Structure has the following three parts – 
 1. **Model**  
 It is the logical data structure behind the entire application and is represented by a database.
