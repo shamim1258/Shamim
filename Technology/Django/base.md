@@ -11,6 +11,6 @@
     3. It has built-in admin interface which makes easy to work with it.
     
 ## Links
-[Django Architecture](architecture)  
+[Django Architecture](architecture.md)  
 [Django Installation](installation.md)  
 [Working on Projects](project)
