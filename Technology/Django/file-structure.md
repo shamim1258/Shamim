@@ -1,5 +1,25 @@
 # Django Project File Structure
 
+     - ProjectName
+       - ProjectName
+         - __init__.py
+         - settings
+         - urls.py
+         - wsgi.py
+       - apps
+         - __init__.py
+       - configs
+         - README
+       - manage.py
+       - README
+       - static
+         - README
+       - templates
+         - base.html
+         - core
+           - login.html
+         - README
+ 
 - ProjectName
   - ProjectName
     \- \_\_init__.py
