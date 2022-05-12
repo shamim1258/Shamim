@@ -1,5 +1,12 @@
 # Django Project File Structure
 
+
+    - ProjectName
+     - ProjectName
+      - AppName
+       - common.py
+        - 123.py
+
 - ProjectName
   - ProjectName
     - [__init__.py](#__init__)
