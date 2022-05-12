@@ -31,8 +31,6 @@
 ## Sample File
 
 ### manage.py
-<details>
-<pre>
     import os
     import sys
     
@@ -53,8 +51,6 @@
         main()
 
 ### settings.py
-<details>
-<pre>
     from pathlib import Path
     from os.path import abspath, basename, dirname, join, normpath
     import os
@@ -193,6 +189,3 @@
 
     LOGIN_REDIRECT_URL = '/'
     LOGOUT_REDIRECT_URL  = '/'
-</pre>
-
-jgjhgh jknk
