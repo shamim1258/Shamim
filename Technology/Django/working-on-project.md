@@ -32,7 +32,7 @@
 
 ### manage.py
 <details>
-<code>
+<pre>
     import os
     import sys
     
@@ -51,7 +51,6 @@
 
     if __name__ == '__main__':
         main()
-
 
 ### settings.py
 <details>
@@ -194,3 +193,6 @@
 
     LOGIN_REDIRECT_URL = '/'
     LOGOUT_REDIRECT_URL  = '/'
+</pre>
+
+jgjhgh jknk
