@@ -52,6 +52,7 @@
 
 
 ### settings.py
+<details>
     from pathlib import Path
     from os.path import abspath, basename, dirname, join, normpath
     import os
