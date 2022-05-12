@@ -1,11 +1,14 @@
 # Django Project File Structure
 
 
-    - ProjectName
      - ProjectName
-      - AppName
-       - common.py
-        - 123.py
+       - ProjectName
+       - [AppName](#AppName)
+         1. common.py
+         2. 123.py
+         # hastcheck
+         * star list
+         + listlist
 
 - ProjectName
   - ProjectName
@@ -53,3 +56,7 @@ This folder contains all the packages of your project. Initially, it contains fo
   In this file, we store all links of the project and functions to call.
   - wsgi.py
   This file is used in deploying the project in WSGI. It is used to help your Django application communicate with the webserver.
+  
+  
+# AppName
+
