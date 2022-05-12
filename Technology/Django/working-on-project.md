@@ -189,3 +189,94 @@
 
     LOGIN_REDIRECT_URL = '/'
     LOGOUT_REDIRECT_URL  = '/'
+    
+### urls.py
+    from django.contrib import admin
+    from django.urls import path,include
+
+    urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('', include("home.urls")),
+    path('home/', include("home.urls")),
+    path('shp/', include("shp.urls")),
+    ]  
+    
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+      path('',views.cancel_order),
+      path('cancel_order',views.cancel_order,),
+    ]
+
+### apps.py
+    from django.apps import AppConfig
+
+    class CancelOrderConfig(AppConfig):
+      default_auto_field = 'django.db.models.BigAutoField'
+      name = 'cancel_order'  
+      
+### forms.py
+    from django import forms
+    from django.forms import ModelForm
+    \#from django.forms import ModelForm,CheckboxSelectMultiple
+    from . import models
+
+    class NameForm(ModelForm):
+      class Meta:
+        model = models.cancelorder
+        fields = '__all__'
+        exclude = ('Username',)
+
+### models.py
+    from django.db import models
+
+    class cancelorder(models.Model):
+      Username = models.CharField(max_length=8, default='')
+      Order_Number = models.CharField(max_length=20, default='')
+      \#Order_Status = models.CharField(max_length=20,default='')
+
+### views.py
+    from django.shortcuts import render
+    from django.http import HttpResponse
+    from .forms import NameForm
+    from .cancel_order import get_order, cancel_order_fun
+    from django.contrib.auth.decorators import login_required
+
+    @login_required
+    def cancel_order(request):
+      if request.method == 'GET':
+          form = NameForm()
+          template_name = 'cancel_order/get_order.html'
+          return render(request, template_name, {'form': form})
+      else:
+          form = NameForm(request.POST)
+          if request.POST.get("get_order"):
+              form = NameForm(request.POST)
+              if form.is_valid():
+                  order_num_var = request.POST["Order_Number"]
+                  get_order_var = get_order(order_num_var)
+                  orderid = str(get_order_var[1][0])
+                  error_flg = get_order_var[0]
+                  if error_flg is not True:
+                      error_flg = False
+                      process = "get"
+                      return render(request, 'cancel_order/cancel_order.html',
+                                    context={'form': form, 'errorflag': error_flg, 'order_msg': orderid})
+                  else:
+                      error_flg = True
+                      msg = get_order_var
+                      return render(request, 'cancel_order/get_order.html',context={'form': form, 'errorflag': error_flg, 'error_msg': msg[1]})
+              else:
+                  return HttpResponse(form.errors)
+          else:
+              get_order_num = request.POST.getlist('Order')[1]
+              cancel_order_var = cancel_order_fun(get_order_id)
+              if cancel_order_var[1] == 'success':
+                  msg = 'Order is successfully cancelled : ' + get_order_num
+              else:
+                  error_flg = True
+                  msg = cancel_order_var[1]
+              return render(request, 'cancel_order/get_order.html',
+                            context={'form': form, 'errorflag': error_flg, 'success_msg': msg, 'error_msg': msg})
