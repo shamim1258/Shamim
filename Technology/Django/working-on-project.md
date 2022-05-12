@@ -31,6 +31,8 @@
 ## Sample File
 
 ### manage.py
+<details>
+<code>
     import os
     import sys
     
@@ -53,6 +55,7 @@
 
 ### settings.py
 <details>
+<pre>
     from pathlib import Path
     from os.path import abspath, basename, dirname, join, normpath
     import os
