@@ -9,7 +9,7 @@
 
 ### Django Project steps
 
-1. Creating Project  
+1. Creating Project.  
 ```django-admin startproject projectName```
 2. Run new created project
 ```cd projectName```  
