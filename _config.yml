@@ -1,4 +1,4 @@
 name: Learning
 title: null
 
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: ngzhio/jekyll-theme-hamilton
