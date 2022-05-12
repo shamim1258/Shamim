@@ -13,8 +13,7 @@
     
 ## Links
 [Django File Structure](file-structure.md)  
-[Django Installation](installation.md)  
-[Working on Projects](project)  
+[Working on Projects](working-on-project.md)    
 
 ### MVT
 
