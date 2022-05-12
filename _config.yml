@@ -1,4 +1,4 @@
 name: Learning
 title: null
 
-remote_theme: benbalter/retlab
+remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5"
