@@ -22,23 +22,23 @@
  
 - ProjectName
   - ProjectName
-    \- \_\_init__.py
-    \- settings
-    \- urls.py
-    \- wsgi.py
+    - \_\_init__.py
+    - settings
+    - urls.py
+    - wsgi.py
   - apps
-    \- \_\_init__.py
+    - \_\_init__.py
   - configs
-    \- README
+    - README
   - manage.py
   - README
   - static
-    \- README
+    - README
   - tempaltes
-    \- base.html
-    \- core
-      \- login.html
-    \- README
+    - base.html
+    - core
+      - login.html
+    - README
 
 #### manage.py
 - This file is used to interact with your project via the [command line utility](##command-line-utility) and for deploying, debugging, or running our web application.
