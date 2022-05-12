@@ -7,7 +7,13 @@
     - urls.py
     - wsgi.py
   - apps
+    - migrations
     - \_\_init__.py
+    - admin.py
+    - apps.py
+    - models.py
+    - tests.py
+    - views.py
   - configs
     - README
   - manage.py
