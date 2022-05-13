@@ -41,17 +41,16 @@ foo\nbar```
 - List is like array but item can of different data-types.
 - Uses - []
 
-## Boolean
-### &emsp;bool
-- Boolean type have 2 values -```True or False```.
-
-    
 ### &emsp;Tuble
 - Tuple are immutable i.e. cannot be modified after it is created.
 - Uses - ()
     
 ### &emsp;Range
 - This is range section.
+
+## Boolean
+### &emsp;bool
+- Boolean type have 2 values -```True or False```.
 
 # Variable scopes
 ### &emsp;Global
