@@ -21,6 +21,14 @@
 ### Serialization
 - We can not send Python objects over a network, and hence need a mechanism to translate Django models in other formats like JSON, XML, and vice-versa. This sometimes challenging process, also called serialization.  
 - Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON, XML or other content types. Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.  
+- For serialization create file : ```serializers.py```
+    from rest_framework import serializers
+    from talk.models import Post
+
+    class PostSerializer(serializers.ModelSerializer):
+      class Meta:
+        model = Post
+        fields = ('id', 'author', 'text', 'created', 'updated')
 
 #### Viewset
 - To render data into frontend, and handle requests from user, we need to create a view. In Django REST Framework, we call these as viewsets.  
