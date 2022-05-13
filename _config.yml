@@ -1,4 +1,13 @@
 name: Learning
 title: HOME
 
+menu:
+  - title:             Example
+    url:               /example/
+  - title:             Documentation
+    url:               /docs/
+  - title:             About
+    url:               /about/
+
+
 
