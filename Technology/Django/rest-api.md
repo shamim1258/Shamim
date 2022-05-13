@@ -17,8 +17,38 @@
 - most remarkable features of Django is its Object Relational Mapper (ORM) which facilitates interaction with the database in a Pythonic way.  
 - There are three stages before creating a API through REST framework, Converting a Model’s data to JSON/XML format (Serialization), Rendering this data to the view, Creating a URL for mapping to the viewset.  
 - To initialize REST Framework in your project, go to settings.py, and in INSTALLED_APPS add ‘rest_framework’ at the bottom.  
-- Can be done using class based or function based.
-- 
+- Can be done using class based or function based.  
+
+      from django.shortcuts import render
+      from django.http import HttpResponse
+      from rest_framework.decorators import api_view
+      from rest_framework.response import Response
+      from talk.models import Post
+      from talk.serializers import PostSerializer
+      from talk.forms import PostForm
+
+      def home(request):
+        tmpl_vars = {'form': PostForm()}
+        return render(request, 'talk/index.html', tmpl_vars)
+
+
+      @api_view(['GET'])
+      def post_collection(request):
+        if request.method == 'GET':
+          posts = Post.objects.all()
+          serializer = PostSerializer(posts, many=True)
+          return Response(serializer.data)
+
+      @api_view(['GET'])
+      def post_element(request, pk):
+        try:
+          post = Post.objects.get(pk=pk)
+        except Post.DoesNotExist:
+          return HttpResponse(status=404)
+
+      if request.method == 'GET':
+        serializer = PostSerializer(post)
+        return Response(serializer.data)
 
 ### Serialization
 - We can not send Python objects over a network, and hence need a mechanism to translate Django models in other formats like JSON, XML, and vice-versa. This sometimes challenging process, also called serialization.  
