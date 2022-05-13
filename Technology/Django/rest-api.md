@@ -8,6 +8,8 @@
 - It is a standard architecture for building and communicating with web services.  
 - It typically mandates resources on the web are represented in a text format (like JSON, HTML, or XML) and can be accessed or modified by a predetermined set of operations.  
 - Given that we typically build REST APIs to leverage with HTTP instead of other protocols, these operations correspond to HTTP methods like GET, POST, or PUT.  
+- **Setup**
+  - Installation : ```pip install djangorestframework```
 
 ## REST Framework
 - Django REST Framework (**DRF**).
