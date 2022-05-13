@@ -1,6 +1,8 @@
 name: Learning
 title: HOME
 
+tagline: Change `tagline` in `_config.yml`
+
 menu:
   - title:             Example
     url:               /example/
