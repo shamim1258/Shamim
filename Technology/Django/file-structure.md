@@ -17,6 +17,7 @@
   - configs
     - README
   - manage.py
+  - requirements.txt
   - README
   - static
     - README
