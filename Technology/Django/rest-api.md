@@ -11,6 +11,18 @@
 - **Setup**
   - Installation : ```pip install djangorestframework```
 
+### Advantages
+- Designed for high performance, portability, reliability, and scalability.
+- Client-server separation allows each to individually operate and scale.
+- Easy to test and adapt to various environments.
+- Supports various data transfer technologies including JSON, XML, YAML, images, and more.
+- Uses less bandwidth than other methods, such as SOAP.
+
+### Disadvantages
+- Doesn’t enforce security practices.
+- HTTP method limits you to synchronous requests.
+- Due to statelessness, you might be unable to maintain state (e.g. in sessions).
+
 ## REST Framework
 - Django REST Framework (**DRF**).
 - It is a package built on top of Django to create web APIs.  
