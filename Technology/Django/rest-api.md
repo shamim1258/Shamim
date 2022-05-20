@@ -23,6 +23,17 @@
 - HTTP method limits you to synchronous requests.
 - Due to statelessness, you might be unable to maintain state (e.g. in sessions).
 
+### Response Status Code
+- 200: Successful request
+- 201: Entity or entities created from successful request
+- 400: Bad request. Invalid client request.
+- 401: Unauthorized. User isn’t authorized to access a resource and may be unauthenticated
+- 403: Forbidden. User isn’t authorized to access a resource, user is authenticated
+- 404: Not found. Resource not found
+- 500: Internal server error. Generic server error
+- 502: Bad gateway. Response from upstream server is not valid
+- 503: Service unavailable. Result of server-side issue, including overload or system failure
+
 ## REST Framework
 - Django REST Framework (**DRF**).
 - It is a package built on top of Django to create web APIs.  
