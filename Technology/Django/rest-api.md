@@ -24,6 +24,7 @@
 - Due to statelessness, you might be unable to maintain state (e.g. in sessions).
 
 ### Response Status Code
+```from rest_framework import status```
 - 200: Successful request
 - 201: Entity or entities created from successful request
 - 400: Bad request. Invalid client request.
