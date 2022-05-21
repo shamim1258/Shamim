@@ -46,7 +46,8 @@
     - Uses decorator ```@api_view``` for request and response.
 
   - **Class Based**
-    - Uses ```APIVIEW```
+    - Uses ```APIVIEW```  
+
 
       from django.shortcuts import render
       from django.http import HttpResponse
