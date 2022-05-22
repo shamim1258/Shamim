@@ -82,6 +82,8 @@
 
 ### Serialization
 - We can not send Python objects over a network, and hence need a mechanism to translate Django models in other formats like JSON, XML, and vice-versa. This sometimes challenging process, also called serialization.  
+  - GET request : convert from model object to JSON.
+  - POST request : convert from JSON to model object can alse called de-serialization.
 - Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON, XML or other content types. Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.  
 - For serialization create file : ```serializers.py```  
 
