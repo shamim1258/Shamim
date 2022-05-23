@@ -46,3 +46,6 @@ DTL stand for Django Template Language.
 Django template has its own syntax in rendering the data on to the web page.  
 - For displaying a dynamic variable, the variable name is written inside the curly braces; denoted by ```{{variable_name}}```.
 
+
+### Django Server side and Client side rendering
+check..
