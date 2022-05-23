@@ -79,3 +79,10 @@
 #### Viewset
 - To render data into frontend, and handle requests from user, we need to create a view. In Django REST Framework, we call these as viewsets.  
 - 
+
+#### @api_view
+- The @api_view is a decorator in the rest_framework.decorators module, and it is the base class for all the Django REST framework views. We can provide the allowed HTTP verbs as the http_methods_names argument (list of strings) in the @api_view decorator.  
+```@api_view(http_method_names=['GET'])```
+- The @api_view decorator can parse different content types by choosing the appropriate parser.
+- When we use the @api_view decorator, it automatically makes use of APIView class and its settings. This way we will be able to use the parsers and renders.
+- The @api_view decorator helps the Django REST framework to examine the Content-Type header in the data attribute and identifies the exact parser to parse the request. It also invokes the rest_framework.negotiation.DefaultContentNegotiation class to select the suitable renderer for the request.
