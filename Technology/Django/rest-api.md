@@ -48,42 +48,21 @@
   - **Class Based**
     - Uses ```APIVIEW```  
 
-
-    from django.shortcuts import render
-      from django.http import HttpResponse
-      from rest_framework.decorators import api_view
-      from rest_framework.response import Response
-      from talk.models import Post
-      from talk.serializers import PostSerializer
-      from talk.forms import PostForm
-
-      def home(request):
-        tmpl_vars = {'form': PostForm()}
-        return render(request, 'talk/index.html', tmpl_vars)
-
-
-      @api_view(['GET'])
-      def post_collection(request):
-        if request.method == 'GET':
-          posts = Post.objects.all()
-          serializer = PostSerializer(posts, many=True)
-          return Response(serializer.data)
-
-      @api_view(['GET'])
-      def post_element(request, pk):
-        try:
-          post = Post.objects.get(pk=pk)
-        except Post.DoesNotExist:
-          return HttpResponse(status=404)
-
-      if request.method == 'GET':
-        serializer = PostSerializer(post)
-        return Response(serializer.data)
-
 ### Serialization
 - We can not send Python objects over a network, and hence need a mechanism to translate Django models in other formats like JSON, XML, and vice-versa. This sometimes challenging process, also called serialization.  
-  - GET request : convert from model object to JSON.
-  - POST request : convert from JSON to model object can alse called de-serialization.
+  - GET request : convert from model object to JSON.  
+     if request.method == 'GET':
+        transformer = Transformer.objects.all()
+        serializer = TransformerSerializer(transformer, many=True)
+        return JsonResponse(serializer.data, safe=False)
+  - POST request : convert from JSON to model object can alse called de-serialization.  
+     elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = TransformerSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)  
 - Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON, XML or other content types. Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data. - Serializer classes -
   - Serializer
   - ModelSerializer 
