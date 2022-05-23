@@ -51,7 +51,7 @@
 ### Serialization
 - We can not send Python objects over a network, and hence need a mechanism to translate Django models in other formats like JSON, XML, and vice-versa. This sometimes challenging process, also called serialization.  
   - GET request : convert from model object to JSON.  
-     if request.method == 'GET':
+      if request.method == 'GET':
         transformer = Transformer.objects.all()
         serializer = TransformerSerializer(transformer, many=True)
         return JsonResponse(serializer.data, safe=False)
