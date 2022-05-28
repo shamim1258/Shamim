@@ -14,8 +14,7 @@
 ## Links
 [Django File Structure](file-structure.md)  
 [Working on Projects](working-on-project.md)    
-[Rest API](rest-api.md)
-[Rest API](Api/base.md)
+[Rest API](Api/base.md)  
 
 ### MVT
 
