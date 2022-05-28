@@ -3,6 +3,9 @@
 - REST APIs are an industry-standard way for web services to send and receive data.  
 - They use HTTP request methods to facilitate the request-response cycle and typically transfer data using JSON, and more rarely - HTML, XML and other formats.  
 
+**Links :**  
+- [Example](example_1.md)
+
 ## REST API
 - REST stands for Representational State Transfer.  
 - It is a standard architecture for building and communicating with web services.  
