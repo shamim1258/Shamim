@@ -1,4 +1,14 @@
-# Rest API example - function based view basic
+# Rest API example
+
+This example shows the function and class based views keeping all the files and we can use the class based views.py file or function based from below.
+
+**urls.py**
+
+     urlpatterns = [
+       path('admin/', admin.site.urls),
+       path('students/', views.students_list),
+       path('students/', views.students_details),
+     ]
 
 **Models.py**  
 
@@ -21,6 +31,7 @@
          fields = ["id","name","score"]
          
 **Views.py**
+This views file is for the function based views
 
      from students.models import Students
      from students.serializers import StudentSerializers
@@ -64,10 +75,24 @@
          Students.delete()
          return Response(status=status.HTTP_204_NO_CONTENT)
          
-**urls.py**
+**Views.py**
+This views file used for class based views keeping rest of the other files same.
 
-     urlpatterns = [
-       path('admin/', admin.site.urls),
-       path('students/', views.students_list),
-       path('students/', views.students_details),
-     ]
+     from students.models import Students
+     from students.serializers import StudentSerializers
+     from rest_framework.response import Response
+     from rest_framework import status
+     from rest_framework.views import APIView
+     
+     class SturdentList(APIView):
+       def get(self, request):
+         students = Students.objects.all()
+         serializers = StudentSerializers(students,many=True)
+         return Response(serializers.data)
+         
+       def post(self, request):
+         serializers = StudentSerializers(data=request.data)
+           if serializers.is_valid():
+             serializers.save()
+             return Response(serializers.data,status=status.HTTP_201_CREATED)
+         return Response(serializers.errors,status=status.HTTP_400_BAD_REQUEST)
