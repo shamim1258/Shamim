@@ -44,6 +44,8 @@
 - most remarkable features of Django is its Object Relational Mapper (ORM) which facilitates interaction with the database in a Pythonic way.  
 - There are three stages before creating a API through REST framework, Converting a Model’s data to JSON/XML format (Serialization), Rendering this data to the view, Creating a URL for mapping to the viewset.  
 - To initialize REST Framework in your project, go to settings.py, and in INSTALLED_APPS add ‘rest_framework’ at the bottom.  
+- There are two ways to directly implement APIView: With a function or with a class. If you're writing a view in the form of a function, you'll need to use the @api_view decorator.
+- @api_view is a decorator that converts a function-based view into an APIView subclass (thus providing the Response and Request classes). It takes a list of allowed methods for the view as an argument.
 - Can be done using class based or function based.  
   - **Function Based**
     - Uses decorator ```@api_view``` for request and response.
