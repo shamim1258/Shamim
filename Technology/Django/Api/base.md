@@ -63,6 +63,7 @@
     - Those decorators correspond to APIView subclasses. Because the @api_view decorator checks if any of the following decorators are used, they need to be added below the api_view decorator.
     - If we use the same example that we did for the policy attributes, we can implement the decorators like so to achieve the same results:  
 
+
     from rest_framework.decorators import api_view, permission_classes, renderer_classes
     from rest_framework.permissions import IsAuthenticated
     from rest_framework.renderers import JSONRenderer
