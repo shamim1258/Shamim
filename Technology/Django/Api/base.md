@@ -40,6 +40,14 @@
 
 ## REST Framework
 - Django REST Framework (**DRF**).
+  - Django REST Framework (DRF) has its own flavor of views that inherit from Django's View class.
+  - The essential component of DRF views is the APIView class, which subclasses Django's View class.
+  - APIView class is a base for all the views that you might choose to use in your DRF application which includes :
+    - function-based views
+    - class-based views
+    - mixins
+    - generic view classes
+    - viewsets
   - When a request hits a view, the view first initializes a Request object, which is a DRF-enhanced HttpRequest from Django.
   - When compared to Django's HttpRequest, it has the following advantages:
     - Content is automatically parsed according to the Content-Type header and is available as request.data.
