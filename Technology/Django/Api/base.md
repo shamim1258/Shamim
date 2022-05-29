@@ -40,6 +40,11 @@
 
 ## REST Framework
 - Django REST Framework (**DRF**).
+  - When a request hits a view, the view first initializes a Request object, which is a DRF-enhanced HttpRequest from Django.
+  - When compared to Django's HttpRequest, it has the following advantages:
+    - Content is automatically parsed according to the Content-Type header and is available as request.data.
+    - It supports PUT and PATCH methods (including file uploads). (Django only supports GET and POST methods.)
+    - By temporarily overriding the method on a request, it checks permissions against other HTTP methods.
 - It is a package built on top of Django to create web APIs.  
 - most remarkable features of Django is its Object Relational Mapper (ORM) which facilitates interaction with the database in a Pythonic way.  
 - There are three stages before creating a API through REST framework, Converting a Model’s data to JSON/XML format (Serialization), Rendering this data to the view, Creating a URL for mapping to the viewset.  
@@ -49,6 +54,27 @@
 - Can be done using class based or function based.  
   - **Function Based**
     - Uses decorator ```@api_view``` for request and response.
+    - If you want to override the default settings for your function-based view, you can use policy decorators. You can use one or multiple of the following:
+      - @renderer_classes
+      - @parser_classes
+      - @authentication_classes
+      - @throttle_classes
+      - @permission_classes
+    - Those decorators correspond to APIView subclasses. Because the @api_view decorator checks if any of the following decorators are used, they need to be added below the api_view decorator.
+    - If we use the same example that we did for the policy attributes, we can implement the decorators like so to achieve the same results:  
+
+    from rest_framework.decorators import api_view, permission_classes, renderer_classes
+    from rest_framework.permissions import IsAuthenticated
+    from rest_framework.renderers import JSONRenderer
+    from rest_framework.response import Response
+
+    @api_view(['GET'])
+    @permission_classes([IsAuthenticated])  # policy decorator
+    @renderer_classes([JSONRenderer])       # policy decorator
+    def items_not_done(request):
+      user_count = Item.objects.filter(done=False).count()
+      content = {'not_done': user_count}
+    return Response(content)
 
   - **Class Based**
     - Uses ```APIVIEW```  
