@@ -1,3 +1,3 @@
 **Example Code File Links:**
 
-- [connect.py](connect.md)  : DB query execution, read AWS parameter, create csv file, send email with attachment :mytag: [#mytag2]()
+- [connect.py](connect.md)  : ```DB Query Execution, Read AWS Parameter, Write CSV File, Email with Attachment```
