@@ -1,5 +1,4 @@
-```
-import boto3
+```import boto3
 import smtplib
 import logging
 import cx_Oracle as cx
@@ -203,5 +202,4 @@ class DatabaseOperation():
         session.starttls()  # enable security
         session.login(self.safemail_username, self.safemail_password)
         session.sendmail(self.safemail_from, user_email, message.as_string())
-        session.quit()
-        ```
+        session.quit()```
