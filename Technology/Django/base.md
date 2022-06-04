@@ -30,9 +30,11 @@ Although Django follows MVC pattern but maintains it's own conventions. So, cont
   - With this can perform the DML operations on the data.
   - So after defining our database tables, columns and records; we are going to get the data linked to our application by defining the mapping in settings.py file under the INSTALLED_APPS.
 - **View**
+  - According to Django, the ‘view’ basically describes the data presented to the user. It does not deal with how the data looks but rather what the data actually is.
   - This is the part where actually we would be mentioning our logic. This coding is done through the python file views.py
   - How do you think that the system is going to understand to display a particular view? This can be done by mapping the views.py in urls.py file.
 - **Template**
+  - The ‘templates’ on the other hand deal with the presentation of data, thereby, separating the content from its presentation.
   - The Template handles the UI and architecture part of an application.
   - This template helps us to create a dynamic website in an easy manner. The dynamic website deals with dynamic data. Dynamic data deals with a scenario where each user is displayed with their personalized data.
   - The configuration of the template is done in settings.py file under INSTALLED_APPS. So python code would search for the files under the template subdirectory.
