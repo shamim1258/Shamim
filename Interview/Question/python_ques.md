@@ -23,7 +23,11 @@ Having .pyc file saves you the compilation time.
 
 9. Explain split() and join() functions in Python?
 10. What does \*args and \*\*kwargs mean?
-  
+11. What is suit in Python?
+&emsp;<details>
+Suit is group of statements which as a combination perform a block of codes.
+
+
 ## Python Class
 
 1. How does inheritance work in class?
