@@ -6,12 +6,33 @@
 - Open source.
 - The main python files are used to link with each other to display our web page are settings.py, view.py, and urls.py.
 
-## Benefits
-    1. Django is a rapid web development framework.
-    2. It is very easy to switch database in Django framework.
-    3. It has built-in admin interface which makes easy to work with it.
+**Features of Django**
+- Admin Interface
+- Templating
+- Form Handling
+- Internationalization
+- A Session, user management, role-based permissions
+- Object-relational mapping (ORM)
+- Testing Framework
+- Fantastic Documentation
+
+**Advantages**
+- Django is python framework so it is easy to learn.
+- Clear and readable.
+- Versitile
+- Secure
+- Scalable
+- Django is a rapid web development framework.
+- It is very easy to switch database in Django framework.
+- It has built-in admin interface which makes easy to work with it.
+
+**Disadvantages**
+- You must know the full structure to work.
+- Django module are bulky
+- Completely based on django ORM.
+- Components are deployed together.
     
-## Links
+**Links**
 [Django File Structure](file-structure.md)  
 [Working on Projects](working-on-project.md)    
 [Rest API](Api/base.md)  
