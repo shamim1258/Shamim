@@ -129,4 +129,14 @@
 ```@api_view(http_method_names=['GET'])```
 - The @api_view decorator can parse different content types by choosing the appropriate parser.
 - When we use the @api_view decorator, it automatically makes use of APIView class and its settings. This way we will be able to use the parsers and renders.
-- The @api_view decorator helps the Django REST framework to examine the Content-Type header in the data attribute and identifies the exact parser to parse the request. It also invokes the rest_framework.negotiation.DefaultContentNegotiation class to select the suitable renderer for the request.
+- The @api_view decorator helps the Django REST framework to examine the Content-Type header in the data attribute and identifies the exact parser to parse the request. It also invokes the rest_framework.negotiation.DefaultContentNegotiation class to select the suitable renderer for the request.  
+
+### Mixins
+- The mixin classes can be imported from rest_framework.mixins  
+- The mixin classes provide the actions that are used to provide the basic view behavior. Note that the mixin classes provide action methods rather than defining the handler methods, such as .get() and .post(), directly. This allows for more flexible composition of behavior.  
+- List of available mixins:  
+  - ListModelMixin: provides a .list() method to the view/viewset
+  - RetrieveModelMixin: provides a .retrieve() method to the view/viewset
+  - CreateModelMixin: provides a .create() method to the view/viewset
+  - UpdateModelMixin: provides a .update() method to the view/viewset
+  - DestroyModelMixin: provides a .destroy() method to the view/viewset
