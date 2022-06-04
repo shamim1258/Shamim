@@ -32,7 +32,7 @@
 - Completely based on django ORM.
 - Components are deployed together.
     
-**Links**
+**Links**  
 [Django File Structure](file-structure.md)  
 [Working on Projects](working-on-project.md)    
 [Rest API](Api/base.md)  
