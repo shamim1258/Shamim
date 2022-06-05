@@ -24,3 +24,8 @@
   - Scrum Developer
 - ROI - Return Of Investment
 - Scrum main purpose is to increase the ROI of project.
+
+**User Story Mapping :**
+Mapping a new story to existing product or feature.
+
+Any team member can write user story.
