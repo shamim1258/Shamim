@@ -8,6 +8,8 @@
 [Shell Script Notes](Technology/Shell/base.md)  
 [Git Notes](Technology/Git/base.md)  
 
+[Project Management](Management/base.md)  
+
 [Difference Between](Technology/differences.md)  
 [Question](Interview/Question/base.md)  
 
