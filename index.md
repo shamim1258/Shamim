@@ -5,6 +5,7 @@
 [Django Notes](Technology/Django/base.md)  
 [Django Rest API](Technology/Django/Api/base.md)  
 [AWS Notes](Technology/AWS/base.md)  
+[Linux Commands](Technology/Linux/base.md)  
 [Shell Script Notes](Technology/Shell/base.md)  
 [Git Notes](Technology/Git/base.md)  
 
