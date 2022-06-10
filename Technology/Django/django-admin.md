@@ -3,5 +3,7 @@
 Django provide build-in Admin-Page to manage access and permission.  
 
 ## Access
-- User access is created in model - auth_user
+- Model - **auth_user**
+  - User authentication maintained in this model.
+  - Rest_Framework also use this model for user authentication.
 
