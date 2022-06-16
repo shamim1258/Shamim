@@ -10,6 +10,7 @@
 [Git Notes](Technology/Git/base.md)  
 
 [Project Management](Management/base.md)  
+[Deployment](Technology/Deployment/base.md)
 
 [Difference Between](Technology/differences.md)  
 [Question](Interview/Question/base.md)  
