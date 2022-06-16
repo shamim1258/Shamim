@@ -1,5 +1,7 @@
 # Deployment
 
+[Django File Structure](../Django/file-structure.md)
+
 **My Project Deployment Process :**  
 1. Git pull repository
 2. Apply changes in local
