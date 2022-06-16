@@ -26,6 +26,7 @@
     - core
       - login.html
     - README
+  - Dockerfile
 
 **Notes :**
 - **Root Directory :** the directory which contains your manage.py file.
