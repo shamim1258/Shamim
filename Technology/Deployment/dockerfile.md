@@ -1,4 +1,4 @@
-    
+      
 FROM python:3
 ENV PYTHONUNBUFFERED=1
 ENV LD_LIBRARY_PATH=/opt/oracle/instantclient_21_1
