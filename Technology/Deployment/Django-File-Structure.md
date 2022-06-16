@@ -27,6 +27,7 @@
       - login.html
     - README
   - Dockerfile
+  - Jenkinsfile
 
 **Notes :**
 - **Root Directory :** the directory which contains your manage.py file.
