@@ -24,7 +24,7 @@
     - Checks the branch working on ```env.BRANCH_NAME```
     - ```docker.build("${package_url}")``` this line will build the docker image (docker image contains the application file/code along with dependencies).
     - ```docker.withRegistry('https://artifacts.kpn.org', 'artifacts.kpn.org') { img.push("${tag}") // Pushing the image }```  
-    This line will publish docker build image to the artifactory where withRegistry method takes 1 arguments as customer artifactory url and 2nd argument is the credentials which are coming from Jenkins Credential Manager.
+    This line will publish docker build image to the artifactory where withRegistry method takes 1 arguments as customer artifactory url and 2nd argument is the credentials which are coming from Jenkins Credential Manager. ```img.push``` for pushing image with the latest tag.
 7. 
 8. With git repository update jenkins pipeline will be trigger 
 9. in Jenkins artifactory will be created 
