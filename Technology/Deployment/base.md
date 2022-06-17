@@ -19,9 +19,9 @@
   - This file is reading parameters from file - 'Jenkins.properties'
   - The stages are the jenkins steps in the pipeline.
   - Stage : Checkout  
-    - ```checkout scm``` this line is checking out the git repository.
-  - Stage - Docker Build
-    - Checks the branch working on ```env.BRANCH_NAME```
+    - This line is checking out the git repository ```checkout scm```.  
+  - Stage : Docker Build  
+    - Checks the branch working on ```env.BRANCH_NAME```.  
     - ```docker.build("${package_url}")``` this line will build the docker image (docker image contains the application file/code along with dependencies).
     - ```docker.withRegistry('https://artifacts.kpn.org', 'artifacts.kpn.org') { img.push("${tag}") // Pushing the image }```  
     This line will publish docker build image to the artifactory where withRegistry method takes 1 arguments as customer artifactory url and 2nd argument is the credentials which are coming from Jenkins Credential Manager. ```img.push``` for pushing image with the latest tag.
