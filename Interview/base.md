@@ -1,0 +1,66 @@
+# My Interview Preperation
+
+## Topics
+
+- Python
+  - Overview
+  - Setup
+  - Data Types
+  - Libraries / Packages
+  - File Handling
+  - Memory Management
+  - Funtion
+  - Class
+- Django
+  - Overview / MVT
+  - File Structure
+  - ORM - DB Language
+  - Utility Commands
+  - Multiuser
+  - Admin Panel
+  - Security
+  - Templating Language Jinja Format
+  - Rendering Server and Client side
+  - **Deployment**
+    - Overview
+    - Nginx
+    - Jenkins
+    - Docker Container
+    - WSGI
+    - Git
+- REST API
+  - Django Rest Framework
+  - Class Based
+  - Function Based
+  - Mixins
+  - Serialization
+  - Security
+    - Authentication
+    - JWT
+- Database
+  - SQL
+  - PL/SQL
+- Shell Scripting
+  - Cron Job
+  - Basic Commands
+  - Programming Logic
+  - File Handling
+- AWS
+  - EC2
+  - S3
+  - Access
+  - Policy
+  - Lambda Function
+  - Parameter Store
+- Git
+  - Overview
+  - Basic Commands
+- Docker Container
+  - Overview
+  - Basic Commands
+- Javascript
+  - Overview
+  - Basic Operations
+- HTML
+- CSS
+- Bootstrap
