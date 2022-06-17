@@ -40,6 +40,7 @@ foo\nbar```
 ### &emsp;List
 - List is like array but item can of different data-types.
 - Uses - []
+- List methods are - append(), clear(), copy(), count(), extend(), pop(), remove(), reverse(), index(), insert(), sort()
 
 ### &emsp;Tuble
 - Tuple are immutable i.e. cannot be modified after it is created.
