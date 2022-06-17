@@ -7,5 +7,5 @@
 [Shell Scripting Questions Preperations](python_ques.md)    
 
 **My Interview :**
-[Blue Yonder Inc](Blue-Yonder-Inc.md)  
+[Blue Yonder Inc](Blue-Yonder-Interview.md)  
 
