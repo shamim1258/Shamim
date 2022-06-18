@@ -8,12 +8,14 @@
 Test
 
 1.  2space
-2.  2space
+1.  2space
     1.  2space2space
     1.  4space2space
-    1.    4space2space
-4.    4space
-5.    4space
+        1.  3rdlevel
+        2.  2spaces
+    1.  4space2space
+1.  4space
+1.  4space
 
 
 
