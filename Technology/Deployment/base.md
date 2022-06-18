@@ -11,9 +11,9 @@
    a. `git pull <branch-name>`.  
 2. Make changes in this repo locally.
 3. **Pushing local changes to remote in Git**  
-```git status
-git add <file-names-space-separated>
-git commit -m "message-string"
+```git status  
+git add <file-names-space-separated>  
+git commit -m "message-string"  
 git push origin <branch-name>```  
 
 4. If step-3 is success verify changes in git cloud/remote.
