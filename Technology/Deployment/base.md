@@ -20,10 +20,10 @@
   a. This file is reading parameters from file - 'Jenkins.properties'.  
   b. The stages are the jenkins steps in the pipeline.  
   c. Stage : Checkout  
-    i. This line is checking out the git repository ```checkout scm```.  
+    1. This line is checking out the git repository ```checkout scm```.  
   d. Stage : Docker Build  
-    - Checks the branch working on ```env.BRANCH_NAME```.  
-    - ```docker.build("${package_url}")``` this line will build the docker image (docker image contains the application file/code along with dependencies).
+    1. Checks the branch working on ```env.BRANCH_NAME```.  
+    2. ```docker.build("${package_url}")``` this line will build the docker image (docker image contains the application file/code along with dependencies).
       - Internally above step will run the command ```docker build -t artifacts.kpn.org/docker-local/cm_northbound/awstools/dev .```
       - By default setting above command will run the [DockerFile](dockerfile.md) from jenkins logs ```[internal] load build definition from Dockerfile```.
     - ```docker.withRegistry('https://artifacts.kpn.org', 'artifacts.kpn.org') { img.push("${tag}") // Pushing the image }```  
