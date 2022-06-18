@@ -22,11 +22,15 @@ Check the [operations](#operations) on data-types.
 
 ## Text
 ### &emsp;str
-- Strings are sequences of character data.
-- Interpreting a character or sequence of characters within a string differently use ```\``` as **Escape Sequences**.
-- **Raw String** - literal is preceded by r or R, which specifies that escape sequences in the associated string are not translated. The backslash character is left in the string: ```>>> print(r'foo\nbar')
-foo\nbar```
-- **Triple Quoted Strings** - Escape sequences still work in triple-quoted strings, but single quotes, double quotes, and newlines can be included without escaping them.
+1.  **str**
+    - Strings are sequences of character data.
+    - Interpreting a character or sequence of characters within a string differently use ```\``` as **Escape Sequences**.
+    - **Raw String** - literal is preceded by r or R, which specifies that escape sequences in the associated string are not translated. The backslash character is left in the string:
+    `>>> print(r'foo\nbar')`  
+    `foo\nbar`
+    - **Triple Quoted Strings** - Escape sequences still work in triple-quoted strings, but single quotes, double quotes, and newlines can be included without escaping them.
+    -  All string methods returns new values. They do not change the original string.
+    -  Various [methos](https://www.w3schools.com/python/python_ref_string.asp) on string.
 
 ## Numeric
 ### &emsp;int
