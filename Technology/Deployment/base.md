@@ -20,7 +20,7 @@
   a. This file is reading parameters from file - 'Jenkins.properties'.  
   b. The stages are the jenkins steps in the pipeline.  
   c. Stage : Checkout  
-    1. This line is checking out the git repository ```checkout scm```.  
+    1. ```checkout scm``` This line is checking out the git repository.  
   d. Stage : Docker Build  
     1. Checks the branch working on ```env.BRANCH_NAME```.  
     2. ```docker.build("${package_url}")``` this line will build the docker image (docker image contains the application file/code along with dependencies).
