@@ -4,6 +4,7 @@
 - [Django File Structure](Django-File-Structure.md)  
 - [JenkinsFile](jenkinsfile.md)  
 - [DockerFile](dockerfile.md)  
+- [runner.sh](runner-sh.md)  
 
 **My Project Deployment Process :**  
 1.  Git pull repository.  
@@ -47,8 +48,7 @@ This line will publish docker build image to the artifactory where withRegistry 
         -  `cp -r /code/aws_tools/static /usr/local/lib/python3.9/site-packages/django/contrib/admin/`
     2.  Running below command
         -  `uwsgi --http "0.0.0.0:${PORT}" --module aws_tools.wsgi --master --processes 4 --threads 2`
-9. With git repository update jenkins pipeline will be trigger 
-10. in Jenkins artifactory will be created 
-11. Copy link from jenkins
-12. Goto AWS EC2 - kill existing docker image and pull new artifactory image and runserver
+8.  Rest task is performed in artifactory and in jenkins logs artifactory link logged.
+9.  Copy artifactory build image link from jenkins
+10.  Goto AWS EC2 - kill existing docker image and pull new artifactory image and runserver.
 
