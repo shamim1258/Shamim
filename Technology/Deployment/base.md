@@ -5,20 +5,6 @@
 - [JenkinsFile](jenkinsfile.md)  
 - [DockerFile](dockerfile.md)  
 
-Test
-
-1.  2space
-1.  2space
-    1.  2space2space
-    1.  4space2space
-        1.  3rdlevel
-        2.  2spaces
-    1.  4space2space
-1.  4space
-1.  4space
-
-
-
 **My Project Deployment Process :**  
 1.  Git pull repository.  
     1.  `git pull <branch-name>`.  
@@ -41,7 +27,18 @@ Test
         4.  By default setting above command will run the [DockerFile](dockerfile.md) from jenkins logs ```[internal] load build definition from Dockerfile```.
         5.  ```docker.withRegistry('https://artifacts.kpn.org', 'artifacts.kpn.org') { img.push("${tag}") // Pushing the image }```  
 This line will publish docker build image to the artifactory where withRegistry method takes 1 arguments as customer artifactory url and 2nd argument is the credentials which are coming from Jenkins Credential Manager. ```img.push``` for pushing image with the latest tag.
-7. 
+6.  [JenkinsFile](jenkinsfile.md) run the [DockerFile](dockerfile.md) at step 5-iv-c.
+    1.  DockerFile download the oracle client for linux library and copy the below 2 files
+        - `COPY aws_tools/libaio.so.1 /opt/oracle/instantclient_21_1`
+        -  `COPY aws_tools/libaio1 /opt/oracle/instantclient_21_1`
+    2.  Copy requirement.txt file to path code/ and run the this file with below command
+        -  `RUN pip install -r requirements.txt`
+    3.  Coping the db.sqlite3 file from PROD directory
+        -  `COPY aws_tools/PROD_DB/db.sqlite3 /code/aws_tools/`
+    4.  Running django db migration commands
+        -  `RUN python /code/aws_tools/manage.py makemigrations`
+        -  `RUN python /code/aws_tools/manage.py migrate`
+    5.  Running the [runner.sh](runner.md) file 
 8. With git repository update jenkins pipeline will be trigger 
 9. in Jenkins artifactory will be created 
 10. Copy link from jenkins
