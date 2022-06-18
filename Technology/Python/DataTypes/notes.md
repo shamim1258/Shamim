@@ -21,7 +21,6 @@ Convert data-type - ```str(123)```.
 Check the [operations](#operations) on data-types.
 
 ## Text
-### &emsp;str
 1.  **str**
     - Strings are sequences of character data.
     - Interpreting a character or sequence of characters within a string differently use ```\``` as **Escape Sequences**.
@@ -33,11 +32,12 @@ Check the [operations](#operations) on data-types.
     -  Various [methos](https://www.w3schools.com/python/python_ref_string.asp) on string.
 
 ## Numeric
-### &emsp;int
-- In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has.
+-  Various methods on numberic data types - min(n1,n2,n3..), max(n1,n2,n3..), abs(x), pow(x,y), round(x), sqrt(x)
+1.  **int**
+    -  In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has.
 
-### &emsp;float
-- float values are specified with a decimal point.
+2.  **float**
+    - float values are specified with a decimal point.
 
 
 ## Sequence
