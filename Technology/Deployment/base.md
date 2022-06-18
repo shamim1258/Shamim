@@ -2,8 +2,9 @@
 
 **Links :**  
 [Django File Structure](Django-File-Structure.md)  
-[DockerFile](dockerfile.md)  
 [JenkinsFile](jenkinsfile.md)  
+[DockerFile](dockerfile.md)  
+
 
 **My Project Deployment Process :**  
 1. Git pull repository.  
@@ -24,7 +25,7 @@
     - Checks the branch working on ```env.BRANCH_NAME```.  
     - ```docker.build("${package_url}")``` this line will build the docker image (docker image contains the application file/code along with dependencies).
       - Internally above step will run the command ```docker build -t artifacts.kpn.org/docker-local/cm_northbound/awstools/dev .```
-      - By default setting above command will run the ```Dockerfile``` from jenkins logs ```[internal] load build definition from Dockerfile```.
+      - By default setting above command will run the [DockerFile](dockerfile.md) from jenkins logs ```[internal] load build definition from Dockerfile```.
     - ```docker.withRegistry('https://artifacts.kpn.org', 'artifacts.kpn.org') { img.push("${tag}") // Pushing the image }```  
     This line will publish docker build image to the artifactory where withRegistry method takes 1 arguments as customer artifactory url and 2nd argument is the credentials which are coming from Jenkins Credential Manager. ```img.push``` for pushing image with the latest tag.
 7. 
