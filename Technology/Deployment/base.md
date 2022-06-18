@@ -11,10 +11,10 @@
   a. ```git pull <branch-name>```.  
 2. Make changes in this repo locally.
 3. **Pushing local changes to remote in Git**
-  a. ```git status```.  
-  a. ```git add <file-names-space-separated>```.  
-  a. ```git commit -m "message-string"```.  
-  d. ```git push origin <branch-name>```.  
+  1. ```git status```.  
+  2. ```git add <file-names-space-separated>```.  
+  1. ```git commit -m "message-string"```.  
+  1. ```git push origin <branch-name>```.  
 4. If step-3 is success verify changes in git cloud/remote.
 5. Repository contain one file - [JenkinsFile](jenkinsfile.md) which is configured in jenkins configuration to run this as script file, so for every push on git this file will be executed. So deployment is initiated from within repository only running the script from jenkinsfile.  
   a. This file is reading parameters from file - 'Jenkins.properties'.  
