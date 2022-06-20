@@ -8,7 +8,7 @@ Convert data-type - ```str(123)```.
 - [Text](#text)    : str
 - [Numeric](#numeric)    : int, float, complex
 - [Sequence](#sequence)    : list, tuple, range
-- [Mappingr](#mapping)    : dict
+- [Mapping](#mapping)    : dict
 - [Set](#set)    : set, frozenset
 - [Boolean](#boolean)    : bool
 - [Binary](#binary)    : bytes, bytearray, memoryview
@@ -42,21 +42,39 @@ Check the [operations](#operations) on data-types.
 
 
 ## Sequence
-### &emsp;List
+1.  **List**
 - List is like array but item can of different data-types.
 - Uses - []
 - List methods are - append(), clear(), copy(), count(), extend(), pop(), remove(), reverse(), index(), insert(), sort()
 
-### &emsp;Tuble
+2.  **Tuple**
 - Tuple are immutable i.e. cannot be modified after it is created.
 - Uses - ()
+- Tuple methods only 2 - count(), index()
     
-### &emsp;Range
-- This is range section.
+2.  **Range**
+- Create a sequence of number starting from 0 to n-1.
+- Syntax `range(start, stop, step)`
+
+## Mapping
+- Mapping data types are key, value pair types - dict.
+^
+1.  **dict**
+- Methods - clear(), copy(), formkeys(), get(), items(), keys(), pop(), popitem(), setdefault(), update(), values()
+
+## Set
+1.  **Set**
+- Methods - add(), clear(), copy(), difference(), difference_update(), discard(), intersection(), intersection_update(), isdisjoint(), issubset(), isuperset(), pop(), remove(), symmetric_difference(), symmetric_difference_update(), union(), update().
+
+2.  **FronzenSet**
+- It return set of unchangeable objects.
+- Methods - 
 
 ## Boolean
-### &emsp;bool
+1.  **bool**
 - Boolean type have 2 values -```True or False```.
+- Return boolean value of given expression - `bool(1)`
+- If no parameter is given default return value is `False`.
 
 # Variable scopes
 ### &emsp;Global
