@@ -3,12 +3,12 @@
 **Python :**.
 1. How security can be implemented in Python.
 &emsp;<details>
--  Careful when downloading the package. - PyPl - packages issues can be reported but package added to pypl does not undergo review. We can use https://snyk.io/advisor/ to check package security health.
--  User python capacity for virtual environment.
--  Set `Debug = False` in production. - Make sure to switch debugging to False in production to prevent leaking sensitive application information to attackers.
--  Be careful with string formatting.
--  (De)serialize very cautiously
--  Do not use the system standard version of Python - problem with build python is its not latest version.
+Careful when downloading the package. - PyPl - packages issues can be reported but package added to pypl does not undergo review. We can use https://snyk.io/advisor/ to check package security health.
+User python capacity for virtual environment.
+Set `Debug = False` in production. - Make sure to switch debugging to False in production to prevent leaking sensitive application information to attackers.
+<li>Be careful with string formatting.</li>
+- (De)serialize very cautiously
+Do not use the system standard version of Python - problem with build python is its not latest version.
   
 1. How security can be implemented in Django.
 &emsp;<details>
