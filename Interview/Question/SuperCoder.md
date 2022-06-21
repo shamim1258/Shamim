@@ -9,6 +9,7 @@ Set `Debug = False` in production. - Make sure to switch debugging to False in p
 <li>Be careful with string formatting.</li>
 - (De)serialize very cautiously
 Do not use the system standard version of Python - problem with build python is its not latest version.
+  </details>
   
 1. How security can be implemented in Django.
 &emsp;<details>
