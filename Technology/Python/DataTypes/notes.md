@@ -88,18 +88,28 @@ Check the [operations](#operations) on data-types.
 
 # Other objects Types
 
-### &emsp;self
+**Generator Function :**
+A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. If the body of a def contains yield, the function automatically becomes a generator function.
+    # A generator function that yields 1 for first time,
+    # 2 second time and 3 third time
+    def simpleGeneratorFun():
+      yield 1            
+      yield 2            
+      yield 3
+
+
+**self :**
 - Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
 
-### &emsp;__init__
+**__init__ :**
 - __init__ is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a __init__ method associated with them.
 
-### &emsp;docstring
+**docstring :**
 - Represented with triple quotation marks used for documents. __doc__ attribute.
 Syntax ``` ''' This is doc string. '''  ```
 
 # Operations
 
-### &emsp;Slicing
+**Slicing :**
 - Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is number of items and step is 1.  
 Slicing can be done on strings, arrays, lists, and tuples.
