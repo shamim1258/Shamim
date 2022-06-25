@@ -77,26 +77,28 @@ Check the [operations](#operations) on data-types.
 - If no parameter is given default return value is `False`.
 
 # Variable scopes
-### &emsp;Global
+**Global :**
 - Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
 
-### &emsp;Protected
+**Protected :**
 - Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
 
-### &emsp;Private
+**Private :**
 - Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
 
 # Other objects Types
 
 **Generator Function :**
 A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. If the body of a def contains yield, the function automatically becomes a generator function.
-    # A generator function that yields 1 for first time,
-    # 2 second time and 3 third time
-    def simpleGeneratorFun():
-      yield 1            
-      yield 2            
-      yield 3
+      # A generator function that yields 1 for first time,
+      # 2 second time and 3 third time
+      def simpleGeneratorFun():
+        yield 1            
+        yield 2            
+        yield 3
 
+**Generator Object :**
+Generator functions return a generator object. Generator objects are used either by calling the next method on the generator object or using the generator object in a `for in` loop.
 
 **self :**
 - Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
