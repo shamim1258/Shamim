@@ -57,5 +57,11 @@
 
 
 ### Miscellaneous
-  -  ```eval()```&emsp;- Evaluates a Python expression.
-  -  ```len()```&emsp;- Returns the length of an object.
+  -  `eval()`&emsp;- Evaluates a Python expression.
+  -  `len()`&emsp;- Returns the length of an object.
+  -  `filter()`
+     -  Takes input as list, tuple, set or container of iterator.
+     -  Takes each element of input and if evelautes to True or not.
+     -  **Returns iterator** that is filtered.
+     -  It is normally used with Lambda functions to separate list, tuple, or sets.
+     -  Example `filter(lambda x: x % 2 != 0, [0,1,2,3,4])`
