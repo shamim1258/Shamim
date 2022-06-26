@@ -6,10 +6,11 @@
 ## Lambda Function
 -  Anonymous function means that a function is without a name.
 -  `lambda` keyword is used to create anonymous functions.
--  Syntax  
-   -  `lambda arguments : expression`.  
-   -  def myfunc(n):  
+-  Syntax    
+    - `lambda arguments : expression`.
+-  Example
 ^
+    def myfunc(n):  
     return lambda a,b : a * n * b
     mydoubler = myfunc(3)
     print(mydoubler(10,20))
