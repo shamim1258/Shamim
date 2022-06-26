@@ -8,12 +8,12 @@
 -  `lambda` keyword is used to create anonymous functions.
 -  Syntax  
    -  `lambda arguments : expression`.  
-   -  def myfunc(n):
-      return lambda a,b : a * n * b
-
-mydoubler = myfunc(3)
-
-print(mydoubler(10,20))
+   -  def myfunc(n):  
+^
+    return lambda a,b : a * n * b
+    mydoubler = myfunc(3)
+    print(mydoubler(10,20))
+      
 -  It can have any number of arguments but only one expression, which is evaluated and returned.
 
 
