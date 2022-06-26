@@ -8,15 +8,27 @@
 -  `lambda` keyword is used to create anonymous functions.
 -  Syntax    
     - `lambda arguments : expression`.
--  Example
+-  Example - Here `myfun(3)` 3 is argument for function myfunc not lambda `mydoubler(10,20)` is arguments to lambda function.
 ^
     def myfunc(n):  
-    return lambda a,b : a * n * b
+      return lambda a,b : a * n * b
     mydoubler = myfunc(3)
     print(mydoubler(10,20))
-      
+   
 -  It can have any number of arguments but only one expression, which is evaluated and returned.
-
+-  If we directly call lambda it will return the lambda object not it's return value.
+   -  `print(lambda a : a + 1)`
+-  To get the return value call this with the arguments.
+   -  Calling directly
+      -  `print((lambda a : a + 1)(5))`
+   -  Calling via variable  
+^
+    x = lambda a : a + 1
+    print(x(5))
+    
+   -  Calling inside function is above Example point-3
+      
+-  The power of lambda is better shown when you use them inside another function.
 
 ## Build-in Function
 - The Python interpreter supports many functions that are built-in: sixty-eight, as of Python 3.6.
