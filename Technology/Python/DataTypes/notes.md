@@ -98,11 +98,9 @@ Check the [operations](#operations) on data-types.
    -  Create **custom iterator** by defining a class that has `__init__, __next__, and __iter__` methods.
    -  **Generators Function** it looks like normal function except it uses `yield` instead of `return` expression.
    -  **Generator Expression** it return an iterator, it looks like normal expression followed by a `for` expression defining loop variable,range and an optional multiple `if` expression(s).  
-
-
+^
     numbers = [1, 2, 3, 4, 5]  
     squares = (number**2 for number in numbers if number % 2 == 0) if number % 4 == 0  
-    
     
 -  The `__iter__()` method acts similar, you can do operations (initializing etc.), but must always return the iterator object itself.
 -  **next()**
@@ -125,8 +123,6 @@ Check the [operations](#operations) on data-types.
 - Represented with triple quotation marks used for documents. __doc__ attribute.
 Syntax ``` ''' This is doc string. '''  ```
 
-
-
 # Operations
 
 **Slicing :**
@@ -134,4 +130,4 @@ Syntax ``` ''' This is doc string. '''  ```
 Slicing can be done on strings, arrays, lists, and tuples.
 
 **Links :**  
-[Lambda Function](../functions/base.md)
+[Lambda Function](../functions.md)
