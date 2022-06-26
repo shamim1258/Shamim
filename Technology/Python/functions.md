@@ -71,3 +71,20 @@
      -  **Returns iterator** that is filtered.
      -  It is normally used with Lambda functions to separate list, tuple, or sets.
      -  Example `filter(lambda x: x % 2 != 0, [0,1,2,3,4])`
+-  `map()`
+   -  `map(fun, iter)`
+   -  Returns a map object(which is an iterator) of the results after applying the given function to each item of a given iterable (list, tuple etc.).
+   -  It returns the values of the input function.
+-  `reduce()`
+   -  This function is defined in “functools” module.
+   -  The reduce(fun,seq) function is used to apply a particular function passed in its argument to all of the list elements mentioned in the sequence passed along.
+   -  At first step, first two elements of sequence are picked and the result is obtained.
+   -  Next step is to apply the same function to the previously attained result and the number just succeeding the second element and the result is again stored.
+   -  This process continues till no more elements are left in the container.
+   -  The final returned result is returned and printed on console
+^
+    import functools
+    lis = [1, 3, 5, 6, 2, ]
+    print(functools.reduce(lambda a, b: a+b, lis))
+    # Output 17 = 1+3, 4+5, 9+6, 15+2
+    
