@@ -30,9 +30,14 @@
       
 -  The power of lambda is better shown when you use them inside another function.
 
+## Higher Order Function
+-  A function is called Higher Order Function if it contains other functions as a parameter or returns a function as an output.
+-  Decorators are the most common use of higher-order functions.
+-  Example : Build-in functions - `filter()`, `map()`.
+
 ## Build-in Function
 - The Python interpreter supports many functions that are built-in: sixty-eight, as of Python 3.6.
-
+- Few important function are : **map(), filter(), reduce()**
 
 ### Math
   -  ```max()```&emsp;- Returns the largest of the given arguments or items in an iterable.
@@ -60,6 +65,7 @@
   -  `eval()`&emsp;- Evaluates a Python expression.
   -  `len()`&emsp;- Returns the length of an object.
   -  `filter()`
+     -  Syntax `filter (function, iterables)`
      -  Takes input as list, tuple, set or container of iterator.
      -  Takes each element of input and if evelautes to True or not.
      -  **Returns iterator** that is filtered.
