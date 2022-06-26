@@ -129,5 +129,5 @@ Syntax ``` ''' This is doc string. '''  ```
 - Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is number of items and step is 1.  
 Slicing can be done on strings, arrays, lists, and tuples.
 
-**Links :**
-[Lambda Function](../function/base.md)
+**Links :**  
+[Lambda Function](../functions/base.md)
