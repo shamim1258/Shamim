@@ -107,6 +107,10 @@ Check the [operations](#operations) on data-types.
    -  When this is used for first time it will get the first element.
    -  Iterators don’t have to be finite. It’s perfectly reasonable to write an iterator that produces an infinite stream of data.
 
+**yield :**
+- It temperory suspend the processing remembering the location execution state (including local variables and pending try-statements).
+- When the generator iterator resumes, it picks up where it left off (in contrast to functions which start fresh on every invocation).
+
 **self :**
 - Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
 
@@ -117,12 +121,13 @@ Check the [operations](#operations) on data-types.
 - Represented with triple quotation marks used for documents. __doc__ attribute.
 Syntax ``` ''' This is doc string. '''  ```
 
-**yield :**
-- It temperory suspend the processing remembering the location execution state (including local variables and pending try-statements).
-- When the generator iterator resumes, it picks up where it left off (in contrast to functions which start fresh on every invocation).
+
 
 # Operations
 
 **Slicing :**
 - Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is number of items and step is 1.  
 Slicing can be done on strings, arrays, lists, and tuples.
+
+**Links :**
+[Lambda Function](../function/base.md)
