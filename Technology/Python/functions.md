@@ -1,5 +1,22 @@
 # Functions
 
+## Normal Function
+- `def` keyword used to create function.
+
+## Lambda Function
+-  Anonymous function means that a function is without a name.
+-  `lambda` keyword is used to create anonymous functions.
+-  Syntax
+   -  `lambda arguments : expression`.
+   -  def myfunc(n):
+  return lambda a,b : a * n * b
+
+mydoubler = myfunc(3)
+
+print(mydoubler(10,20))
+-  It can have any number of arguments but only one expression, which is evaluated and returned.
+
+
 ## Build-in Function
 - The Python interpreter supports many functions that are built-in: sixty-eight, as of Python 3.6.
 
