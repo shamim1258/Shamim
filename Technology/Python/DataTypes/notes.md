@@ -88,17 +88,24 @@ Check the [operations](#operations) on data-types.
 
 # Other objects Types
 
-**Generator Function :**
-A generator-function is defined like a normal function, but whenever it needs to generate a value, it does so with the yield keyword rather than return. If the body of a def contains yield, the function automatically becomes a generator function.  
-    # A generator function that yields 1 for first time,
-    # 2 second time and 3 third time
-      def simpleGeneratorFun():
-        yield 1            
-        yield 2            
-        yield 3
-
-**Generator Object :**
-Generator functions return a generator object. Generator objects are used either by calling the next method on the generator object or using the generator object in a `for in` loop.
+**Iterator :**
+-  Iterator is an object that contains countable number of values.
+-  Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods `__iter__()` and `__next__()`.
+-  Iterators allow us to both work with and create lazy iterables that don’t do any work until we ask them for their next item.
+-  Because of their laziness, the iterators can help us to deal with infinitely long iterables. In some cases, we can’t even store all the information in the memory, so we can use an iterator which can give us the next item every time we ask it. Iterators can save us a lot of memory and CPU time.
+-  Creating iterators :
+   -  Applying the **`iter()`** built-in function to an iterable.
+   -  Create **custom iterator** by defining a class that has `__init__, __next__, and __iter__` methods.
+   -  **Generators Function** it looks like normal function except it uses `yield` instead of `return` expression.
+   -  **Generator Expression** it return an iterator, it looks like normal expression followed by a `for` expression defining loop variable,range and an optional multiple `if` expression(s).
+      -  `numbers = [1, 2, 3, 4, 5]`
+          `squares = (number**2 for number in numbers if number % 2 == 0) if number % 4 == 0`
+-  The `__iter__()` method acts similar, you can do operations (initializing etc.), but must always return the iterator object itself.
+-  **next()**
+   -  This method returns the next item from the container. If there are no further items, raise the `StopIteration` exception.
+   -  We can directly use `next()` function or `__next__()` method to traverse the elements.
+   -  When this is used for first time it will get the first element.
+   -  Iterators don’t have to be finite. It’s perfectly reasonable to write an iterator that produces an infinite stream of data.
 
 **self :**
 - Self is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python.
@@ -109,6 +116,10 @@ Generator functions return a generator object. Generator objects are used either
 **docstring :**
 - Represented with triple quotation marks used for documents. __doc__ attribute.
 Syntax ``` ''' This is doc string. '''  ```
+
+**yield :**
+- It temperory suspend the processing remembering the location execution state (including local variables and pending try-statements).
+- When the generator iterator resumes, it picks up where it left off (in contrast to functions which start fresh on every invocation).
 
 # Operations
 
