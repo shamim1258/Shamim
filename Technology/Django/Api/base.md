@@ -127,8 +127,8 @@
   - ModelSerializer 
 - For serialization create file : `serializers.py`  
 ^
-      from rest_framework import serializers
-      from talk.models import Post
+    from rest_framework import serializers
+    from talk.models import Post
     class PostSerializer(serializers.ModelSerializer):
       class Meta:
         model = Post
@@ -136,7 +136,6 @@
 
 #### Viewset
 - To render data into frontend, and handle requests from user, we need to create a view. In Django REST Framework, we call these as viewsets.  
-- 
 
 #### @api_view
 - The @api_view is a decorator in the rest_framework.decorators module, and it is the base class for all the Django REST framework views. We can provide the allowed HTTP verbs as the http_methods_names argument (list of strings) in the @api_view decorator.  
