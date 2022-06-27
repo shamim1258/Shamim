@@ -110,7 +110,8 @@
       if request.method == 'GET':
         transformer = Transformer.objects.all()
         serializer = TransformerSerializer(transformer, many=True)
-        return JsonResponse(serializer.data, safe=False)
+        return JsonResponse(serializer.data, safe=False)  
+        
   - POST request : convert from JSON to model object can alse called de-serialization.  
 ^
      elif request.method == 'POST':
@@ -120,6 +121,7 @@
             serializer.save()
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)  
+        
 - Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON, XML or other content types. Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data. - Serializer classes -
   - Serializer
   - ModelSerializer 
