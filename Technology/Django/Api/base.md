@@ -12,7 +12,23 @@
 - It typically mandates resources on the web are represented in a text format (like JSON, HTML, or XML) and can be accessed or modified by a predetermined set of operations.  
 - Given that we typically build REST APIs to leverage with HTTP instead of other protocols, these operations correspond to HTTP methods like GET, POST, or PUT.  
 - **Setup**
-  - Installation : ```pip install djangorestframework```
+  - Installation : `pip install djangorestframework`
+  - In settings.py add `rest_framework` under INSTALLED_APPS section.
+  - If you're intending to use the browsable API you'll probably also want to add REST framework's login and logout views. Add the following to your root urls.py file.
+^
+    urlpatterns = [
+      ...
+      path('api-auth/', include('rest_framework.urls'))
+    ]
+  -  Any global settings for a REST framework API are kept in a single configuration dictionary named REST_FRAMEWORK. Start off by adding the following to your settings.py module:
+^
+    REST_FRAMEWORK = {
+      # Use Django's standard `django.contrib.auth` permissions,
+      # or allow read-only access for unauthenticated users.
+      'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+      ]
+    }
 
 ### Advantages
 - Designed for high performance, portability, reliability, and scalability.
@@ -54,14 +70,14 @@
     - It supports PUT and PATCH methods (including file uploads). (Django only supports GET and POST methods.)
     - By temporarily overriding the method on a request, it checks permissions against other HTTP methods.
 - It is a package built on top of Django to create web APIs.  
-- most remarkable features of Django is its Object Relational Mapper (ORM) which facilitates interaction with the database in a Pythonic way.  
+- Most remarkable features of Django is its Object Relational Mapper (ORM) which facilitates interaction with the database in a Pythonic way.  
 - There are three stages before creating a API through REST framework, Converting a Model’s data to JSON/XML format (Serialization), Rendering this data to the view, Creating a URL for mapping to the viewset.  
-- To initialize REST Framework in your project, go to settings.py, and in INSTALLED_APPS add ‘rest_framework’ at the bottom.  
+- To initialize REST Framework in your project, go to settings.py, and in INSTALLED_APPS add `rest_framework`.
 - There are two ways to directly implement APIView: With a function or with a class. If you're writing a view in the form of a function, you'll need to use the @api_view decorator.
 - @api_view is a decorator that converts a function-based view into an APIView subclass (thus providing the Response and Request classes). It takes a list of allowed methods for the view as an argument.
 - Can be done using class based or function based.  
   - **Function Based**
-    - Uses decorator ```@api_view``` for request and response.
+    - Uses decorator `@api_view` for request and response.
     - If you want to override the default settings for your function-based view, you can use policy decorators. You can use one or multiple of the following:
       - @renderer_classes
       - @parser_classes
@@ -70,8 +86,7 @@
       - @permission_classes
     - Those decorators correspond to APIView subclasses. Because the @api_view decorator checks if any of the following decorators are used, they need to be added below the api_view decorator.
     - If we use the same example that we did for the policy attributes, we can implement the decorators like so to achieve the same results:  
-
-
+^
     from rest_framework.decorators import api_view, permission_classes, renderer_classes
     from rest_framework.permissions import IsAuthenticated
     from rest_framework.renderers import JSONRenderer
@@ -86,7 +101,7 @@
     return Response(content)
 
   - **Class Based**
-    - Uses ```APIVIEW```  
+    - Uses `APIVIEW`
 
 ### Serialization
 - We can not send Python objects over a network, and hence need a mechanism to translate Django models in other formats like JSON, XML, and vice-versa. This sometimes challenging process, also called serialization.  
