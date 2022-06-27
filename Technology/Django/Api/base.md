@@ -19,7 +19,8 @@
     urlpatterns = [
       ...
       path('api-auth/', include('rest_framework.urls'))
-    ]
+    ]  
+    
   -  Any global settings for a REST framework API are kept in a single configuration dictionary named REST_FRAMEWORK. Start off by adding the following to your settings.py module:
 ^
     REST_FRAMEWORK = {
