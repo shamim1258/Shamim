@@ -14,6 +14,13 @@
     - models.py
     - tests.py
     - views.py
+  - api_app
+    -  admin.py
+    -  __init__.py
+    -  serializers.py
+    -  models.py
+    -  urls.py
+    -  views.py
   - configs
     - README
   - manage.py
