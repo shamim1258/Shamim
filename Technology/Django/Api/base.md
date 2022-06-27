@@ -106,15 +106,13 @@
 ### Serialization
 - We can not send Python objects over a network, and hence need a mechanism to translate Django models in other formats like JSON, XML, and vice-versa. This sometimes challenging process, also called serialization.  
   - GET request : convert from model object to JSON.  
-
-
+^
       if request.method == 'GET':
         transformer = Transformer.objects.all()
         serializer = TransformerSerializer(transformer, many=True)
         return JsonResponse(serializer.data, safe=False)
   - POST request : convert from JSON to model object can alse called de-serialization.  
-
-
+^
      elif request.method == 'POST':
         data = JSONParser().parse(request)
         serializer = TransformerSerializer(data=data)
@@ -125,9 +123,8 @@
 - Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON, XML or other content types. Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data. - Serializer classes -
   - Serializer
   - ModelSerializer 
-- For serialization create file : ```serializers.py```  
-
-
+- For serialization create file : `serializers.py`  
+^
       from rest_framework import serializers
       from talk.models import Post
     class PostSerializer(serializers.ModelSerializer):
@@ -141,7 +138,7 @@
 
 #### @api_view
 - The @api_view is a decorator in the rest_framework.decorators module, and it is the base class for all the Django REST framework views. We can provide the allowed HTTP verbs as the http_methods_names argument (list of strings) in the @api_view decorator.  
-```@api_view(http_method_names=['GET'])```
+`@api_view(http_method_names=['GET'])`
 - The @api_view decorator can parse different content types by choosing the appropriate parser.
 - When we use the @api_view decorator, it automatically makes use of APIView class and its settings. This way we will be able to use the parsers and renders.
 - The @api_view decorator helps the Django REST framework to examine the Content-Type header in the data attribute and identifies the exact parser to parse the request. It also invokes the rest_framework.negotiation.DefaultContentNegotiation class to select the suitable renderer for the request.  
