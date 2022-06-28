@@ -3,7 +3,7 @@
 ## Python
 
 1- We have list[0,1,2..9] how we can print this list in reverse order.
-<details><summary>Toggle me!</summary>Use rever method of list list.reverse() this will reverse the list whenever it is referred.
+&emsp;<details><summary>Toggle me!</summary>Use rever method of list list.reverse() this will reverse the list whenever it is referred.
 * fruit
 * veg
 * dry fruit
