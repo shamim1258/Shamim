@@ -83,6 +83,8 @@ print(students)
     
 1.  Explain signal and receivers.
     
+1.  Explain what is decorator and custom decorators.
+    
 ## Rest API
 
 1.  If API is slow how can we improve performance.
