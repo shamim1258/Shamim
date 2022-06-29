@@ -29,13 +29,14 @@ Careful when downloading the package PyPl-packages issues can be reported but pa
 <br>&emsp;from .some_module import some_class /* Relative Import */
 <br>Use the latest version of your HTTP requests library, confirm if the library is handling the SSL verification of the source you sent requests to, if you are using standard library urllib,  you should follow best practices to prevent request smuggling.
     
-1.  What is garbage collection.
-[Memory Management](../../Technology/Python/base.md) 
+1.  What is garbage collection.  
+[Memory Management](../../Technology/Python/base.md##memory-management)  
 &emsp;<details>
 Prior to Python version 2.0, the Python interpreter only used reference counting for memory management.
 Reference counting works by counting the number of times an object is referenced by other objects in the system. When references to an object are removed, the reference count for an object is decremented.When the reference count becomes zero, the object is deallocated.
     
 1.  Difference between List and Tuple.
+[Difference Between List and Tuple](../../Technology/differences.md)  
 
 1.  List and Dictonary comprehenion.
     
