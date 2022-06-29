@@ -13,7 +13,16 @@
 &emsp;<details>
 Use % operator for getting the remainder input % 2 == 0 to get square = num**2 to get cube = num**3
     
-1.  How to implement security.
+1.  How to implement security in python.
+&emsp;<details>
+Careful when downloading the package PyPl-packages issues can be reported but package added to pypl does not undergo review. We can use https://snyk.io/advisor/ to check package security health.
+User python capacity for virtual environment.
+Set `Debug = False` in production.
+Make sure to switch debugging to False in production to prevent leaking sensitive application information to attackers.
+<li>Be careful with string formatting.</li>
+- (De)serialize very cautiously
+Do not use the system standard version of Python - problem with build python is its not latest version.
+</details>
     
 1.  What is garbage collection.
     
