@@ -16,12 +16,18 @@ Use % operator for getting the remainder input % 2 == 0 to get square = num**2 t
 1.  How to implement security in python.
 &emsp;<details>
 Careful when downloading the package PyPl-packages issues can be reported but package added to pypl does not undergo review. We can use https://snyk.io/advisor/ to check package security health.
-<br>User python capacity for virtual environment.
-<br>Set `Debug = False` in production.
+<br>Use virtual environment - if you install a package dependency with malicious code in one project, it will not affect the others. Each project’s packages are isolated from each other.
+<br>Set `Debug = False` in production - Displaying errors in our code publicly could show a weakness in our security that will be exploited.
 <br>Make sure to switch debugging to False in production to prevent leaking sensitive application information to attackers.
 <br>Be careful with string formatting.
-- (De)serialize very cautiously
-* Do not use the system standard version of Python - problem with build python is its not latest version.
+<br>- (De)serialize very cautiously - When handling data deserialization in Python, I’ll recommend only deserializing data from a trusted source as its possible that a malicious arbitrary code could be hidden in the data.
+<br>* Do not use the system standard version of Python - problem with build python is its not latest version.
+<br> Always double check before commiting any file to git that it does not contain any password or sensitive information.
+<br> Protect against SQL injections.
+<br> Use abosulte import instead of relative import.
+<br>&emsp;from package1 import module1 /* Absolute Import */
+<br>&emsp;from .some_module import some_class /* Relative Import */
+<br>Use the latest version of your HTTP requests library, confirm if the library is handling the SSL verification of the source you sent requests to, if you are using standard library urllib,  you should follow best practices to prevent request smuggling.
     
 1.  What is garbage collection.
     
