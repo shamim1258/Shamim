@@ -12,10 +12,6 @@
 1.  We have list[1,2,3,4] if input number in list is even print square of it and if odd print cube of it, output should be [1,4,27,16].
 &emsp;<details>
 Use % operator for getting the remainder input % 2 == 0 to get square = num**2 to get cube = num**3
-
-1.  We have list[1,2,3,4] if input number in list is even print square of it and if odd print cube of it, output should be [1,4,27,16].
-&emsp;<details>
-Use % operator for getting the remainder input % 2 == 0 to get square = num**2 to get cube = num**3
     
 1.  How to implement security.
     
