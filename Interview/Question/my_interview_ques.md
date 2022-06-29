@@ -39,6 +39,9 @@ Reference counting works by counting the number of times an object is referenced
 [Difference Between List and Tuple](../../Technology/differences.md)  
 
 1.  List and Dictonary comprehenion.
+&emsp;<details>
+<br>Comprehension : Creating new sequences using a given python sequence.
+<br>
     
 1.  What is lambda function.
     
