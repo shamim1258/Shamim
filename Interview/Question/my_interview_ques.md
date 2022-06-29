@@ -30,23 +30,25 @@ Careful when downloading the package PyPl-packages issues can be reported but pa
 <br>Use the latest version of your HTTP requests library, confirm if the library is handling the SSL verification of the source you sent requests to, if you are using standard library urllib,  you should follow best practices to prevent request smuggling.
     
 1.  What is garbage collection.  
-[Memory Management](../../Technology/Python/base.md##memory-management)  
+[Memory Management](../../Technology/Python/base.md##memory-management)
 &emsp;<details>
 Prior to Python version 2.0, the Python interpreter only used reference counting for memory management.
 Reference counting works by counting the number of times an object is referenced by other objects in the system. When references to an object are removed, the reference count for an object is decremented.When the reference count becomes zero, the object is deallocated.
     
-1.  Difference between List and Tuple.
+1.  Difference between List and Tuple.  
 [Difference Between List and Tuple](../../Technology/differences.md)  
 
 1.  List and Dictonary comprehenion.
 &emsp;<details>
 <br>Comprehension : Creating new sequences using a given python sequence.
-<br>
+<br>Creating new_list from given_list by adding 3 each element `new_list = [var+3 for var in given_list]`
     
-1.  What is lambda function.
+1.  What is lambda function.  
+[Lambda Function](../../Technology/Python/functions.md)
     
 1.  Explain methods - filter, map and reduce.
-    
+[Function](../../Technology/Python/functions.md)
+
 1.  What is Multilevel and Multiple inheritance.
     
 1.  How resolution works in Multilevel and Multiple inheritance.
