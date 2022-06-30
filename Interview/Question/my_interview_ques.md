@@ -88,7 +88,8 @@ Reference counting works by counting the number of times an object is referenced
 [Object Copying](../../Technology/Python/DataTypes/notes.md)
     
 1.  How break, continue and pass statement works.
-    
+[Object Copying](../../Technology/Python/commands.md)
+
 1.  What is overriding and overloading function in python.
     
 1.  What is global and local variables.
