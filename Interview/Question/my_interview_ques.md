@@ -58,11 +58,15 @@ Reference counting works by counting the number of times an object is referenced
 [Class Inheritance Resolution](../../Technology/Python/class.md)
     
 1.  What is the output of - 
-def foo(a,b,c=None,d=None, *args,**kargs):
-print(a,b,c,d)
-foo(1,2,3,4)
-foo(1,2,3,4,5,6)
-foo(1,2,3,c=4).
+    def foo(a,b,c=None,d=None, *args,**kargs):
+      print(a,b,c,d)
+    foo(1,2,3,4)
+    foo(1,2,3,4,5,6)
+    foo(1,2,3,c=4)
+&emsp;<details>
+    foo(1,2,3,4) Output : 1,2,3,4
+    foo(1,2,3,4,5,6) Output : 1,2,3,4
+    foo(1,2,3,c=4) Output : Error - foo() got multiple values for argument 'c'.
     
 1.  Explain cyclic dependency.
     
