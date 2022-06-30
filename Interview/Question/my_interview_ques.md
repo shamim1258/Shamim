@@ -58,6 +58,7 @@ Reference counting works by counting the number of times an object is referenced
 [Class Inheritance Resolution](../../Technology/Python/class.md)
     
 1.  What is the output of - 
+^
     def foo(a,b,c=None,d=None, *args,**kargs):
       print(a,b,c,d)
     foo(1,2,3,4)
@@ -70,7 +71,7 @@ Reference counting works by counting the number of times an object is referenced
     
 1.  Explain cyclic dependency.
     
-1.  What is recursion
+1.  What is recursion.
     
 1.  Write a recursive function to reverse a string.
     
