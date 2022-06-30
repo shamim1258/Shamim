@@ -85,6 +85,7 @@ Reference counting works by counting the number of times an object is referenced
 1.  Difference between generators and iterators.
     
 1.  Difference between Shallow copy and Deep copy.
+[Object Copying](../../Technology/Python/DataTypes/notes.md)
     
 1.  How break, continue and pass statement works.
     
