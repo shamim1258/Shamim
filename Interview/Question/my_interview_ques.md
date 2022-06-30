@@ -48,12 +48,14 @@ Reference counting works by counting the number of times an object is referenced
 1.  What is lambda function.  
 [Lambda Function](../../Technology/Python/functions.md)
     
-1.  Explain methods - filter, map and reduce.
+1.  Explain methods - filter, map and reduce.  
 [Function](../../Technology/Python/functions.md)
 
-1.  What is Multilevel and Multiple inheritance.
-    
-1.  How resolution works in Multilevel and Multiple inheritance.
+1.  What is Multilevel and Multiple inheritance.  
+[Class Inheritance](../../Technology/Python/class.md)
+
+1.  How resolution works in Multilevel and Multiple inheritance.  
+[Class Inheritance Resolution](../../Technology/Python/class.md)
     
 1.  What is the output of - 
 def foo(a,b,c=None,d=None, *args,**kargs):
