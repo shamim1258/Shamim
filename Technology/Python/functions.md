@@ -35,6 +35,20 @@
 -  Decorators are the most common use of higher-order functions.
 -  Example : Build-in functions - `filter()`, `map()`.
 
+## Recursive Function
+-  Recursive function are function which calls itself.
+-  Example
+^
+    def factorial(x):
+      if x==1:
+        return 1
+      else:
+        return (x\*factorial(x-1))
+-  By default, the maximum depth of recursion is 1000. If the limit is crossed, it results in `RecursionError`.
+-  Disadvantages :
+   -  Recursive calls are expensive (inefficient) as they take up a lot of memory and time.
+   -  Recursive functions are hard to debug.
+
 ## Build-in Function
 - The Python interpreter supports many functions that are built-in: sixty-eight, as of Python 3.6.
 - Few important function are : **map(), filter(), reduce()**
