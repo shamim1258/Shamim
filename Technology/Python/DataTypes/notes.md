@@ -129,5 +129,24 @@ Syntax ``` ''' This is doc string. '''  ```
 - Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is number of items and step is 1.  
 Slicing can be done on strings, arrays, lists, and tuples.
 
+**Copying object by assignment :**
+- When an object is assigned to new object it does not create copy value to new object but new object holds the reference to old object.
+- If any changes made to the value using new object or old object both objects value will show the new updated value.
+^
+    list_A = [1,2,3,4,5]
+    list_B = list_A
+-  Copying objects
+^
+    import copy
+    copy.copy(x)
+    copy.deepcopy(x)
+    
+**Shallo Copy :**
+-  A shallow copy creates a new object which stores the reference of the original elements.
+
+**Deep Copy :**
+-  The deep copy creates independent copy of original object and all its nested objects.
+
+
 **Links :**  
 [Lambda Function](../functions.md)
