@@ -4,7 +4,8 @@
 - They use HTTP request methods to facilitate the request-response cycle and typically transfer data using JSON, and more rarely - HTML, XML and other formats.  
 
 **Links :**  
-- [Example](example_1.md)
+- [Example](example_1.md)  
+- [Example Authentication](example_2.md)  
 
 ## REST API
 - REST stands for Representational State Transfer.  
@@ -156,6 +157,10 @@
   - DestroyModelMixin: provides a .destroy() method to the view/viewset
 
 ## Authentication
+
+**Links :**  
+- [Example Authentication](example_2.md)  
+
 
 -  The `request.user` property will typically be set to an instance of the `contrib.auth` package's User class.
 -  The `request.auth` property is used for any additional authentication information, for example, it may be used to represent an authentication **token** that the request was signed with.
