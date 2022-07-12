@@ -109,8 +109,8 @@ This example shows the REST API Authentication.
         request.user.auth_token.delete()
         return Response(status=status.HTTP_200_OK)
 
-   @api_view(['POST',])
-   def registration_view(request):
+    @api_view(['POST',])
+    def registration_view(request):
      try:
        if request.method == 'POST':
          serializer = ResigtrationSerializer(data=request.data)
