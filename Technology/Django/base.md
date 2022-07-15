@@ -39,6 +39,7 @@
 [Example Code Files](Example/base.md)  
 [Example connect.py](Example/connect.md)  
 [Django Access Permission Admin Panel](django-admin.md)  
+[Middleware](middleware.md)  
 
 ### MVT
 
