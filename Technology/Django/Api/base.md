@@ -6,6 +6,7 @@
 **Links :**  
 - [Example](example_1.md)  
 - [Example Authentication](example_2.md)  
+- [Example ViewSet Router](example_3.md)  
 
 ## REST API
 - REST stands for Representational State Transfer.  
