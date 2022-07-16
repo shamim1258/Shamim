@@ -128,5 +128,32 @@ This example shows the REST API Authentication.
      except Exception as e:
         print("MyTraceBack_Views::", traceback.print_exc())
 
-	
-   
+## JWT Authentication
+
+-  JWT stand for JSON Web Token.
+-  JWT is just an authorization token that should be included in all requests: `http://127.0.0.1:8000/Hero/ -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTQzODI4NDMxLCJqdGkiOiI3ZjU5OTdiNzE1MGQ0NjU3OWRjMmI0OTE2NzA5N2U3YiIsInVzZXJfaWQiOjF9.Ju70kdcaHKn1Qaz8H42zrOYk0Jx9kIckTn9Xx7vhikY'`
+-  The JWT is acquired by exchanging an username + password for an access token and an refresh token.
+-  The access token is usually short-lived (expires in 5 min or so, can be customized though).
+-  The refresh token lives a little bit longer (expires in 24 hours, also customizable). It is comparable to an authentication session. After it expires, you need a full login with username + password again.
+-  JWT is composed of 3 different parts : `header.payload.signature`
+-  **Setup :**
+   -  Installing the JWT package `pip install djangorestframework_simplejwt`.
+   -  In settings.py
+^
+    REST_FRAMEWORK = {
+      'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+      ],
+    }
+    
+   -  In urls.py
+^
+    from django.urls import path
+    from rest_framework_simplejwt import views as jwt_views
+
+    urlpatterns = [
+        path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
+        path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+    ]
+    
+    -  Keeping the views.py file same using the `permission_classes = (IsAuthenticated,)`
