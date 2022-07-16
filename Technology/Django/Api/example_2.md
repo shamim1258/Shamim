@@ -136,6 +136,7 @@ This example shows the REST API Authentication.
 -  The access token is usually short-lived (expires in 5 min or so, can be customized though).
 -  The refresh token lives a little bit longer (expires in 24 hours, also customizable). It is comparable to an authentication session. After it expires, you need a full login with username + password again.
 -  JWT is composed of 3 different parts : `header.payload.signature`
+-  Secure in a sense that the refresh token only travel in the POST data and the access token is sent via HTTP header, which may be logged along the way. So this also give a short window, should your access token be compromised.
 -  **Setup :**
    -  Installing the JWT package `pip install djangorestframework_simplejwt`.
    -  In settings.py
