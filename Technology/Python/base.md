@@ -8,11 +8,12 @@
 **Links :**  
 - [Data Types](DataTypes/notes.md)  
 - [Loop](loop.md)  
+- [Exception Handling](exception_handling.md)  
 - [Functions](functions.md)  
 - [Classes](class.md)  
-- [Libraries Packages](libraries.md)  
-- [Keywords/Commands](commands.md)
-- [Working on File](working_on_files.md)
+- [Libraries Packages](libraries.md)    
+- [Keywords/Commands](commands.md)  
+- [Working on File](working_on_files.md)  
 
 ### Memory Management
 
