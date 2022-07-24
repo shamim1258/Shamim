@@ -7,6 +7,7 @@
 
 **Links :**  
 - [Data Types](DataTypes/notes.md)  
+- [Loop](loop.md)  
 - [Functions](functions.md)  
 - [Classes](class.md)  
 - [Libraries Packages](libraries.md)  
