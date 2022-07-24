@@ -3,6 +3,7 @@
 - Attributes or Properties are the variables that belong to a class.
 - Attributes are always public and can be accessed using the dot (.) operator. Eg.: ```Myclass.Myattribute```.
 - An **Object** is an instance of a Class.
+- **__init___** method in class initize the object and takes the first argument `self` which is object of class but we can use anything in place of `self` here.
 
 ## Inheritance
 -  Inheritance is the capability of one class to derive or inherit the properties from another class.
