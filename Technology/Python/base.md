@@ -55,10 +55,12 @@ The garbage collection can be invoked manually in the following way :
     collected = gc.collect()
     print("Garbage collector: collected","%d objects." % collected)
     
--  **Reference Cycles :**
-   -  It is created when there is no way the reference count of the object can reach.
+-  **Reference Cycles / Circular Reference :**
+   -  Cyclic Reference is created when A object calls B object and B also calls A.
+   -  It is created when there is no way the reference count of the object can reach zero.
    -  It involving lists, tuples, instances, classes, dictionaries, and functions are common.
    -  The easiest way to create a reference cycle is to create an object which refers to itself.
+   -  This cannot be handled by reference counting and but can be handled by **Garbage Collector**.
 ^
     Because create_cycle() creates an object x which refers to itself, the object x will not automatically be freed when the function returns. This will cause the memory that x is using to be held onto until the Python garbage collector is invoked.
     def create_cycle():
