@@ -101,6 +101,7 @@ Check the [Mutability](#mutability) on data-types.
    -  Sets
    -  Dictionaries
    -  User-defined classes
+-  Tuple is immutable but it can have mutable elements like list where we can say tuple is immutable but it's element are mutable.
 
 # Other objects Types
 
