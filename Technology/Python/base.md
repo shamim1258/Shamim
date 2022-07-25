@@ -1,6 +1,7 @@
 ### Overview of Python :
 - Python is an **interpreted language** means executes each statement line by line and thus type-checking is done on the fly, during execution.
-- Python is a **Dynamically Typed Language**. Example of interpreted languages are Python, Javascript, R, PHP. Programs written in an interpreted language runs directly from the source code, **with no intermediary compilation step**.
+- Example of interpreted languages are Python, Javascript, R, PHP. Programs written in an interpreted language runs directly from the source code, **with no intermediary compilation step**.
+- Python is a **Dynamically Typed Language** as in python variable is not associated with the data-type but it have the memory reference and that memory holds the data and its type, so when we reassign the variable its memory reference and type also changes. `variable_name = "value"`
 - It support objects, modules, threads, exception-handling, and **automatic memory management**.
 - Python is simple, easy-to-learn syntax that emphasizes readability, is capable of scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.
 - Its high-level data structures, combined with dynamic typing and dynamic binding, Rapid Application Development and deployment.
