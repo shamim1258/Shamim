@@ -19,6 +19,7 @@ Convert data-type - ```str(123)```.
 - Private
 
 Check the [operations](#operations) on data-types.
+Check the [Mutability](#mutability) on data-types.
 
 ## Text
 1.  **str**
@@ -85,6 +86,21 @@ Check the [operations](#operations) on data-types.
 
 **Private :**
 - Private attributes are attributes with double underscore prefixed to their identifier eg. \_\_ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made
+
+## Mutability
+-  Data-types holds the memory reference and that memory hold the data-type and value.
+-  Mutability tells if the state of the data-type can be changed or not.
+-  Immutables
+   -  Numbers(int, float, Boolean, etc.)
+   -  Strings
+   -  Tuples
+   -  Frozen Sets
+   -  User-defined classes
+-  Mutables
+   -  Lists
+   -  Sets
+   -  Dictionaries
+   -  User-defined classes
 
 # Other objects Types
 
