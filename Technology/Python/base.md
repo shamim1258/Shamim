@@ -38,6 +38,10 @@
     x.append(l)
     x.append(2)
     del x
+^
+   -  It can be controlled programmitacally using gc module to do your own clean up.
+   -  By default it is turned ON.
+   -  We can turn it OFF if you are sure that your code does not create circular reference.
    -  **Automatic Garbage Collection of Cycles :**
       -  Because reference cycles take computational work to discover, garbage collection must be a scheduled activity. Python schedules garbage collection based upon a threshold of object allocations and object deallocations. When the number of allocations minus the number of deallocations is greater than the threshold number, the garbage collector is run. One can inspect the threshold for new objects (objects in Python known as generation 0 objects) by importing the gc module and asking for garbage collection thresholds.\
 ^
