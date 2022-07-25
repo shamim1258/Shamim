@@ -102,6 +102,8 @@ Check the [Mutability](#mutability) on data-types.
    -  Dictionaries
    -  User-defined classes
 -  Tuple is immutable but it can have mutable elements like list where we can say tuple is immutable but it's element are mutable.
+-  When tuple passed as function parameter the original tuple will remain unchanged.
+-  When list passed as function parameter the original list will get changed in function update the list.
 
 # Other objects Types
 
