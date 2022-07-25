@@ -17,14 +17,20 @@
 
 ### Memory Management
 
+-  Python objects and variables stored in the memory address and variable holds the address of memory and not actual value.
+-  To get the memory address of any object `id(variable_name)`
 -  Python uses two strategies for memory allocation :
    1.  Reference Counting
    1.  Garbage Collection
 -  Prior to Python version 2.0, the Python interpreter only used reference counting for memory management.
 -  **Reference Counting :**
-   -  Reference counting works by counting the number of times an object is referenced by other objects in the system.
+   -  Reference counting is tracking number of times a memory address is being used by different objects.
    -  When references to an object are removed, the reference count for an object is decremented.
    -  When the reference count becomes zero, the object is deallocated.
+   -  Getting the reference count :
+      -  To get the reference count of any memory address - `sys.getrefcount(variable_name)` but downside to this is it also increase the reference count by 1.
+      -  By using `ctypes.c_long.from_address(address).value` here we are not passing variable name but its memory address and it will give the exact count without increasing it.
+      -  If count like `ctypes.c_long.from_address(id(variable_name)).value` than it will not increase the count by 1 even if we are taking parameter as variable_name because when from_address will run by that time id(variable_name) is already executed and release its memory also this will work same way as `ctypes.c_long.from_address(address).value`
 -  **Garbage Collection :**
    -  The reference count for the list created is now two. However, since it cannot be reached from inside Python and cannot possibly be used again, it is considered garbage. In the current version of Python, this list is never freed.
 ^
