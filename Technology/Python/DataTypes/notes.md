@@ -209,3 +209,8 @@ Slicing can be done on strings, arrays, lists, and tuples.
 
 **Links :**  
 [Lambda Function](../functions.md)
+
+**Unpacking of iterable :**
+-  Assigning a tuple items to values in a single line.
+-  `a, b, c = [1, 2, 3]`
+-  `a, b, c = 1, 2, 3`
