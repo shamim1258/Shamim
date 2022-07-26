@@ -1,17 +1,31 @@
-# Python Data Types :
+# Data Types :
 
-Data type tells about type of value it can hold and also what [operations](#operations) can be performed on that value.
-Python sets the variable type based on the value that is assigned to it.
-Use ```type()``` function to get the data-type of any variable.
-Convert data-type - ```str(123)```.
+-  Data type tells about type of value it can hold and also what [operations](#operations) can be performed on that value.
+-  Python sets the variable type based on the value that is assigned to it.
+-  Use ```type()``` function to get the data-type of any variable.
+-  Convert data-type - ```str(123)```.
+-  A variable actually hold the memory reference and not the actual value. `a = 10`
+-  In below example a hold memory reference for 10 and when we do `b = a` this does not copy the value 10 to b but b will also have same memory reference as a.
+^
+    a = 10
+    b = a
+^
+-  When more than one variable having same the variable not actually have same value but all such variable are having memory reference to same address and this task of assigning memory reference is done by python memory manager.
+^
+    a = 10
+    b = 10
+    stra = "hello"
+    strb = "hello"
+^
 
-- [Text](#text)    : str
-- [Numeric](#numeric)    : int, float, complex
-- [Sequence](#sequence)    : list, tuple, range
-- [Mapping](#mapping)    : dict
-- [Set](#set)    : set, frozenset
-- [Boolean](#boolean)    : bool
-- [Binary](#binary)    : bytes, bytearray, memoryview
+-  **Python Data Types :**
+   - [Text](#text)    : str
+   - [Numeric](#numeric)    : int, float, complex
+   - [Sequence](#sequence)    : list, tuple, range
+   - [Mapping](#mapping)    : dict
+   - [Set](#set)    : set, frozenset
+   - [Boolean](#boolean)    : bool
+   - [Binary](#binary)    : bytes, bytearray, memoryview
 
 [Scope](#variable-scopes) wise variables types
 - Global
@@ -35,11 +49,6 @@ Check the [Mutability](#mutability) on data-types.
 ## Numeric
 -  Various methods on numberic data types - min(n1,n2,n3..), max(n1,n2,n3..), abs(x), pow(x,y), round(x), sqrt(x).
 -  Variable hold the memory reference where the actual value present.
--  In below example a hold memory reference for 10 and when we do `b = a` this does not copy the value 10 to b but b will also have same memory reference as a.
-^
-    a = 10
-    b = a
-^
 1.  **int**
     -  In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has.
 
