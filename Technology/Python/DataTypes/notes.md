@@ -33,7 +33,12 @@ Check the [Mutability](#mutability) on data-types.
     -  Various [methos](https://www.w3schools.com/python/python_ref_string.asp) on string.
 
 ## Numeric
--  Various methods on numberic data types - min(n1,n2,n3..), max(n1,n2,n3..), abs(x), pow(x,y), round(x), sqrt(x).  
+-  Various methods on numberic data types - min(n1,n2,n3..), max(n1,n2,n3..), abs(x), pow(x,y), round(x), sqrt(x).
+-  Variable hold the memory reference where the actual value present.
+-  In below example a hold memory reference for 10 and when we do `b = a` this does not copy the value 10 to b but b will also have same memory reference as a.
+^
+    a = 10
+    b = a
 ^
 1.  **int**
     -  In Python 3, there is effectively no limit to how long an integer value can be. Of course, it is constrained by the amount of memory your system has.
