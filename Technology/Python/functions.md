@@ -1,7 +1,26 @@
 # Functions
 
 ## Normal Function
-- `def` keyword used to create function.
+-  `def` keyword used to create function.
+-  Parameter are variable in the function definition and Arguments are passed when we call function.
+-  **Default Parameter**
+   - We can define default parameter `def func(a, b = 100)`
+   - If we give any default parameter than all the parameter after that must also be default parameter otherwise it will error out.
+-  **Keyword Arguments**
+   -  When we call function we can specify the actual parameter name used in function definition in argument
+^
+    def myfun(a, b = 1, c = 2):
+        pass
+    myfun(a = 0, c = 3)
+^
+   -  If we specify keyword argument even if parameter don't have default value than we can specify the argument in any order but here also all argument after the first argument with keyword must all have keyword.
+^
+    def myfun(a, b, c):
+        pass
+    myfun(c = 0, a = 3, b = 4)
+    myfun(c = 10, 5, 20) #This will error out
+^
+
 
 ## Lambda Function
 -  Anonymous function means that a function is without a name.
