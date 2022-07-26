@@ -68,6 +68,7 @@ Check the [Mutability](#mutability) on data-types.
     -  All string methods returns new values. They do not change the original string.
     -  Various [methos](https://www.w3schools.com/python/python_ref_string.asp) on string.
     -  string comparsion with operation `==` is done character by character and `is` operator compares the memory reference.
+    -  We can manually intern the string by using `sys.intern()` method and now for this string we can use the `is` operator to compare which will make the comparision faster.
 
 ## Numeric
 -  Various methods on numberic data types - min(n1,n2,n3..), max(n1,n2,n3..), abs(x), pow(x,y), round(x), sqrt(x).
