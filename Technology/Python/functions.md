@@ -20,7 +20,16 @@
     myfun(c = 0, a = 3, b = 4)
     myfun(c = 10, 5, 20) #This will error out
 ^
-
+-  **\*arg**
+   -  This specify there can be 0 or more arguments.
+   -  \*arg is tradition name but it can have any name but '\*' is required '\*abc' this will also work.
+^
+    def myfun(a, b, \*arg):
+        pass
+    myfun(1,2)
+    myfun(1,2,3,4,5)
+^
+   -  \*arg is tuple not list.
 
 ## Lambda Function
 -  Anonymous function means that a function is without a name.
