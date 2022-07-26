@@ -67,6 +67,7 @@ Check the [Mutability](#mutability) on data-types.
     - **Triple Quoted Strings** - Escape sequences still work in triple-quoted strings, but single quotes, double quotes, and newlines can be included without escaping them.
     -  All string methods returns new values. They do not change the original string.
     -  Various [methos](https://www.w3schools.com/python/python_ref_string.asp) on string.
+    -  string comparsion with operation `==` is done character by character and `is` operator compares the memory reference.
 
 ## Numeric
 -  Various methods on numberic data types - min(n1,n2,n3..), max(n1,n2,n3..), abs(x), pow(x,y), round(x), sqrt(x).
