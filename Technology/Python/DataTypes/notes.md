@@ -4,8 +4,11 @@
 -  Python sets the variable type based on the value that is assigned to it.
 -  Use ```type()``` function to get the data-type of any variable.
 -  Convert data-type - ```str(123)```.
--  A variable actually hold the memory reference and not the actual value. `a = 10`
--  In below example a hold memory reference for 10 and when we do `b = a` this does not copy the value 10 to b but b will also have same memory reference as a.
+-  Check the [Mutability](#mutability) section carefully than go through below point of deep understanding of variable assignment.
+-  Mutable object hold the memory address and the state or value of data this address hold can be changed keeping the same memory address of variable.
+-  Immutable object hold the memory address and state or value of data this address hold cannot be changed so when assigning new value it changes the memory reference to some other address where new value present and the previous memory address still having the previous value.
+-  A variable actually hold the memory reference and not the actual value whether mutable or immutable. `a = 10`
+-  In below example a hold memory reference for 10 and when we do `b = a` this does not copy the value 10 to b but b will also have same memory reference as a, As a = 10 and it is interger type which is immutable.
 ^
     a = 10
     b = a
