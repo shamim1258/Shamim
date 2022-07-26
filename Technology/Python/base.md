@@ -74,3 +74,16 @@ The garbage collection can be invoked manually in the following way :
       x.append(x)
     create_cycle()
     
+-  **Python Optimizations - Peephole :** pre-calculate or cache the expression for optimization purpose.
+   -  **Contact expression**
+      -  Numeric calculation `25 * 60` python will pre-calculate.
+      -  Short sequence with length < 20 `lst = [1,2,3]`
+   -  Membership test : Mutable object converted to immutable object
+      -  list to tuple
+      -  set to frozenset
+      -  Example below list_A with list elements immutable will get converted to tuple but list_B having variable elements this will not get converted.
+^
+    list_A = [1, 2, 3]
+    list_B = [variable_a, 2, 3]
+^
+   -  set element comparision is much faster than list and tuple.
