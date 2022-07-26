@@ -114,6 +114,7 @@ Check the [Mutability](#mutability) on data-types.
 - Boolean type have 2 values -```True or False```.
 - Return boolean value of given expression - `bool(1)`
 - If no parameter is given default return value is `False`.
+- `bool` is subclass of `int` and we can check this also `issubclass(bool, int)`
 
 # Variable scopes
 **Global :**
