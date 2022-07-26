@@ -4,6 +4,7 @@
 -  Python sets the variable type based on the value that is assigned to it.
 -  Use ```type()``` function to get the data-type of any variable.
 -  Convert data-type - ```str(123)```.
+-  `None` is real object managed by python memory manager and all objects assigned with None will have same memroy reference.
 -  Check the [Mutability](#mutability) section carefully than go through below point of deep understanding of variable assignment.
 -  A variable actually hold the memory reference and not the actual value whether mutable or immutable. `a = 10`
 -  Mutable object hold the memory address and the state or value of data this address hold can be changed keeping the same memory address of variable.
@@ -19,7 +20,7 @@
     a = 10
     b = 10
     stra = "hello"
-    strb = "hello"
+    strb = "hello"an
 ^
 -  **Mutable** object assignment.
    -  (ReConfirm not sure about this point)Even if two variable have same value the memory address is different because if one variable value is changed it will update the value in the meory address and not change the memory address and keeping such variable memory different will avoid over writing of other variable when one is updated.
@@ -27,6 +28,7 @@
     list_A = [1, 2, 3]
     list_B = [1, 2, 3]
 ^
+-  **Interning** is resuing objects on-demand - At startup python(CPython) pre-loads(cache) a global list of integers in range(-5:256) so anytime integer is referenced in this range python will reuse the address reference of cached version of object.
 -  **Python Data Types :**
    - [Text](#text)    : str
    - [Numeric](#numeric)    : int, float, complex
@@ -43,6 +45,12 @@
 
 Check the [operations](#operations) on data-types.
 Check the [Mutability](#mutability) on data-types.
+
+**Variable Equality :**
+-  Can you `is` operator to compare the memory address of two variable this is similar to `==` operator.
+-  Can you `is not` operator which is similar to `!=` operator.
+-  `is` compare the memory address only so not always works well.
+-  `==` compare the object memory address values this is more trust worthy.
 
 ## Text
 1.  **str**
