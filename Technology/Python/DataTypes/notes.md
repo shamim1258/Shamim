@@ -90,6 +90,7 @@ Check the [Mutability](#mutability) on data-types.
 - Tuple are immutable i.e. cannot be modified after it is created.
 - Uses - ()
 - Tuple methods only 2 - count(), index()
+- `tpl = (1)` this is not tuple but int you can check by `type(tpl)` to make it tuple `tpl = (1,)`.
     
 2.  **Range**
 - Create a sequence of number starting from 0 to n-1.
