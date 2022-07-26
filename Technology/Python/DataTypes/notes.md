@@ -28,7 +28,12 @@
     list_A = [1, 2, 3]
     list_B = [1, 2, 3]
 ^
--  **Interning** is resuing objects on-demand - At startup python(CPython) pre-loads(cache) a global list of integers in range(-5:256) so anytime integer is referenced in this range python will reuse the address reference of cached version of object.
+-  **Interning** is resuing objects on-demand \
+   - At startup python(CPython) pre-loads(cache) a global list of integers in range(-5:256) so anytime integer is referenced in this range python will reuse the address reference of cached version of object.
+   - Python also cache some strings but not all.
+     - As python code compiled identifier are interned which includes : variable name, function name, class name and identifier which are like start with _ or letter and only contains letter and number.
+     - Some string literal also interned which looks like identifier example 'hello_world'
+-  
 -  **Python Data Types :**
    - [Text](#text)    : str
    - [Numeric](#numeric)    : int, float, complex
