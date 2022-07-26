@@ -22,7 +22,7 @@
     strb = "hello"
 ^
 -  **Mutable** object assignment.
-   -  Even if two variable have same value the memory address is different because if one variable value is changed it will update the value in the meory address and not change the memory address and keeping such variable memory different will avoid over writing of other variable when one is updated.
+   -  (ReConfirm not sure about this point)Even if two variable have same value the memory address is different because if one variable value is changed it will update the value in the meory address and not change the memory address and keeping such variable memory different will avoid over writing of other variable when one is updated.
 ^
     list_A = [1, 2, 3]
     list_B = [1, 2, 3]
