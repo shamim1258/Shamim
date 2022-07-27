@@ -108,14 +108,15 @@
   -  `eval()`&emsp;- Evaluates a Python expression.
   -  `len()`&emsp;- Returns the length of an object.
   -  `filter()`
-     -  Syntax `filter (function, iterables)`
+     -  Syntax `filter (function, iterable)`
      -  Takes input as list, tuple, set or container of iterator.
      -  Takes each element of input and if evelautes to True or not.
      -  **Returns iterator** that is filtered.
      -  It is normally used with Lambda functions to separate list, tuple, or sets.
      -  Example `filter(lambda x: x % 2 != 0, [0,1,2,3,4])`
 -  `map()`
-   -  `map(fun, iter)`
+   -  `map(function, *iterables)`
+   -  It takes input function and one or more iterables and pass first element of both iterable in first loop and end when shortest iterable ends.
    -  Returns a map object(which is an iterator) of the results after applying the given function to each item of a given iterable (list, tuple etc.).
    -  It returns the values of the input function.
 -  `reduce()`
