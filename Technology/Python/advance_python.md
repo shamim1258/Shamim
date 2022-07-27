@@ -10,3 +10,8 @@
     for i in var:
         print(i) # here we are retiving output values so here map function is executed to be exact.
 ^
+   -  Filter with None function example
+^
+    var = list(filter(None, [1, 'a', 0, '', None, 'b', false])
+    print(var) #Output [1, 'a', 'b']
+^
