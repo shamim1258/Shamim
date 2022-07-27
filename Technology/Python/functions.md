@@ -94,9 +94,10 @@
 
 
 ### Iterables and Iterators
-  -  ```all()```&emsp;- Returns True if all elements of an iterable are true.
-  -  ```len()```&emsp;- Returns the length of an object.
-  -  ```zip()```&emsp;- Creates an iterator that aggregates elements from iterables.
+  -  `all()`&emsp;- Returns True if all elements of an iterable are true.
+  -  `len()`&emsp;- Returns the length of an object.
+  -  `zip()`&emsp;- Creates an iterator that aggregates elements from iterables.
+     -  Example `zip([1, 2, 3], ['a', 'b', 'c', 'd'])` output will be `[(1, 'a'), (2, 'b'), (3, 'c')]`
 
 
 ### Input Output
