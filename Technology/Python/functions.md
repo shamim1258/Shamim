@@ -62,7 +62,7 @@
 ## Higher Order Function
 -  A function is called Higher Order Function if it contains other functions as a parameter or returns a function as an output.
 -  Decorators are the most common use of higher-order functions.
--  Example : Build-in functions - `filter()`, `map()`.
+-  Example : Build-in functions - `filter()`, `map()`, `sorted()`.
 
 ## Recursive Function
 -  Recursive function are function which calls itself.
