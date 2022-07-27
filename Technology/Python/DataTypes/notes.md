@@ -221,3 +221,9 @@ Slicing can be done on strings, arrays, lists, and tuples.
       -  `List_B = List_A[n:m]`
    -  List can be created using lambda with map method.
       -  `List_B = list(map(lambda x:x**2, list_A))`
+   -  List comprehension alternative to filter method. Below for way will get same output.
+^
+    List_A = [1, 2, 3, 4]
+    filter_fun = list(filter(lambda x : x %% 2 == 0, List_A))
+    list_comph = (x for x in List_A if x %% 2 == 0 )
+^
