@@ -15,6 +15,7 @@
 - [Libraries Packages](libraries.md)    
 - [Keywords/Commands](commands.md)  
 - [Working on File](working_on_files.md)  
+- [Advance Python Concept](advance_python.md)  
 
 ### Memory Management
 
