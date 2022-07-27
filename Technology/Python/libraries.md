@@ -5,6 +5,8 @@ Modules, in general, are simply Python files with a .py extension and can have a
 
 -  Build-in modules which i have used.(`import <module_name>`)
    -  sys
+   -  functools
+      -  reduce
    -  inspect
       -  isfunction(obj)
       -  ismethod(obj)
