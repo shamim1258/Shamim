@@ -214,3 +214,10 @@ Slicing can be done on strings, arrays, lists, and tuples.
 -  Assigning a tuple items to values in a single line.
 -  `a, b, c = [1, 2, 3]`
 -  `a, b, c = 1, 2, 3`
+
+**Comprehension :**
+-  List
+   -  List can be created using another list.
+      -  `List_B = List_A[n:m]`
+   -  List can be created using lambda with map method.
+      -  `List_B = list(map(lambda x:x**2, list_A))`
