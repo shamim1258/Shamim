@@ -30,6 +30,7 @@
     myfun(1,2,3,4,5)
 ^
    -  \*arg is tuple not list.
+   -  We cannot add more position argument after '\*arg' example `def myfun(a, b, c, *arg, d)` here we cannot add 'd'.
 
 ## Lambda Function
 -  Anonymous function means that a function is without a name.
@@ -129,4 +130,7 @@
     lis = [1, 3, 5, 6, 2, ]
     print(functools.reduce(lambda a, b: a+b, lis))
     # Output 17 = 1+3, 4+5, 9+6, 15+2
+    
+-  `dir()`
+   -  It takes argument as objects and return the attributes build-in and custom for that object.
     
