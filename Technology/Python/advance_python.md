@@ -1,7 +1,7 @@
 # Advance Python
 
 **Important Points to Remember :**
--  [Higher Order Function](#high-order-function.md)
+-  [Higher Order Function](functions.md)  
    -  Function like `map(), filter(), sorted()` are not executed when called with arguments but it is executed when the calling variable is used to retrive the output values.
 ^
     var = map(lambda x : x ** 2, (1, 2, 3))
