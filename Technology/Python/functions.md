@@ -129,9 +129,8 @@
 ^
     import functools
     lis = [1, 3, 5, 6, 2, ]
-    print(functools.reduce(lambda a, b: a+b, lis))
-    # Output 17 = 1+3, 4+5, 9+6, 15+2
-    
+    print(functools.reduce(lambda a, b: a+b, lis)) #Output 17 = 1+3, 4+5, 9+6, 15+2
+^
 -  `dir()`
    -  It takes argument as objects and return the attributes build-in and custom for that object.
     
