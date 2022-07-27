@@ -104,6 +104,8 @@
   -  ```open()```&emsp;- Opens a file and returns a file object.
   -  ```print()```&emsp;- Prints to a text stream or the console.
 
+**Reducing Function Build-In :**
+-  reduce, min, max, sum, any, all
 
 ### Miscellaneous
   -  `eval()`&emsp;- Evaluates a Python expression.
