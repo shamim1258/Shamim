@@ -8,8 +8,9 @@ Modules, in general, are simply Python files with a .py extension and can have a
    -  inspect
       -  isfunction(obj)
       -  ismethod(obj)
-      -  inspect.getsource(function)
-      -  inspect.getmodule(function)
+      -  inspect.getsource(object)
+      -  inspect.getmodule(object)
+      -  inspect.getcomments(object)
 
 ## Packages
 
