@@ -118,8 +118,11 @@ Check the [Mutability](#mutability) on data-types.
 - `bool` is subclass of `int` and we can check this also `issubclass(bool, int)`
 
 # Variable scopes
+-  **Namespace** is collection of object(variable) and object information(value) for the given scope(build-in, global, local).
 **Global :**
-- Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
+-  Global scope is the module scope.
+-  Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
+-  Python don't have concept of Truely Gobal scope across all modules and only exception to this is some globally available build-in objects which are `True, False, None, print, dict`
 
 **Protected :**
 - Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
