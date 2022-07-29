@@ -118,15 +118,42 @@ Check the [Mutability](#mutability) on data-types.
 - `bool` is subclass of `int` and we can check this also `issubclass(bool, int)`
 
 # Variable scopes
--  **Namespace** is collection of object(variable) and object information(value) for the given scope(build-in, global, local).  
+-  **Namespace** is collection of object(variable) and object information(value) for the given scope(built-in, global, local).  
 -  An object can be variable or method.
 -  A lifetime of a namespace depends upon the scope of objects, if the scope of an object ends, the lifetime of that namespace comes to an end. Hence, it is not possible to access the inner namespace’s objects from an outer namespace.
 -  Python itself maintain Namespace in the form of python dictionary.  
+-  Types of Namespcae
+   -  Built-In
+      -  It contains the names of all of Python’s built-in objects. These are available at all times when Python is running.
+      -  To get the list of namespace in built-in use command `dir(__builtins__)`
+   -  Global
+      -  It contains any names defined at the level of the main program.
+      -  Python creates the global namespace when the main program body starts, and it remains in existence until the interpreter terminates.
+      -  There may not be the only one global namespace that exists. The interpreter also creates a global namespace for any module that your program loads with the import statement.
+   -  Enclosing
+      -  When the main program calls function f() python creates a namespace for f() is Enclosing namespace.
+   -  Local
+      -  When the main function f() in enclosing namespace calls function g() than python create a namespace is Local namespace.
 -  **Scope** refers to the coding region from which a particular Python object is accessible. Hence one cannot access any particular object from anywhere from the code, the accessing has to be allowed by the scope of the object.
+-  When we define a variable at that point scope is not created when that variable is called at that point scope is created for that variable.
+-  **LEGB Rule / Order of namespace :**
+   -  LEGB - Local, Enclosing, Global, Built-in.
+   -  Suppose we have a variable with same name in all the namespaces than python will search the variable in exists in the order 
+      1.  Local
+      2.  Enclosing
+      3.  Global
+      4.  Built-In
+-  If an object is present in built-in and if we declare same in local that local will overwrite that object in the local scope.
+^
+    print = lambda x : 'hello ' + x, x
+    print('world') # this will overwrite the print function in local scope but outside this scope the print function will as default functionality
+^
+
+      
 **Global :**
 -  Global scope is the module scope.
 -  Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
--  Python don't have concept of Truely Gobal scope across all modules and only exception to this is some globally available build-in objects which are `True, False, None, print, dict`
+-  Python don't have concept of Truely Gobal scope across all modules and only exception to this is some globally available built-in objects which are `True, False, None, print, dict`
 
 **Protected :**
 - Protected attributes are attributes defined with an underscore prefixed to their identifier eg. \_sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
