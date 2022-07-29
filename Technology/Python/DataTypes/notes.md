@@ -136,6 +136,7 @@ Check the [Mutability](#mutability) on data-types.
       -  When the main function f() in enclosing namespace calls function g() than python create a namespace is Local namespace.
 -  **Scope** refers to the coding region from which a particular Python object is accessible. Hence one cannot access any particular object from anywhere from the code, the accessing has to be allowed by the scope of the object.
 -  When we define a variable at that point scope is not created when that variable is called at that point scope is created for that variable.
+-  New scope is created every time a function is called and new scope is created every time same function is called.
 -  **LEGB Rule / Order of namespace :**
    -  LEGB - Local, Enclosing, Global, Built-in.
    -  Suppose we have a variable with same name in all the namespaces than python will search the variable in exists in the order 
