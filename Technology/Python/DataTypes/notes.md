@@ -150,7 +150,16 @@ Check the [Mutability](#mutability) on data-types.
     print('world') # this will overwrite the print function in local scope but outside this scope the print function will as default functionality
 ^
 -  We can use `nonlocal` similar like `global` to refer to nonlocal variable which will search variable from inner most in the only local scope and will not search in global scope.
-      
+-  **Closure :**
+   -  When inner function refers to its outer function variable in this case the inner function and its outer variable together called closure.
+^
+    def outer():
+        var = 10
+        def inner():
+            print(var)
+        return inner
+^
+     
 **Global :**
 -  Global scope is the module scope.
 -  Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
