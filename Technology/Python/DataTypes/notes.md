@@ -118,7 +118,11 @@ Check the [Mutability](#mutability) on data-types.
 - `bool` is subclass of `int` and we can check this also `issubclass(bool, int)`
 
 # Variable scopes
--  **Namespace** is collection of object(variable) and object information(value) for the given scope(build-in, global, local).
+-  **Namespace** is collection of object(variable) and object information(value) for the given scope(build-in, global, local).  
+-  An object can be variable or method.
+-  A lifetime of a namespace depends upon the scope of objects, if the scope of an object ends, the lifetime of that namespace comes to an end. Hence, it is not possible to access the inner namespace’s objects from an outer namespace.
+-  Python itself maintain Namespace in the form of python dictionary.  
+-  **Scope** refers to the coding region from which a particular Python object is accessible. Hence one cannot access any particular object from anywhere from the code, the accessing has to be allowed by the scope of the object.
 **Global :**
 -  Global scope is the module scope.
 -  Global variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
