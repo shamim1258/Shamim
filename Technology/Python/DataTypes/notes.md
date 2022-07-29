@@ -149,7 +149,7 @@ Check the [Mutability](#mutability) on data-types.
     print = lambda x : 'hello ' + x, x
     print('world') # this will overwrite the print function in local scope but outside this scope the print function will as default functionality
 ^
-
+-  We can use `nonlocal` similar like `global` to refer to nonlocal variable which will search variable from inner most in the only local scope and will not search in global scope.
       
 **Global :**
 -  Global scope is the module scope.
