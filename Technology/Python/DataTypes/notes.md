@@ -151,6 +151,7 @@ Check the [Mutability](#mutability) on data-types.
 ^
 -  We can use `nonlocal` similar like `global` to refer to nonlocal variable which will search variable from inner most in the only local scope and will not search in global scope.
 -  **Closure :**
+   -  The function plus extended scope that contains free variable together called closure.
    -  When inner function refers to its outer function variable in this case the inner function and its outer variable together called closure. In below example inner function with outer function var variable is closure
 ^
     def outer():
@@ -158,7 +159,9 @@ Check the [Mutability](#mutability) on data-types.
         def inner():   #Closure
             print(var) #Closure
         return inner
+    fn = outer()
 ^
+   -  In above example if we want to check the if there is any close we can use `fn_.__closure__` this will return the cell memory reference and to check the free variables `fn.__code__.co_freevars`.
    -  Problem here is var variable exists in scope of outer and inner function so when inner function called the scope of outer function already ended how to get the value of var variable to solve this python as an exception identify this as closure than outer function var hold the memory address of a cell(this is memory address which hold the memory address of where actual value of var kept) and inner function also refers to this cell, so both refers to the cell and cell refers to address which holds the value of object.
      
 **Global :**
