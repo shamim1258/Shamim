@@ -60,6 +60,10 @@
       
 -  The power of lambda is better shown when you use them inside another function.
 
+## Decorators
+-  Decorators are used to add addition function over the function without modifying our function.
+-  Decorators functions take our function as argument into another function(wrapper function) and this wrapper function takes arguments (\*args,\*\*kwargs) and returns our function.
+
 ## Higher Order Function
 -  A function is called Higher Order Function if it contains other functions as a parameter or returns a function as an output.
 -  Decorators are the most common use of higher-order functions.
