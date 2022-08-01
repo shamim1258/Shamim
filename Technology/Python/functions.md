@@ -64,12 +64,14 @@
 -  Decorators are used to add addition function over the function without modifying our function.
 -  Decorators functions take our function as argument into another function(wrapper function) and this wrapper function takes arguments (\*args,\*\*kwargs) and returns the closure(our function which is given as argument in decorator function).
 -  Example
+^
     def decorator_fun(our_fun):
         def inner_fun(*args, **kwargs):    #This is wrapper function
             return our_fun(*args, **kwargs) # returning closure as our_fun is coming from decorator_fun argument
     @decorator_fun()
     def our_fun(a, b):
         pass
+^
 
 ## Higher Order Function
 -  A function is called Higher Order Function if it contains other functions as a parameter or returns a function as an output.
