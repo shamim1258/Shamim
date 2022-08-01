@@ -66,7 +66,7 @@
 -  Example
     def decorator_fun(our_fun):
         def inner_fun(*args, **kwargs):    #This is wrapper function
-            return our_fun(*args, **kwargs)
+            return our_fun(*args, **kwargs) # returning closure as our_fun is coming from decorator_fun argument
     @decorator_fun()
     def our_fun(a, b):
         pass
