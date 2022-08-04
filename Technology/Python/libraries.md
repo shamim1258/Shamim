@@ -4,7 +4,12 @@
 -  Modules, in general, are simply Python files with a .py extension and can have a set of functions, classes, or variables defined and implemented. They can be imported and initialized once using the import statement. If partial functionality is needed, import the requisite classes or functions using from foo import bar.
 -  When a module is imported python first check if it is present in `sys.path` if present or not if not than there could be some issue with installation.
 -  When importing a module python first check in the cache in `sys.modules` if present than not import and use the existing one.
--  Build-in modules which i have used.(`import <module_name>`)
+-  Modules are imported when code line `import` is executed in the file and not imported in advance so if import statement in used in between code and not in starting than first the initial code is executed and when control reaches to import statement than it is executed.
+-  When we use import statement it perform 2 tasks
+   -  finder
+   -  loader
+
+-  Build-in modules which i have used.(`import <module_name>`).
    -  sys
       -  sys.prefix : Get the python installation path.
       -  sys.path : Get the list of modules installed.
