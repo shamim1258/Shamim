@@ -27,7 +27,7 @@
             -  It will add r_math symbol in the module's global namespace referencing same object as above created in sys.module `module1.globals()` even if math already present in the namespace and both will refer to same object in sys.module.
    -  `from math import sqrt`
       -  First check if module 'math' is present in 'sys.modules' `is math in sys.module`
-         -  If present in sys.module than it will refer to this and not import again.
+         -  If present in sys.module than it will refer to this and not import math again.
             -  It will add sqrt symbol in the module's global namespace referencing same object math.sqrt and not add math in global namespace.   
          -  If not present in sys.module
             -  It will import the module math and create the reference in sys.module with keyword as math.
@@ -39,6 +39,20 @@
          -  If not present in sys.module
             -  It will import the module math and create the reference in sys.module with keyword as math.
             -  It will add r_sqrt symbol in the module's global namespace referencing same object math.sqrt and not add math in global namespace.  
+   -  `from math import *`
+      -  First check if module 'math' is present in 'sys.modules' `is math in sys.module`
+         -  If present in sys.module than it will refer to this and not import again.
+            -  It will add all the function of math symbol's in the module's global namespace referencing object liek math.sqrt, math.pi, etc and not add math in global namespace.   
+         -  If not present in sys.module
+            -  It will import the module math and create the reference in sys.module with keyword as math.
+            -  It will add all the function of math symbol's in the module's global namespace referencing object liek math.sqrt, math.pi, etc and not add math in global namespace.  
+      -   Issue occur when we use 2 moduel having same function name like moduel math and cmath both having function name sqrt.
+          -   In this case the in the namespace only 1 keyword is created for sqrt and it will refer to the last module imported as it will referesh the namespace from sys.module, like in below example math will overwrite in namespace.
+^
+    from import cmath *
+    from import math *
+^
+
 
 -  Build-in modules which i have used.(`import <module_name>`).
    -  sys
