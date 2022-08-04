@@ -81,6 +81,16 @@ Check the [Mutability](#mutability) on data-types.
 
 
 ## Sequence
+-  Standard sequence methods.
+   -  `item **in** seq`
+   -  `item **not in** seq`
+   -  concatenation `seq1 + seq2`
+   -  repetition `s * n` where n is integer.
+   -  `len(s)`
+   -  `min(s)` if ordering between elements is defined
+   -  `max(s)`
+   -  `index(i, j, k)` where i is required it will give first occurance of i in x, j is optional it is starting index to look and k is optional it is ending index till there it will look of i.
+   
 1.  **List**
 - List is like array but item can of different data-types.
 - Uses - []
@@ -116,6 +126,10 @@ Check the [Mutability](#mutability) on data-types.
 - Return boolean value of given expression - `bool(1)`
 - If no parameter is given default return value is `False`.
 - `bool` is subclass of `int` and we can check this also `issubclass(bool, int)`
+
+## Iterable
+-  It is a container type of object and we can list out elements in object one by one.
+-  Iterable is not necessary a sequence type example set.
 
 # Variable scopes
 -  **Namespace** is collection of object(variable) and object information(value) for the given scope(built-in, global, local).  
