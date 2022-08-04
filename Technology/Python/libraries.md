@@ -32,7 +32,13 @@
          -  If not present in sys.module
             -  It will import the module math and create the reference in sys.module with keyword as math.
             -  It will add sqrt symbol in the module's global namespace referencing same object math.sqrt and not add math in global namespace.  
-
+   -  `from math import sqrt as r_sqrt`
+      -  First check if module 'math' is present in 'sys.modules' `is math in sys.module`
+         -  If present in sys.module than it will refer to this and not import again.
+            -  It will add r_sqrt symbol in the module's global namespace referencing same object math.sqrt and not add math in global namespace.   
+         -  If not present in sys.module
+            -  It will import the module math and create the reference in sys.module with keyword as math.
+            -  It will add r_sqrt symbol in the module's global namespace referencing same object math.sqrt and not add math in global namespace.  
 
 -  Build-in modules which i have used.(`import <module_name>`).
    -  sys
