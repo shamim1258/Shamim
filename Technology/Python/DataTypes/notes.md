@@ -84,8 +84,8 @@ Check the [Mutability](#mutability) on data-types.
 -  Standard sequence methods.
    -  `item **in** seq`
    -  `item **not in** seq`
-   -  concatenation `seq1 + seq2`
-   -  repetition `s * n` where n is integer.
+   -  concatenation `seq1 + seq2`, list and tuple support this but range not support this.
+   -  repetition `s * n` where n is integer, list and tuple support this but range not support this.
    -  `len(s)`
    -  `min(s)` if ordering between elements is defined
    -  `max(s)`
@@ -247,7 +247,7 @@ Syntax ``` ''' This is doc string. '''  ```
 # Operations
 
 **Slicing :**
-- Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is number of items and step is 1.  
+- Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is index till where it will slice but not include stop index and step is 1.  
 Slicing can be done on strings, arrays, lists, and tuples.
 
 **Copying object by assignment :**
