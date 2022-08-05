@@ -95,6 +95,7 @@ Check the [Mutability](#mutability) on data-types.
 - List is like array but item can of different data-types.
 - Uses - []
 - List methods are - append(), clear(), copy(), count(), extend(), pop(), remove(), reverse(), index(), insert(), sort()
+- `append()` method mutate the list means when we append new item in list it will update the list object memory address information of original memory reference and not change the memory reference.
 
 2.  **Tuple**
 - Tuple are immutable i.e. cannot be modified after it is created.
@@ -248,10 +249,23 @@ Syntax ``` ''' This is doc string. '''  ```
 
 **Slicing :**
 - Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is index till where it will slice but not include stop index and step is 1.  
-Slicing can be done on strings, arrays, lists, and tuples.
+-  Slicing can be done on strings, arrays, lists, and tuples.
+-  If index is out of range of the given sequence than also it will the output and not error out.
+^
+    x = 'abc'
+    print(x[1:30]) #output will be bc
+^
+-  It always creates the new object not create reference to existing object.
+-  If we want to reverse a string we can use `str[::-1]` in this case python itself changes the default values to str[stop : start : -1].
 
 **Concatenation :**
--  Use `+` operator to concatenate 2 sequence.
+-  Use `+` operator to concatenate 2 sequence where both object must be of same type like list1 + list2 or tuple1 + tupel
+-  Concatenation does not udpate the original object but will create new object in case want to mutate original object we can use list append method.
+^
+    names = ['Ram', 'Shyam'] # Memory Reference 1x1002 containing Ram and Shyam
+    names = names + ['Gopal'] # Memory Reference 1x1005 containing Ram, Shyam and Gopal and memory address 1x1002 also exists but names now reference to 1x1005
+^
+
 -  Example
 ^
     x = [1, 2]
@@ -284,6 +298,18 @@ Slicing can be done on strings, arrays, lists, and tuples.
     #Output a = [[5, 2], [5, 2]]
 ^
 
+**Join :**
+-  It concatenates the string items by putting between them the given string.
+-  Syntax `'#'join(['a', 'b', 'c'])` Output will be `a#b#c`.
+-  The sequence items must be **string only**.
+
+**Enumerate :**
+-  It takes input as iterable and output the it's index as tuple combination and each item.
+-  Example : `str1 = list('ababc')` output will be `[(1, 'a'), (2, 'b'), (3, 'a'), (4, 'b'), (5, 'c')]`
+
+**Index :**
+-  index(i, j, k) where i is required it will give first occurance of i in x, j is optional it is starting index to look and k is optional it is ending index till there it will look of i.
+-  If given string in not found it will give exception error that sub-string not exists.
 
 **Copying object by assignment :**
 - When an object is assigned to new object it does not create copy value to new object but new object holds the reference to old object.
