@@ -60,6 +60,7 @@
       -  sys.prefix : Get the python installation path.
       -  sys.path : Get the list of modules installed.
       -  sys.modules : This get the cached modules imported in dictionary format of currently imported modules or sys.modules['sys'].
+      -  sys.getsizeof(object) : Get the size of object in bytes
    -  functools
       -  reduce
    -  inspect
@@ -70,6 +71,12 @@
       -  inspect.getcomments(object)
    -  time
       -  perf_counter()
+   -  timeit
+      -  timeit
+   -  dis
+      -  dis()
+      -  compile()
+      -  
 
 ## Packages
 -  Package is directory with __init__.py file and other python files where name of directory is package name.
