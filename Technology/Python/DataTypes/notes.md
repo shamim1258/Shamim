@@ -255,7 +255,7 @@ Syntax ``` ''' This is doc string. '''  ```
     x = 'abc'
     print(x[1:30]) #output will be bc
 ^
--  It always creates the new object not create reference to existing object.
+-  It always creates the new object not mutate the original object.
 -  If we want to reverse a string we can use `str[::-1]` in this case python itself changes the default values to str[stop : start : -1].
 
 **Concatenation :**
