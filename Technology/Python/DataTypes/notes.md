@@ -262,10 +262,28 @@ Slicing can be done on strings, arrays, lists, and tuples.
 ^
     x = [[1, 2], [1, 2]]
     a = x + x
+    #Output a = [[1, 2], [1, 2], [1, 2], [1, 2]]
+    a[0][0] = 5
+    #Output a = [[5, 2], [1, 2], [5, 2], [1, 2]]
+^
+
+**Repetition :**
+-  Use `*` operator to repeat a sequence n times where n is integer.
+-  Example
+^
+    x = [1, 2]
+    a = x * 3
+    #Output a = [1, 2, 1, 2, 1, 2]
+^
+-  The above example works fine as sequence items are immutable like x = [1, 2] where 1 and 2 are immutable if it contains string it will also work fine as string is also immutable but if items are mutable than it will create issue because repetition of same object will not copy these object to new variable but new object reference to previous object 'x' so here a will refer to x 3 times so in below example when mutable object is modified it will update it all places referencing same object.
+^
+    x = [[1, 2], [1, 2]]
+    a = x * 2
     #Output a = [[1, 2], [1, 2]]
     a[0][0] = 5
     #Output a = [[5, 2], [5, 2]]
 ^
+
 
 **Copying object by assignment :**
 - When an object is assigned to new object it does not create copy value to new object but new object holds the reference to old object.
