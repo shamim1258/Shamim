@@ -15,3 +15,21 @@
     var = list(filter(None, [1, 'a', 0, '', None, 'b', false])
     print(var) #Output [1, 'a', 'b']
 ^
+
+**Concatenation :**
+-  Use `+` operator to concatenate 2 sequence.
+-  Example
+^
+    x = [1, 2]
+    a = x + x
+    #Output a = [1, 2, 1, 2]
+^
+-  The above example works fine as sequence items are immutable like x = [1, 2] where 1 and 2 are immutable if it contains string it will also work fine as string is also immutable but if items are mutable than it will create issue because concatenating same object will not copy these object to new variable but new object reference to previous object 'x' so here a will refer to x 2 times so in below example when mutable object is modified it will update it all places referencing same object.
+^
+    x = [[1, 2], [1, 2]]
+    a = x + x
+    #Output a = [[1, 2], [1, 2]]
+    a[0][0] = 5
+    #Output a = [[5, 2], [5, 2]]
+^
+
