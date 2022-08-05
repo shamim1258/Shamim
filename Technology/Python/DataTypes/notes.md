@@ -325,6 +325,12 @@ Syntax ``` ''' This is doc string. '''  ```
     
 **Shallo Copy :**
 -  A shallow copy creates a new object which stores the reference of the original elements.
+    list1 = [[1, 2], 3, 4]
+    list2 = list1.copy()
+    #so now if we check with id for list1 and list2 will be different but list1[0] and list2[0] will be same and list1[1] and list2[1] will also same
+    list1[0].append('x')
+    #output for list1 = [[1, 2, 'x'], 3, 4]
+    #output for list2 = [[1, 2, 'x'], 3, 4] this will also be udpated as elements memory address is same
 
 **Deep Copy :**
 -  The deep copy creates independent copy of original object and all its nested objects.
