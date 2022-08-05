@@ -250,6 +250,23 @@ Syntax ``` ''' This is doc string. '''  ```
 - Slicing is taking some part of. Syntax ``` [start : stop : step] ```. Default values of start is 0, stop is index till where it will slice but not include stop index and step is 1.  
 Slicing can be done on strings, arrays, lists, and tuples.
 
+**Concatenation :**
+-  Use `+` operator to concatenate 2 sequence.
+-  Example
+^
+    x = [1, 2]
+    a = x + x
+    #Output a = [1, 2, 1, 2]
+^
+-  The above example works fine as sequence items are immutable like x = [1, 2] where 1 and 2 are immutable if it contains string it will also work fine as string is also immutable but if items are mutable than it will create issue because concatenating same object will not copy these object to new variable but new object reference to previous object 'x' so here a will refer to x 2 times so in below example when mutable object is modified it will update it all places referencing same object.
+^
+    x = [[1, 2], [1, 2]]
+    a = x + x
+    #Output a = [[1, 2], [1, 2]]
+    a[0][0] = 5
+    #Output a = [[5, 2], [5, 2]]
+^
+
 **Copying object by assignment :**
 - When an object is assigned to new object it does not create copy value to new object but new object holds the reference to old object.
 - If any changes made to the value using new object or old object both objects value will show the new updated value.
