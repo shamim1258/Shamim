@@ -96,12 +96,14 @@ Check the [Mutability](#mutability) on data-types.
 - Uses - []
 - List methods are - append(), clear(), copy(), count(), extend(), pop(), remove(), reverse(), index(), insert(), sort()
 - `append()` method mutate the list means when we append new item in list it will update the list object memory address information of original memory reference and not change the memory reference.
+- If we check the storage size of list using `sys.getsizeof()` when appending items in a for loop at few interval it increase the memory size of list and than after than for few item it does not increase mean it increase the memory size after few interval and in between remain same.
 
 2.  **Tuple**
 - Tuple are immutable i.e. cannot be modified after it is created.
 - Uses - ()
 - Tuple methods only 2 - count(), index()
 - `tpl = (1)` this is not tuple but int you can check by `type(tpl)` to make it tuple `tpl = (1,)`.
+-  If we check the storage size of tuple using `sys.getsizeof()` the memory size of tuple keep on increasing with 8 byte with each new item.
     
 2.  **Range**
 - Create a sequence of number starting from 0 to n-1.
