@@ -76,7 +76,9 @@
    -  dis
       -  dis()
       -  compile()
-      -  
+   -  copy
+      -  copy
+      -  deepcopy
 
 ## Packages
 -  Package is directory with __init__.py file and other python files where name of directory is package name.
