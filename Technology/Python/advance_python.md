@@ -33,3 +33,5 @@
     #Output a = [[5, 2], [5, 2]]
 ^
 
+**Sorting :**
+-  The method `sorted()` copies the object and sort the copied object but list function `list.sort()` this does in-place sorting as this works on original list and not copies the list.
