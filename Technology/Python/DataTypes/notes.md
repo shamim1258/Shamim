@@ -96,7 +96,8 @@ Check the [Mutability](#mutability) on data-types.
 - Uses - []
 - List methods are - append(), clear(), copy(), count(), extend(), pop(), remove(), reverse(), index(), insert(), sort()
 - `append()` method mutate the list means when we append new item in list it will update the list object memory address information of original memory reference and not change the memory reference.
-- If we check the storage size of list using `sys.getsizeof()` when appending items in a for loop at few interval it increase the memory size of list and than after than for few item it does not increase mean it increase the memory size after few interval and in between remain same.
+-  If we check the storage size of list using `sys.getsizeof()` when appending items in a for loop at few interval it increase the memory size of list and than after than for few item it does not increase mean it increase the memory size after few interval and in between remain same.
+-  When we use list assignment like `list2 = list1` in this case id(list1) and id(list2) are different as new list object is created but the id of element will be same id(list1[0]) and id(list2[0]) will be same as both refering to same object.
 
 2.  **Tuple**
 - Tuple are immutable i.e. cannot be modified after it is created.
@@ -104,6 +105,7 @@ Check the [Mutability](#mutability) on data-types.
 - Tuple methods only 2 - count(), index()
 - `tpl = (1)` this is not tuple but int you can check by `type(tpl)` to make it tuple `tpl = (1,)`.
 -  If we check the storage size of tuple using `sys.getsizeof()` the memory size of tuple keep on increasing with 8 byte with each new item.
+-  When we use tuple assignment like `tuple2 = tuple1` in this case id(tuple1) and id(tuple2) are same as both refering to same object and items will also refer to same object.
     
 2.  **Range**
 - Create a sequence of number starting from 0 to n-1.
