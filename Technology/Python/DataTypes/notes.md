@@ -261,10 +261,10 @@ Syntax ``` ''' This is doc string. '''  ```
 ^
 -  It always creates the new object not mutate the original object.
 -  If we want to reverse a string we can use `str[::-1]` in this case python itself changes the default values to str[stop : start : -1].
--  We can also use slicing for assignment also even the number of items in assignment not required to be same.
+-  We can also use slicing for assignment also even the number of items in assignment not required to be same also in case of assignment the list is mutate and not create new object reference.
 ^
     list1 = [1, 2, 3, 4, 5]
-    list1[0:2] : ('a', 'b', 'c')
+    list1[0:2] = ('a', 'b', 'c')
     #Output list1 = ['a', 'b', 'c', 3, 4, 5] here replaced 1, 2 with 'a', 'b', 'c' even number of items are not same but it works
 ^
 - **Slice definition** is naming a slice and it will be object of type slice and instead of using [start:end] we can use slice object by `slice(start, end)` where start and end are the indexes where we exclude end index value.
