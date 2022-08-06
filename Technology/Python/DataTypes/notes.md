@@ -274,6 +274,12 @@ Syntax ``` ''' This is doc string. '''  ```
     list2 = list1[s] #Here we are using slice named object s 
     #output list2 = [1, 2]
 ^
+-  **Insertion** using slice can be but the slice object should be empty like list[n:n] it will empty list [], also it will mutate the list.
+^
+    list1 = [1, 2, 3, 4, 5]
+    list1[ 1 : 1 ] = 'abc'
+    #output list1 = [1, 'a', 'b', 'c', 2, 3, 4, 5]
+^
 
 **Concatenation :**
 -  Use `+` operator to concatenate 2 sequence where both object must be of same type like list1 + list2 or tuple1 + tupel
