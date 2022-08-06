@@ -103,9 +103,8 @@
 
 ### Type Conversion
   -  ```str()```&emsp;- Returns a string version of an object.
-  -  ```ord()```&emsp;- Returns integer representation of a character.
+  -  ```ord()```&emsp;- Returns ASCII integer representation of a character.
   -  ```type()```&emsp;- Returns the type of an object or creates a new type object.  
-
 
 ### Iterables and Iterators
   -  `all()`&emsp;- Returns True if all elements of an iterable are true.
@@ -124,6 +123,12 @@
 ### Miscellaneous
   -  `eval()`&emsp;- Evaluates a Python expression.
   -  `len()`&emsp;- Returns the length of an object.
+  -  `sorted()`
+     -  It sorts the given iterable default type is ascending.
+     -  Syntax `sorted(iterable, key=None, reverse=False)` where key and reverse are keyword arguments and reverse=False for ascending and reverse=True is decending.
+     -  This does not workon on original object it first copies the object and than sort the copied one.
+     -  This returns a list.
+     -  This uses sort algorithm called 'TimSort'
   -  `filter()`
      -  Syntax `filter (function, iterable)`
      -  Takes input as list, tuple, set or container of iterator.
