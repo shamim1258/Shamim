@@ -131,3 +131,4 @@
 ## Django Libraries
 -  Django packages and libraries i have used.
    -  `from django.shortcuts import render`
+   -  `from django.http import HttpResponse`
