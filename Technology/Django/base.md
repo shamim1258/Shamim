@@ -40,6 +40,7 @@
 [Example connect.py](Example/connect.md)  
 [Django Access Permission Admin Panel](django-admin.md)  
 [Middleware](middleware.md)  
+[Django Libraries Used](../Python/libraries.md#django-libraries)  
 
 ### MVT
 
