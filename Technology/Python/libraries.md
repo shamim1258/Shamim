@@ -11,7 +11,7 @@
    -  loader
       -  `<module_name>.__spec__` this will give loader and path details.
 
--  Types of importing module
+-  **Types of importing module :**
    -  `import math`
       -  First check if module 'math' is present in 'sys.modules' `is math in sys.module`
          -  If present in sys.module than it will refer to this and not import again.
@@ -55,7 +55,8 @@
 -  Performance wise not much difference in using `import math` and `from math import sqrt` as in both cases math is going to be imported just in case 2 sqrt namespace will be created in namespace globals().
 -  Module have properties : __file__, __package__ but not have property __path__ but package have this property.
 
--  Build-in modules which i have used.(`import <module_name>`).
+### Build-in Modules 
+- The build-in modules which i have used.
    -  sys
       -  sys.prefix : Get the python installation path.
       -  sys.path : Get the list of modules installed.
@@ -122,3 +123,11 @@
    -  Data visualization tool
 -  HDF5
    -  Used to store and manipulate data
+
+## Libraries
+-  Libraries generally referred as collection of packages.
+-  Libraries can be interchangeble be used for package also as package is collection of modules and sub-packages.
+
+## Django Libraries
+-  Django packages and libraries i have used.
+   -  `from django.shortcuts import render`
