@@ -106,9 +106,11 @@
 -  In above example if we use `import pack1` than pack1 is added to sys.module, module1 is added to sys.module and module2 is added to sys.module.
 -  If we use `import pack1.pack2.module3` than pack1 is added to sys.module, module1 is added to sys.module and module2 is added to sys.module, pack2 is added to sys.module, module3 is added to sys.module.
 
--  Pandas
+-  **Pandas :**
    -  Used for data analysis.
-   -  dataframe
+   -  Commonly useful methods - read_excel, read_csv
+   -  Return dataframe
+   -  Dataframe have numerous methods for data conversion - to_string, to_dict, to_html, to_json
 -  NumPy
    -  Multidimentional Array
 -  SciPy
