@@ -115,6 +115,8 @@
    -  Multidimentional Array
 -  SciPy
    -  Algorithm to use with NumPy
+-  **openpyxl**
+   -  To work on excel file.
 -  PyMySQL
    -  MySQL connection
 -  IPython
