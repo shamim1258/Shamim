@@ -89,3 +89,14 @@ The garbage collection can be invoked manually in the following way :
     list_B = [variable_a, 2, 3]
 ^
    -  set element comparision is much faster than list and tuple.
+
+-  **Context Manager :**
+   -  To overcome the problem of memory leak(external resource like files, locks, network connection when opened will kept open for forever if not closed) python have Context Manager.
+   -  Python have 2 approches to deal with memeory management.
+      -  `try..finally`
+         -  putting file close statement in finally will gurantee that file will get properly closed.
+      -  `with`
+         -  It created run time context where group of statements executed within control of context manager.
+         -  The context manager object results from evaluating the expression after with. In other words, expression must return an object that implements the context management protocol. This protocol consists of two special methods.
+            -  __enter__() is called by the with statement to enter the runtime context.
+            -  __exit__() is called when the execution leaves the with code block.
