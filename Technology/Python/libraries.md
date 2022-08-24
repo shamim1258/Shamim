@@ -85,6 +85,7 @@
    -  random
       -  randint(int1, int2) : To generate any random number between given range
       -  choice(sequnce) : To generate random number from given sequence input
+   -  re
 
 ## Packages
 -  Package is directory with __init__.py file and other python files where name of directory is package name.
