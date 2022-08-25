@@ -128,7 +128,9 @@ print(students)
 ## Rest API
 
 1.  If API is slow how can we improve performance.
-
+&emsp;<details>
+-  Check the database query and optimize if possible
+-  Use cache to increase performance
     
 ## Database
 
