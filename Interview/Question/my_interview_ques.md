@@ -98,6 +98,7 @@ Reference counting works by counting the number of times an object is referenced
 ## Django
 
 1.  Cache in django.
+[Object Copying](../../Technology/Django/cache-django.md)
     
 1.  Cons of django.
     
@@ -131,6 +132,11 @@ print(students)
 &emsp;<details>
 -  Check the database query and optimize if possible
 -  Use cache to increase performance
+    
+## AWS
+1.  What services have you used in AWS.
+&emsp;<details>
+EC2, S3, Lambda function, Parameter Store, Access and Policy
     
 ## Database
 
