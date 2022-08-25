@@ -3,7 +3,7 @@
 -  [Technology](Technology/base.md)  
    -  [Python Notes](Technology/Python/base.md)  
       - [Data Types](Technology/Python/DataTypes/notes.md)  
-      - [Loop](loop.md)  
+      - [Loop](Technology/Python/loop.md)  
       - [Exception Handling](exception_handling.md)  
       - [Functions](functions.md)  
       - [Classes](class.md)  
