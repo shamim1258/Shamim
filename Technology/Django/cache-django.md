@@ -77,7 +77,7 @@ OR
    -  You can also cache parts of a template, this is done by using the cache tag.
    -  The cache tag will take 2 parameters − the time you want the block to be cached (in seconds) and the name to be given to the cache fragment.
 ^
-    {% load cache %}
+    {% loadx cache %}
     {% extends "main_template.html" %}
     {% block title %}My Hello Page{% endblock %}
     {% cache 500 content %}
