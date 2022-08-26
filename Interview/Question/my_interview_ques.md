@@ -101,6 +101,7 @@ Reference counting works by counting the number of times an object is referenced
 [Object Copying](../../Technology/Django/cache-django.md)
     
 1.  Cons of django.
+[Object Copying](../../Technology/Django/base.md)
     
 1.  What is the use of middleware in django
     
