@@ -107,6 +107,8 @@ The garbage collection can be invoked manually in the following way :
    -  Objects
       -  The object is an entity that has a state and behavior associated with it. 
    -  Polymorphism
+      -  This is a concept which is one function or method can take more than one form mean function can take behaives different based on different arguments passed.
+      -  Example `print(1 + 2)` and `print('1' + '2')`
    -  Encapsulation
    -  Inheritance
    -  Data Abstraction
