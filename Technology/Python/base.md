@@ -100,3 +100,13 @@ The garbage collection can be invoked manually in the following way :
          -  The context manager object results from evaluating the expression after with. In other words, expression must return an object that implements the context management protocol. This protocol consists of two special methods.
             -  __enter__() is called by the with statement to enter the runtime context.
             -  __exit__() is called when the execution leaves the with code block.
+
+-  **OOPs Concept in Python :**
+   -  Class
+      -  Class is blueprint or prototype from which objects are created.
+   -  Objects
+      -  The object is an entity that has a state and behavior associated with it. 
+   -  Polymorphism
+   -  Encapsulation
+   -  Inheritance
+   -  Data Abstraction
