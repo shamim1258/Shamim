@@ -41,6 +41,7 @@
   - `python manage.py migrate`
 -  **Database Interactive Shell :**
    -  `python manage.py migrate shell`
+      -  `from <appname>.model import <model_class_name>`
 
 
 ## Sample File
