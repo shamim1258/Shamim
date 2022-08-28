@@ -39,6 +39,7 @@
 - **Migration**
   - This is used for applying the changes done to our models into the database. That is if we make any changes to our database then we use migrate command. This is used the first time we create a database.
   - `python manage.py migrate`
+-  `python manage.py createsuperuser`
 -  **Database Interactive Shell :**
    -  `python manage.py migrate shell`
       -  `from <appname>.model import <model_class_name>`
