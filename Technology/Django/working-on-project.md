@@ -28,6 +28,21 @@
   path('', include("projectApp.urls")),
   ]```  
 
+## Command Line Utility
+
+- **runserver**
+  - This command is used to run the server for our web application.
+  - Syntax `python manage.py runserver`
+- **Makemigrations**
+  - this is done to apply new migrations that have been carried out due to the changes in the database.
+  - `python manage.py makemigrations`
+- **Migration**
+  - This is used for applying the changes done to our models into the database. That is if we make any changes to our database then we use migrate command. This is used the first time we create a database.
+  - `python manage.py migrate`
+-  **Database Interactive Shell :**
+   -  `python manage.py migrate shell`
+
+
 ## Sample File
 
 ### manage.py
