@@ -13,3 +13,7 @@
    -  `python manage.py migrate`
       -  This apply changes to the database and update database.
    -  `python manage.py test`
+   -  `python manage.py squashmigrations <application_name> <migration_file_inital>`
+      - Example : `python manage.py squashmigrations ibupdate_app 0004`
+      - It will mirge all files 0001_initial.py, 0002_initial.py, 0003_initial.py and 0004_initial.py into one file keeping only also which later we can delete manually.
+  
