@@ -1,6 +1,8 @@
 # Models
 
--  To work on database without source code we can you terminal shell intrative utility by using command `python manage.py shell`
+-  To work on database without source code we can you terminal shell intrative utility by using command `python manage.py shell`.
+-  **Model Fields :**
+   -  Fields argument `verbose_name = 'any_name'` is the name visible in admin panel but in the database original field name is considered.
 -  **QuerySet :**
    -  Queryset is a lit of objects in a given model.
    -  It allows to read data from database, filter it and order it.
