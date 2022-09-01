@@ -8,6 +8,7 @@
 
 **Features of Django**
 - Admin Interface
+- Support multiple database backend
 - Templating
 - Form Handling
 - Internationalization
