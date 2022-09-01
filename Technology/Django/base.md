@@ -36,6 +36,7 @@
 [Django File Structure](file-structure.md)  
 [Working on Projects](working-on-project.md)  
 [Django Models](models.md)  
+[Django Signals](signals.md)  
 [Rest API](Api/base.md)  
 [Example Code Files](Example/base.md)  
 [Example connect.py](Example/connect.md)  
