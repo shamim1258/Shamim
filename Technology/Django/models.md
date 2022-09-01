@@ -1,11 +1,11 @@
 # Models
 
-## QuerySet
--  Queryset is a lit of objects in a given model.
--  It allows to read data from database, filter it and order it.
--  Example : `model_name.objects.all()`
 -  To work on database without source code we can you terminal shell intrative utility by using command `python manage.py shell`
--  Useful link to read more about query set https://www.programink.com/django-tutorial/django-queryset.html
+-  **QuerySet :**
+   -  Queryset is a lit of objects in a given model.
+   -  It allows to read data from database, filter it and order it.
+   -  Example : `model_name.objects.all()`
+   -  Useful link to read more about query set https://www.programink.com/django-tutorial/django-queryset.html
 -  **Models deployment or migrations commands :**
    -  `python manage.py makemigrations`
       -  This validates the changes in model classes and throw error if any like if any default attribute for a field not defined eg max_length
@@ -19,3 +19,6 @@
 -  **`bulk_create()`**
    -  This is used to insert multiple record into model in a single operation.
    -  Example `Product.objects.bulk_create([Product(name='Mobile1',price=15), Product(name='Mobile2',price=20),])`
+-  **dumpdata**
+   -  It is used to take backup of django model database.
+   -  Command `python manage.py dumpdata`
