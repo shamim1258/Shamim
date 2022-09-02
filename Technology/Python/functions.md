@@ -34,7 +34,7 @@
    -  We cannot add more position argument after '\*arg' example `def myfun(a, b, c, *arg, d)` here we cannot add 'd'.
 
 ## Lambda Function
--  Anonymous function means that a function is without a name.
+-  Lambda function are anonymous function with a single expression not multiline function.
 -  `lambda` keyword is used to create anonymous functions.
 -  Syntax    
     - `lambda arguments : expression`.
