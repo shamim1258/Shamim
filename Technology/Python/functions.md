@@ -5,6 +5,7 @@
 -  Parameter are variable in the function definition and Arguments are passed when we call function.
 -  Functions are **first class objects** which means that functions in Python can be used or passed as arguments.
 -  **Default Parameter**
+   -  Parameter are defined in order as position , keywords (\*args, \*\*kwargs) and than default.
    - We can define default parameter `def func(a, b = 100)`
    - If we give any default parameter than all the parameter after that must also be default parameter otherwise it will error out.
 -  **Keyword Arguments**
