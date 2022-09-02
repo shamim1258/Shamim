@@ -49,6 +49,7 @@ Reference counting works by counting the number of times an object is referenced
     list_B = [x**2 if x%2==0 else x**3 for x in list_A]
 <br>**Dictionary Comprehension :** Creating new_dict from range(1,11) by adding 3 each element `new_dict = {num: num*num for num in range(1, 11)}`
 <br>**Set Comprehension :** `new_set = {var for var in input_list if var % 2 == 0}`
+    `new_set = {var for var in input_set if var % 2 == 0}`
     
 1.  What is lambda function.  
 [Lambda Function](../../Technology/Python/functions.md)
