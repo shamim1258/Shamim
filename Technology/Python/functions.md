@@ -34,8 +34,9 @@
    -  We cannot add more position argument after '\*arg' example `def myfun(a, b, c, *arg, d)` here we cannot add 'd'.
 
 ## Lambda Function
--  Lambda function are anonymous function with a single expression not multiline function.
+-  Lambda function are anonymous function with any number of arguments but only one expression, which is evaluated and returned.
 -  `lambda` keyword is used to create anonymous functions.
+-  
 -  Syntax    
     - `lambda arguments : expression`.
 -  Example - Here `myfun(3)` 3 is argument for function myfunc not lambda `mydoubler(10,20)` is arguments to lambda function.
@@ -44,8 +45,7 @@
       return lambda a,b : a * n * b
     mydoubler = myfunc(3)
     print(mydoubler(10,20))
-   
--  It can have any number of arguments but only one expression, which is evaluated and returned.
+^
 -  If we directly call lambda it will return the lambda object not it's return value.
    -  `print(lambda a : a + 1)`
 -  To get the return value call this with the arguments.
