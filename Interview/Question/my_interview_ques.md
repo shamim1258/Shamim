@@ -42,7 +42,11 @@ Reference counting works by counting the number of times an object is referenced
 1.  List and Dictionary comprehenion.
 &emsp;<details>
 <br>**Comprehension :** Creating new sequences using a given python sequence.
-<br><h4>List Comprehension :</h4> Creating new_list from given_list by adding 3 each element if it is even number `new_list = [var+3 for var in given_list if var % 2 == 0]`
+<br><h4>List Comprehension :</h4>
+    list_A = [x for x in range(10)]
+    list_B = list_A
+    list_B = [x for x in list_A]
+    list_B = [x**2 if x%2==0 else x**3 for x in list_A]
 <br>**Dictionary Comprehension :** Creating new_dict from range(1,11) by adding 3 each element `new_dict = {num: num*num for num in range(1, 11)}`
 <br>**Set Comprehension :** `new_set = {var for var in input_list if var % 2 == 0}`
     
