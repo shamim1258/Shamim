@@ -119,6 +119,10 @@ Check the [Mutability](#mutability) on data-types.
 
 ## Set
 1.  **Set**
+-  Set is unordered mutuable collection of objects.
+-  Syntax `set_A = {1, 2, 3}`
+-  In a general way it is a dictionary without keywords.
+-  Defining empty set is bit tricky as set_A = {} this will not be a set but dict to create empty set - `set_A = set()`
 - Methods - add(), clear(), copy(), difference(), difference_update(), discard(), intersection(), intersection_update(), isdisjoint(), issubset(), isuperset(), pop(), remove(), symmetric_difference(), symmetric_difference_update(), union(), update().
 
 2.  **FronzenSet**
