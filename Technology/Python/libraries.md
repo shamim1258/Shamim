@@ -64,6 +64,7 @@
       -  sys.path : Get the list of modules installed.
       -  sys.modules : This get the cached modules imported in dictionary format of currently imported modules or sys.modules['sys'].
       -  sys.getsizeof(object) : Get the size of object in bytes
+      -  sys.getrefcount(object) : To get the reference count of object and it will be incremented by 1 with this statement.
    -  functools
       -  reduce
    -  inspect
