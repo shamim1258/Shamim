@@ -84,12 +84,19 @@ Reference counting works by counting the number of times an object is referenced
 [Recursive Function](../../Technology/Python/functions.md#recursive-function)
     
 1.  Write a recursive function to reverse a string.
-&emsp;<details>  
+&emsp;<details>
+^
+    #Solution1
+    import functools
+    rev = functools.reduce(lambda x,y : y+x, 'abcd')
+    
+    #Solution2
     def reverse_string(str):
     if len(str) == 0:
         return str
     else:
         return str[-1]+reverse_string(str[0:-1])
+^
     
 1.  Difference between generators and iterators.
     
