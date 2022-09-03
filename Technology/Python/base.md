@@ -35,6 +35,7 @@
       -  By using `ctypes.c_long.from_address(address).value` here we are not passing variable name but its memory address and it will give the exact count without increasing it.
       -  If count like `ctypes.c_long.from_address(id(variable_name)).value` than it will not increase the count by 1 even if we are taking parameter as variable_name because when from_address will run by that time id(variable_name) is already executed and release its memory also this will work same way as `ctypes.c_long.from_address(address).value`
 -  **Garbage Collection :**
+   -  Garbage Collection is memory management utility which runs automatically to deallocated the memory space of non-usable objects and also take care of cyclic dependency.
    -  This runs automatically and can be also be triggered manually and handles the cyclic dependency.
    -  In below example reference count for the list created is two. However, since it cannot be reached from inside Python and cannot possibly be used again, it is considered garbage. In the current version of Python, this list is never freed.
 ^
