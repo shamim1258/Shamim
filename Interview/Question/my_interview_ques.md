@@ -70,6 +70,8 @@ Reference counting works by counting the number of times an object is referenced
     foo(1,2,3,4)
     foo(1,2,3,4,5,6)
     foo(1,2,3,c=4)  
+^
+[Function Parameter Arguments](../../Technology/Python/function.md)
 &emsp;<details>
     foo(1,2,3,4) Output : 1,2,3,4
     foo(1,2,3,4,5,6) Output : 1,2,3,4
