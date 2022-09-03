@@ -87,7 +87,8 @@
       if x==1:
         return 1
       else:
-        return (x\*factorial(x-1))
+        return (x*factorial(x-1))
+^
 -  By default, the maximum depth of recursion is 1000. If the limit is crossed, it results in `RecursionError`.
 -  Disadvantages :
    -  Recursive calls are expensive (inefficient) as they take up a lot of memory and time.
