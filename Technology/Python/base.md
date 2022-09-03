@@ -72,11 +72,11 @@ The garbage collection can be invoked manually in the following way :
    -  The easiest way to create a reference cycle is to create an object which refers to itself.
    -  This cannot be handled by reference counting and but can be handled by **Garbage Collector**.
 ^
-    Because create_cycle() creates an object x which refers to itself, the object x will not automatically be freed when the function returns. This will cause the memory that x is using to be held onto until the Python garbage collector is invoked.
-    def create_cycle():
-      x = [ ]
-      x.append(x)
-    create_cycle()
+    def functionA():
+        functionB()
+    def functionB():
+        functionA()
+^
     
 -  **Python Optimizations - Peephole :** pre-calculate or cache the expression for optimization purpose.
    -  **Contact expression**
