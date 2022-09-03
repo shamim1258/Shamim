@@ -71,13 +71,14 @@ Reference counting works by counting the number of times an object is referenced
     foo(1,2,3,4,5,6)
     foo(1,2,3,c=4)  
 ^
-[Function Parameter Arguments](../../Technology/Python/function.md)
+[Function Parameter Arguments](../../Technology/Python/functions.md)
 &emsp;<details>
     foo(1,2,3,4) Output : 1,2,3,4
     foo(1,2,3,4,5,6) Output : 1,2,3,4
     foo(1,2,3,c=4) Output : Error - foo() got multiple values for argument 'c'.
     
 1.  Explain cyclic dependency.
+[Cyclic Reference](../../Technology/Python/base.md)
     
 1.  What is recursion.  
 [Recursive Function](../../Technology/Python/functions.md#recursive-function)
