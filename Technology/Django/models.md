@@ -24,3 +24,6 @@
 -  **dumpdata**
    -  It is used to take backup of django model database.
    -  Command `python manage.py dumpdata`
+
+-  **Debug :**
+   -  To check the actual sql generated from ORM we can use expression `<model_name>.objects.all().query`
