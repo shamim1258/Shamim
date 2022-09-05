@@ -26,4 +26,5 @@
    -  Command `python manage.py dumpdata`
 
 -  **Debug :**
-   -  To check the actual sql generated from ORM we can use expression `<model_name>.objects.all().query`
+   -  To check the actual sql generated from ORM we can use expression `<model_name>.objects.all().query`.
+   -  To get more details on ORM sql we can use `from django.db import connection <model_name>.objects.all().connection.queries`
