@@ -1,77 +1,50 @@
-# API
-- API stand for Application Programming Interface.  
-- REST APIs are an industry-standard way for web services to send and receive data.  
-- They use HTTP request methods to facilitate the request-response cycle and typically transfer data using JSON, and more rarely - HTML, XML and other formats.  
+# REST API
+-  REST stands for Representational State Transfer.   
+-  API stand for Application Programming Interface.
+-  REST APIs are industry-standard way for web services to send and receive data.  
+-  They use HTTP request methods to facilitate the request-response cycle and typically transfer data using JSON, and more rarely - HTML, XML and other formats.  
+-  REST APIs leverage with HTTP protocols instead of other protocols, these operations correspond to HTTP methods like GET, POST or PUT.  
+-  **URI :** Universal Resource Identifier used to identifying where a specific resource can be found, such as a page or a document.
+-  **Idempotent :** An operation is idempotent if it produces same result when called multiple times.
+-  **HTTP METHODS :**
+   -  **GET :**
+      -  This is used to get the resource from target.
+      -  The URI contains the Id or any identification key in the request.  
+   -  **POST :**
+      -  This is used to create resources without knowing the URI for the new resource.  
+      -  POST is not idempotent. So sending the same POST requests multiple times can result in the creation of multiple resources.
+      -  POST does not necessarily need to create resources. It can also be used to perform a generic action (e.g. starting a batch job, importing data or process something).
+      -  Example `POST /questions`
+   -  **PUT :**
+      -  Use PUT when we want to modify a singular resource that is already a part of resources collection.
+      -  PUT replaces the resource in its entirety meaning it does not update a one or few fields but replaces the entire object. Also the request contains the all the elements.
+      -  POST is idempotent. So if we retry a request multiple times, that should be equivalent to a single request invocation.
+      -  The main difference between POST and PUT is a different meaning of the request URI.
+      -  Example `PUT /questions/{question-id}`
+   -  **PATCH :**
+      -  PATCH is used to apply partial modifications to a resource.  
+      -  Unlike PUT, PATCH request have only entity which need to be updated.
+      -  POST is not idempotent. So sending the same POST requests multiple times can result in the creation of multiple resources. A simple example here is the addition of an item to an existing list resource, like adding a product to a shopping cart. Multiple (partial) update requests might add the product multiple times to the shopping cart.
 
 **Links :**  
 - [Example](example_1.md)  
 - [Example Authentication](example_2.md)  
 - [Example ViewSet Router](example_3.md)  
 
-## REST API
-- REST stands for Representational State Transfer.  
-- It is a standard architecture for building and communicating with web services.  
-- It typically mandates resources on the web are represented in a text format (like JSON, HTML, or XML) and can be accessed or modified by a predetermined set of operations.  
-- Given that we typically build REST APIs to leverage with HTTP instead of other protocols, these operations correspond to HTTP methods like GET, POST, or PUT.  
-- **Setup**
-  - Installation : `pip install djangorestframework`
-  - In settings.py add `rest_framework` under INSTALLED_APPS section.
-  - If you're intending to use the browsable API you'll probably also want to add REST framework's login and logout views. Add the following to your root urls.py file.
-^
-    urlpatterns = [
-      ...
-      path('api-auth/', include('rest_framework.urls'))
-    ]  
-    
-  -  Any global settings for a REST framework API are kept in a single configuration dictionary named REST_FRAMEWORK. Start off by adding the following to your settings.py module:
-^
-    REST_FRAMEWORK = {
-      # Use Django's standard `django.contrib.auth` permissions,
-      # or allow read-only access for unauthenticated users.
-      'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-      ]
-    }
-
-### Advantages
-- Designed for high performance, portability, reliability, and scalability.
-- Client-server separation allows each to individually operate and scale.
-- Easy to test and adapt to various environments.
-- Supports various data transfer technologies including JSON, XML, YAML, images, and more.
-- Uses less bandwidth than other methods, such as SOAP.
-
-### Disadvantages
-- Doesn’t enforce security practices.
-- HTTP method limits you to synchronous requests.
-- Due to statelessness, you might be unable to maintain state (e.g. in sessions).
-
-### Response Status Code
-```from rest_framework import status```
-- 200: Successful request
-- 201: Entity or entities created from successful request
-- 400: Bad request. Invalid client request.
-- 401: Unauthorized. User isn’t authorized to access a resource and may be unauthenticated
-- 403: Forbidden. User isn’t authorized to access a resource, user is authenticated
-- 404: Not found. Resource not found
-- 500: Internal server error. Generic server error
-- 502: Bad gateway. Response from upstream server is not valid
-- 503: Service unavailable. Result of server-side issue, including overload or system failure
-
-## REST Framework
-- Django REST Framework (**DRF**).
-  - Django REST Framework (DRF) has its own flavor of views that inherit from Django's View class.
-  - The essential component of DRF views is the APIView class, which subclasses Django's View class.
-  - APIView class is a base for all the views that you might choose to use in your DRF application which includes :
-    - function-based views
-    - class-based views
-    - mixins
-    - generic view classes
-    - viewsets
-  - When a request hits a view, the view first initializes a Request object, which is a DRF-enhanced HttpRequest from Django.
-  - When compared to Django's HttpRequest, it has the following advantages:
-    - Content is automatically parsed according to the Content-Type header and is available as request.data.
-    - It supports PUT and PATCH methods (including file uploads). (Django only supports GET and POST methods.)
-    - By temporarily overriding the method on a request, it checks permissions against other HTTP methods.
+## Django Rest Framework DRF
+- Django REST Framework (DRF) has its own flavor of views that inherit from Django's View class.
+- The essential component of DRF views is the APIView class, which subclasses Django's View class.
+- APIView class is a base for all the views that you might choose to use in your DRF application which includes :
+  - function-based views
+  - class-based views
+  - mixins
+  - generic view classes
+  - viewsets
+- When a request hits a view, the view first initializes a Request object, which is a DRF-enhanced HttpRequest from Django.
+- When compared to Django's HttpRequest, it has the following advantages:
+  - Content is automatically parsed according to the Content-Type header and is available as request.data.
+  - It supports PUT and PATCH methods (including file uploads). (Django only supports GET and POST methods.)
+  - By temporarily overriding the method on a request, it checks permissions against other HTTP methods.
 - It is a package built on top of Django to create web APIs.  
 - Most remarkable features of Django is its Object Relational Mapper (ORM) which facilitates interaction with the database in a Pythonic way.  
 - There are three stages before creating a API through REST framework, Converting a Model’s data to JSON/XML format (Serialization), Rendering this data to the view, Creating a URL for mapping to the viewset.  
@@ -105,6 +78,51 @@
 
   - **Class Based**
     - Uses `APIVIEW`
+
+-  **Setup**
+   -  Installation : `pip install djangorestframework`
+   -  In settings.py add `rest_framework` under INSTALLED_APPS section.
+   -  If you're intending to use the browsable API you'll probably also want to add REST framework's login and logout views. Add the following to your root urls.py file.
+^
+    urlpatterns = [
+      ...
+      path('api-auth/', include('rest_framework.urls'))
+    ]  
+^
+  -  Any global settings for a REST framework API are kept in a single configuration dictionary named REST_FRAMEWORK. Start off by adding the following to your settings.py module:
+^
+    REST_FRAMEWORK = {
+      # Use Django's standard `django.contrib.auth` permissions,
+      # or allow read-only access for unauthenticated users.
+      'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+      ]
+    }
+^
+
+-  **Advantages :**
+   - Designed for high performance, portability, reliability, and scalability.
+   - Client-server separation allows each to individually operate and scale.
+   - Easy to test and adapt to various environments.
+   - Supports various data transfer technologies including JSON, XML, YAML, images, and more.
+   - Uses less bandwidth than other methods, such as SOAP.
+
+-  **Disadvantages :**
+   - Doesn’t enforce security practices.
+   - HTTP method limits you to synchronous requests.
+   - Due to statelessness, you might be unable to maintain state (e.g. in sessions).
+
+-  **Response Status Code**
+   -  ```from rest_framework import status```
+   - 200: Successful request
+   - 201: Entity or entities created from successful request
+   - 400: Bad request. Invalid client request.
+   - 401: Unauthorized. User isn’t authorized to access a resource and may be unauthenticated
+   - 403: Forbidden. User isn’t authorized to access a resource, user is authenticated
+   - 404: Not found. Resource not found
+   - 500: Internal server error. Generic server error
+   - 502: Bad gateway. Response from upstream server is not valid
+   - 503: Service unavailable. Result of server-side issue, including overload or system failure
 
 ### Serialization
 - We can not send Python objects over a network, and hence need a mechanism to translate Django models in other formats like JSON, XML, and vice-versa. This sometimes challenging process, also called serialization.  
