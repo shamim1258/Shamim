@@ -6,6 +6,7 @@
 -  REST APIs leverage with HTTP protocols instead of other protocols, these operations correspond to HTTP methods like GET, POST or PUT.  
 -  **URI :** Universal Resource Identifier used to identifying where a specific resource can be found, such as a page or a document.
 -  **Idempotent :** An operation is idempotent if it produces same result when called multiple times.
+-  **JSON :** stands for JavaScript Object Notation.
 -  **HTTP METHODS :**
    -  **GET :**
       -  This is used to get the resource from target.
