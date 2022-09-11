@@ -8,6 +8,7 @@
 
 ## Inheritance
 -  Inheritance is the capability of one class to derive or inherit the properties from another class.
+-  Inheritence is useful when you want to narrow a scope in the inherited class.  
 -  Advantages :
    -  It represents real-world relationships well.
    -  It provides reusability of a code. We don’t have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.
