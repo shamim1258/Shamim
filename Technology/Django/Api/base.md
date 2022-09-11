@@ -33,14 +33,23 @@
 - [Example ViewSet Router](example_3.md)  
 
 ## Django Rest Framework DRF
-- Django REST Framework (DRF) has its own flavor of views that inherit from Django's View class.
-- The essential component of DRF views is the APIView class, which subclasses Django's View class.
+- Django REST Framework (DRF) has its own flavor of views that inherit from Django's `View` class.
+- The essential component of DRF views is the `APIView` class, which subclasses Django's View class.
 - APIView class is a base for all the views that you might choose to use in your DRF application which includes :
-  - function-based views
-  - class-based views
-  - mixins
-  - generic view classes
-  - viewsets
+  -  **Function-based views :**
+     -  Functions are created to handle the api request which uses decorator `@api_view(['GET','POST'])` from `from rest_framework.decorators import api_view`.
+     -  The @api_view decorator ensures that the view receives an instance of the django rest framework Request object (instead of the standard Django HttpRequest object) and returns an instance of the django rest framework’s Response object (instead of the standard Django HttpResponse object).
+     -  Use Cases
+        -  For highly customized view logic.
+  -  **Class-based views :**
+     -  The APIView class subclasses the django View class and is the base of all views in django rest framework.
+     -  Whenever you want to create a class based view you have to subclass the APIView.
+     -  APIView some standard generic view functionality but makes no assumptions on what you want to do with your view. You still have to precisely define your logic which means that it is not that different from the function based view. 
+     -  Use Cases
+        -  Achieve a typical behaviour without much code.
+  - Mixins
+  - Generic view classes
+  - Viewsets
 - When a request hits a view, the view first initializes a Request object, which is a DRF-enhanced HttpRequest from Django.
 - When compared to Django's HttpRequest, it has the following advantages:
   - Content is automatically parsed according to the Content-Type header and is available as request.data.
