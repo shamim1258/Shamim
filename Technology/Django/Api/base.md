@@ -176,6 +176,8 @@
 - The @api_view decorator helps the Django REST framework to examine the Content-Type header in the data attribute and identifies the exact parser to parse the request. It also invokes the rest_framework.negotiation.DefaultContentNegotiation class to select the suitable renderer for the request.  
 
 ### Mixins
+-  Mixins provide bits of common behavior. They cannot be used standalone; they must be paired with GenericAPIView to make a functional view.
+-  While the mixin classes provide create/retrieve/update/delete actions, you still need to bind the appropriate actions to the methods.
 - The mixin classes can be imported from rest_framework.mixins  
 - The mixin classes provide the actions that are used to provide the basic view behavior. Note that the mixin classes provide action methods rather than defining the handler methods, such as .get() and .post(), directly. This allows for more flexible composition of behavior.  
 - List of available mixins:  
@@ -184,7 +186,22 @@
   - CreateModelMixin: provides a .create() method to the view/viewset
   - UpdateModelMixin: provides a .update() method to the view/viewset
   - DestroyModelMixin: provides a .destroy() method to the view/viewset
+-  Example
+^
+    from rest_framework import mixins
+    from rest_framework.generics import GenericAPIView
 
+    class CreateList(mixins.ListModelMixin, mixins.CreateModelMixin, GenericAPIView):
+
+        serializer_class = ItemSerializer
+        queryset = Item.objects.all()
+
+        def get(self, request, *args, **kwargs):
+            return self.create(request, *args, **kwargs)
+
+        def post(self, request, *args, **kwargs):
+            return self.list(request, *args, **kwargs)
+^
 ## Authentication
 
 **Links :**  
