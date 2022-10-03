@@ -1,3 +1,11 @@
 # ORM
 -  ORM stands for Object Relational Model
 -  It is layer between Database and python.
+-  ORM methods
+   -  get
+      -  It returns object.
+      -  It return one and only one object.
+      -  Throw exception error if no record found or multiple record found.
+   -  filter
+      -  It returns queryset object.
+      -  It worked even if no record found or multiple record found.
