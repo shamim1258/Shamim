@@ -6,6 +6,11 @@
 - Python is simple, easy-to-learn syntax that emphasizes readability, is capable of scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.
 - Its high-level data structures, combined with dynamic typing and dynamic binding, Rapid Application Development and deployment.
 - .pyc files are created by the Python interpreter when a .py file is imported. They contain the "compiled bytecode" of the imported module/program so that the "translation" from source code to bytecode (which only needs to be done once) can be skipped on subsequent imports if the .pyc is newer than the corresponding .py file, thus speeding startup a little. But it's still interpreted. Once the *.pyc file is generated, there is no need of /*.py file, unless you edit it.
+-  **PEP-8** is a document that provides guidelines and best practices on how to write Python code.
+   -  PEP stands for Python Enhancement Proposal.
+   -  The primary focus of PEP 8 is to improve the readability and consistency of Python code.
+   -  Follow the naming conventions.
+   -  Provide proper comments.
 
 **Links :**  
 - [Data Types](DataTypes/notes.md)  
