@@ -25,6 +25,7 @@
       -  [Example Authentication](example_2.md)  
       -  [Example ViewSet Router](example_3.md)  
    -  [Asynchronous](Technology/Asynchronous/base.md)  
+   -  [Caching](Technology/Caching/base.md)  
    -  [Testing](Technology/Testing/base.md)  
    -  [Deployment](Technology/Deployment/base.md)
    -  [AWS Notes](Technology/AWS/base.md)  
