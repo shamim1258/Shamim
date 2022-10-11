@@ -3,6 +3,12 @@
 -  Types of cache available in django
    -  **Caching Database :**
       -  Saving cache data in database.
+      -  **Advantages :**
+         -  Easy to setup
+      -  **Disadvantages :**
+         -  Compared to other caching methods not much effective.
+         -  Require good indexing in tables.
+         -  When number of table are much more in database it will require more adjustments.
       -  **Setup :**
          -  To create cache table in database `python manage.py createcachetable`.
          -  In settings.py declare CACHE section
@@ -14,10 +20,4 @@
         }
     }
 ^
-         -  **Advantages :**
-            -  Easy to setup
-         -  **Disadvantages :**
-            -  Compared to other caching methods not much effective.
-            -  Require good indexing in tables.
-            -  When number of table are much more in database it will require more adjustments.
    -  **Memcached :**
