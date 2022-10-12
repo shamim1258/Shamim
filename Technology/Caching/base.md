@@ -1,6 +1,5 @@
 # Caching
 -  Django already comes with a cache system where it lets you save the pages but that’s not it, Django does much more than that. It provides you with different levels of cache granularity.
--  
 -  Types of cache available in django
    -  [Caching Database](#caching-database)
    -  [Filesystem Caching](#filesystem-caching)
@@ -11,6 +10,13 @@
    -  [Per-view cache](#per-view-cache)
    -  [Template fragment cache](#template-fragment-cache)
    -  [Low-level cache API](#low-level-cache-api)
+-  Some very cache-friendly content for most sites are
+   -  Logos and brand images
+   -  Non-rotating images in general (navigation icons, for example)
+   -  Style sheets
+   -  General Javascript files
+   -  Downloadable Content
+   -  Media Files
 
 ## Caching Database
 -  Saving cache data in database.
