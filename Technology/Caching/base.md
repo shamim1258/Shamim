@@ -6,6 +6,11 @@
    -  [Filesystem Caching](#filesystem-caching)
    -  [Memcached Caching](#memcached-caching)
    -  [Redis Caching](#redis-caching)
+-  Django caching level
+   -  Per-site cache
+   -  Per-view cache
+   -  Template fragment cache
+   -  Low-level cache API
 
 ## Caching Database
 -  Saving cache data in database.
@@ -63,7 +68,7 @@
     }
 ^
 
-# Redis Caching
+## Redis Caching
 -  Redis is an open-source data-structure store that can be used as a database, cache, message broker, etc.
 -  **Setup :**
    -  Install django-redis library makes it easier to connect your Django application to Redis `pip install django-redis`
