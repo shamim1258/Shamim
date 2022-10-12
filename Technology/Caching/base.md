@@ -71,7 +71,14 @@
 ## Redis Caching
 -  Redis is an open-source data-structure store that can be used as a database, cache, message broker, etc.
 -  **Setup :**
-   -  Install django-redis library makes it easier to connect your Django application to Redis `pip install django-redis`
+   -  Install redis in server or local.
+   -  Run the redis-server.
+   -  Install `django-redis` library makes it easier to connect your Django application to Redis `pip install django-redis`
+   -  Run the redis-cli command line terminal.
+      -  To test if working fine run command `ping` and getting response `PONG` than it is working fine.
+      -  To select the database `select 1`
+      -  To get all cache keys `keys *`
+      -  To get any key value `get "key_name"`
    -  In settings.py
 ^
     CACHES = {
