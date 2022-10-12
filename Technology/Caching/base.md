@@ -7,10 +7,10 @@
    -  [Memcached Caching](#memcached-caching)
    -  [Redis Caching](#redis-caching)
 -  Django caching level
-   -  Per-site cache
-   -  Per-view cache
-   -  Template fragment cache
-   -  Low-level cache API
+   -  [Per-site cache](#per-site-cache)
+   -  [Per-view cache](#per-view-cache)
+   -  [Template fragment cache](#template-fragment-cache)
+   -  [Low-level cache API](#low-level-cache-api)
 
 ## Caching Database
 -  Saving cache data in database.
@@ -83,4 +83,80 @@
             }
         }
     }
+^
+
+## Per site cache
+-  Easy to implement.
+-  This is best suitable for static sites.
+-  May not be much effective as it cache entire site.
+-  Add two middleware classes to your settings.py file. The order of the middleware is important here. `UpdateCacheMiddleware` must come before `FetchFromCacheMiddleware`
+^
+    MIDDLEWARE = [
+        'django.middleware.cache.UpdateCacheMiddleware',     # NEW
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.cache.FetchFromCacheMiddleware',  # NEW
+    ]
+^
+-  In settings.py
+    CACHE_MIDDLEWARE_ALIAS = 'default'  # which cache alias to use
+    CACHE_MIDDLEWARE_SECONDS = '600'    # number of seconds to cache a page for (TTL)
+    CACHE_MIDDLEWARE_KEY_PREFIX = ''    # should be used if the cache is shared across multiple sites that use the same Django instance
+    
+## Per view cache
+-  This caches specific views.
+-  You can implement this type of cache with the `cache_page` decorator either on the view function directly or in the path within `URLConf`.
+^
+    from django.views.decorators.cache import cache_page
+    @cache_page(60 * 15)
+    def your_view(request):
+    ...
+^
+OR
+^
+    from django.views.decorators.cache import cache_page
+    urlpatterns = [path('object/<int:object_id>/', cache_page(60 * 15)(your_view)),]
+^
+-  The cache itself is based on the URL, so requests to, say, object/1 and object/2 will be cached separately.
+-  It's worth noting that implementing the cache directly on the view makes it more difficult to disable the cache in certain situations. For example, what if you wanted to allow certain users access to the view without the cache? Enabling the cache via the URLConf provides the opportunity to associate a different URL to the view that doesn't use the cache:
+
+## Template fragment cache
+-  If your templates contain parts that change often based on the data you'll probably want to leave them out of the cache.
+-  To cache a list of objects
+^
+    {% load cache %}
+    {% cache 500 object_list %}
+    <ul>
+       {% for object in objects %}
+           <li>{{ object.title }}</li>
+       {% endfor %}
+    </ul>
+    {% endcache %}
+^
+
+## Low-level cache API
+-  the low-level API to manage individual objects in the cache by cache key.
+^
+    from django.core.cache import cache
+    def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    objects = cache.get('objects')
+    if objects is None:
+        objects = Objects.all()
+        cache.set('objects', objects)
+    context['objects'] = objects
+    return context
+^
+-  In this example, you'll want to invalidate (or remove) the cache when objects are added, changed, or removed from the database. One way to manage this is via database signals
+^
+    from django.core.cache import cache
+    from django.db.models.signals import post_delete, post_save
+    from django.dispatch import receiver
+    
+    @receiver(post_delete, sender=Object)
+    def object_post_delete_handler(sender, **kwargs):
+        cache.delete('objects')
+        
+    @receiver(post_save, sender=Object)
+    def object_post_save_handler(sender, **kwargs):
+        cache.delete('objects')
 ^
