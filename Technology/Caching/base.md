@@ -57,4 +57,15 @@
    -  **Caching in Django With Redis :**
       -  Redis is an open-source data-structure store that can be used as a database, cache, message broker, etc.
       -  **Setup :**
+         -  Install django-redis library makes it easier to connect your Django application to Redis `pip install django-redis`
+         -  In settings.py
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_redis.cache.RedisCache',
+            'LOCATION': 'redis://127.0.0.1:6379/1',
+            'OPTIONS': {
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            }
+        }
+    }
    
