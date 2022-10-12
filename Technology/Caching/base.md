@@ -14,14 +14,12 @@
       -  **Setup :**
          -  To create cache table in database `python manage.py createcachetable <cache_table_name>`.
          -  In settings.py declare CACHE section
-^
     CACHES = {
         'default': {
             'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
             'LOCATION': 'cache_data_table',
         }
     }
-^
    -  **Filesystem Caching :**
       -  Saving the cache data in file system.
       -  **Advantages :**
@@ -55,4 +53,8 @@
         }
     }
 ^
+ 
+   -  **Caching in Django With Redis :**
+      -  Redis is an open-source data-structure store that can be used as a database, cache, message broker, etc.
+      -  **Setup :**
    
