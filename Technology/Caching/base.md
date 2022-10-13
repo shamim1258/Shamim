@@ -145,31 +145,3 @@ OR
     </ul>
     {% endcache %}
 ^
-
-## Low-level cache API
--  the low-level API to manage individual objects in the cache by cache key.
-^
-    from django.core.cache import cache
-    def get_context_data(self, \*\*kwargs):
-        context = super().get_context_data(\*\*kwargs)
-        objects = cache.get('objects')
-        if objects is None:
-            objects = Objects.all()
-            cache.set('objects', objects)
-        context['objects'] = objects
-        return context
-^
--  In this example, you'll want to invalidate (or remove) the cache when objects are added, changed, or removed from the database. One way to manage this is via database signals
-^
-    from django.core.cache import cache
-    from django.db.models.signals import post_delete, post_save
-    from django.dispatch import receiver
-    
-    @receiver(post_delete, sender=Object)
-    def object_post_delete_handler(sender, **kwargs):
-        cache.delete('objects')
-        
-    @receiver(post_save, sender=Object)
-    def object_post_save_handler(sender, **kwargs):
-        cache.delete('objects')
-^
