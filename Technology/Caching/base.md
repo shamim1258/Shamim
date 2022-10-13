@@ -150,14 +150,14 @@ OR
 -  the low-level API to manage individual objects in the cache by cache key.
 ^
     from django.core.cache import cache
-    def get_context_data(self, **kwargs):
-    context = super().get_context_data(**kwargs)
-    objects = cache.get('objects')
-    if objects is None:
-        objects = Objects.all()
-        cache.set('objects', objects)
-    context['objects'] = objects
-    return context
+    def get_context_data(self, \*\*kwargs):
+        context = super().get_context_data(\*\*kwargs)
+        objects = cache.get('objects')
+        if objects is None:
+            objects = Objects.all()
+            cache.set('objects', objects)
+        context['objects'] = objects
+        return context
 ^
 -  In this example, you'll want to invalidate (or remove) the cache when objects are added, changed, or removed from the database. One way to manage this is via database signals
 ^
