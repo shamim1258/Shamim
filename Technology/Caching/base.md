@@ -127,7 +127,7 @@
 OR
 ^
     from django.views.decorators.cache import cache_page
-    urlpatterns = [path('object/\<int:object_id\>/', cache_page(60 * 15)(your_view)),]
+    urlpatterns = [path('object/int:object_id/', cache_page(60 * 15)(your_view)),]
 ^
 -  The cache itself is based on the URL, so requests to, say, object/1 and object/2 will be cached separately.
 -  It's worth noting that implementing the cache directly on the view makes it more difficult to disable the cache in certain situations. For example, what if you wanted to allow certain users access to the view without the cache? Enabling the cache via the URLConf provides the opportunity to associate a different URL to the view that doesn't use the cache:
