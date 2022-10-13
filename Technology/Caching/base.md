@@ -115,33 +115,3 @@
     CACHE_MIDDLEWARE_SECONDS = '600'    # number of seconds to cache a page for (TTL)
     CACHE_MIDDLEWARE_KEY_PREFIX = ''    # should be used if the cache is shared across multiple sites that use the same Django instance
     
-## Per view cache
--  This caches specific views.
--  You can implement this type of cache with the `cache_page` decorator either on the view function directly or in the path within `URLConf`.
-^
-    from django.views.decorators.cache import cache_page
-    @cache_page(60 * 15)
-    def your_view(request):
-    ...
-^
-OR
-^
-    from django.views.decorators.cache import cache_page
-    urlpatterns = [path('object/<int:object_id>/', cache_page(60 * 15)(your_view)),]
-^
--  The cache itself is based on the URL, so requests to, say, object/1 and object/2 will be cached separately.
--  It's worth noting that implementing the cache directly on the view makes it more difficult to disable the cache in certain situations. For example, what if you wanted to allow certain users access to the view without the cache? Enabling the cache via the URLConf provides the opportunity to associate a different URL to the view that doesn't use the cache:
-
-## Template fragment cache
--  If your templates contain parts that change often based on the data you'll probably want to leave them out of the cache.
--  To cache a list of objects
-^
-    {% load cache %}
-    {% cache 500 object_list %}
-    <ul>
-       {% for object in objects %}
-           <li>{{ object.title }}</li>
-       {% endfor %}
-    </ul>
-    {% endcache %}
-^
