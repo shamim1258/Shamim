@@ -132,3 +132,15 @@ OR
 -  The cache itself is based on the URL, so requests to, say, object/1 and object/2 will be cached separately.
 -  It's worth noting that implementing the cache directly on the view makes it more difficult to disable the cache in certain situations. For example, what if you wanted to allow certain users access to the view without the cache? Enabling the cache via the URLConf provides the opportunity to associate a different URL to the view that doesn't use the cache:
 
+## Template fragment cache
+-  If your templates contain parts that change often based on the data you'll probably want to leave them out of the cache.
+-  To cache a list of objects
+^
+    {% load cache %}
+    {% cache 500 object_list %}
+       {% for object in objects %}
+           {{ object.title }}
+       {% endfor %}
+    {% endcache %}
+^
+
