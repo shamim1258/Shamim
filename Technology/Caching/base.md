@@ -135,5 +135,13 @@ OR
 ## Template fragment cache
 -  If your templates contain parts that change often based on the data you probably want to leave them out of the cache.
 -  To cache a list of objects
+^
+    {% load cache %}
+    {% cache 500 object_list %}
+       {% for object in objects %}
+           {{ object.title }}
+       {% endfor %}
+    {% endcache %}
+^
 
 
