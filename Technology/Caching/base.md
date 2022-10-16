@@ -137,11 +137,6 @@ OR
 -  To cache a list of objects
 ^
     {% load cache %}
-    {% cache 500 object_list %}
-       {% for object in objects %}
-           {{ object }}
-       {% endfor %}
-    {% endcache %}
 ^
 
 
