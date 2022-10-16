@@ -139,7 +139,7 @@ OR
     {% load cache %}
     {% cache 500 object_list %}
        {% for object in objects %}
-           {{ object.title }}
+           {{ object }}
        {% endfor %}
     {% endcache %}
 ^
