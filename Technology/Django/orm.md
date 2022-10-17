@@ -1,6 +1,10 @@
 # ORM
 -  ORM stands for Object Relational Model
 -  It is layer between Database and python.
+-  **Advantages :**
+   -  The database engine is abstracted from us, so it is possible to switch to another database system with ease.
+   -  It supports migrations: we can easily change our tables by updating our models and Django will automatically generate the migration scripts needed to update the database tables.
+   -  It supports transactions: you can make multiple updates to the database within a transaction and, if something fails, roll it back to the way it was when you started.
 -  ORM methods
    -  get
       -  It returns object.
