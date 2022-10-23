@@ -141,8 +141,11 @@ Check the [Mutability](#mutability) on data-types.
 -  Iterable is not necessary a sequence type example set.
 
 # Variable scopes
--  **Namespace** is collection of object(variable/method) and object information(value) for the given scope(built-in, global, local).  
+-  **Namespace** is collection of object(variable/method) and object information(value) for the given scope(built-in, global, enclosed and local).  
 -  Python itself maintain Namespace in the form of python dictionary.  
+-  **Scope** refers to the coding region from which a particular Python object is accessible. Hence one cannot access any particular object from anywhere from the code, the accessing has to be allowed by the scope of the object.
+-  When we define a variable at that point scope is not created when that variable is called at that point scope is created for that variable.
+-  New scope is created every time a function is called and new scope is created every time same function is called.
 -  A lifetime of a namespace depends upon the scope of objects, if the scope of an object ends, the lifetime of that namespace comes to an end. Hence, it is not possible to access the inner namespace objects from an outer namespace.
 
 -  Types of Namespcae
@@ -160,9 +163,7 @@ Check the [Mutability](#mutability) on data-types.
       -  This lies between global and local scope.
    -  **Local**
       -  When the main function f() in enclosing namespace calls function g() than python create a namespace is Local namespace.
--  **Scope** refers to the coding region from which a particular Python object is accessible. Hence one cannot access any particular object from anywhere from the code, the accessing has to be allowed by the scope of the object.
--  When we define a variable at that point scope is not created when that variable is called at that point scope is created for that variable.
--  New scope is created every time a function is called and new scope is created every time same function is called.
+
 -  **LEGB Rule / Order of namespace :**
    -  LEGB - Local, Enclosing, Global, Built-in.
    -  Suppose we have a variable with same name in all the namespaces than python will search the variable in exists in the order 
