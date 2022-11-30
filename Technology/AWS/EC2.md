@@ -1,6 +1,12 @@
 # Create EC2 Instance :
 
-1.  Goto EC2 Dashboard and click on Launch Instance.
-2.  Enter the new intance name <NewEC2>.
-3.  Select the Operating System - Amazon Linux.
-4.  Create **Key Pair** and download the private key.
+-  Goto EC2 Dashboard and click on Launch Instance.
+-  Enter the new intance name <NewEC2>.
+-  Select the Operating System - Amazon Linux.
+-  Create **Key Pair** and download the private key.
+-  Select or create security groups.
+  -  Verify Network Setting
+   -  VPC
+   -  Subnet
+   -  Select IAM Role or create new.
+
