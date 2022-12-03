@@ -37,7 +37,7 @@
 -  **Reference Counting :**
    -  Reference counting is tracking number of times a memory address is being used by different objects.
    -  When references to an object are removed, the reference count for an object is decremented.
-   -  When the reference count becomes zero, the object is deallocated.
+   -  When the reference count is zero, the object is deleted from the system by the **garbage collection**.
    -  Getting the reference count :
       -  To get the reference count of any memory address - `sys.getrefcount(variable_name)` but downside to this is it also increase the reference count by 1.
       -  By using `ctypes.c_long.from_address(address).value` here we are not passing variable name but its memory address and it will give the exact count without increasing it.
