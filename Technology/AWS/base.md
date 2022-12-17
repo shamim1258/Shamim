@@ -11,7 +11,24 @@
    -  **IAM**
 
 **EC2 :**
-EC2, a Virtual Machine in the cloud on which you have OS-level control. You can run this cloud server whenever you want and can be used when you need to deploy your own servers in the cloud, similar to your on-premises servers, and when you want to have full control over the choice of hardware and the updates on the machine.
+-  EC2, a Virtual Machine in the cloud on which you have OS-level control. You can run this cloud server whenever you want and can be used when you need to deploy your own servers in the cloud, similar to your on-premises servers, and when you want to have full control over the choice of hardware and the updates on the machine.
+-  It mainly consists of :
+   -  EC2 - Renting Virtual Machines
+   -  EBS - Stroing data in virtual drives
+   -  ELB - Distributing load across machines
+   -  ASG - Scaling the services using auto-scaling group
+-  EC2 sizing & configuration options
+   -  Operating System (OS): Linux, Windows or Mac OS
+   -  How much compute power & cores (CPU)
+   -  How much random-access memory (RAM)
+   -  How much storage space:
+      -  Network-attached (EBS & EFS)
+      -  hardware (EC2 Instance Store)
+         -  One important thing to note here is the “delete on termination’ should be “Yes”. By default, it is enabled to yes, which means that once we terminate our EC2 instance, then this volume is also going to be deleted.
+   -  Network card: speed of the card, Public IP address
+   -  Firewall rules: security group
+   -  Bootstrap script (configure at first launch): EC2 User Data
+-  Bootstraping or User Data - It is script or commands we specify which will run only once when the machine starts and it runs with root user.
 
 **Links :**  
 -  [Policy](policy.md)  
