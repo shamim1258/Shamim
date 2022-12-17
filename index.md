@@ -27,11 +27,14 @@
    -  [Asynchronous](Technology/Asynchronous/base.md)  
    -  [Caching](Technology/Caching/base.md)  
    -  [Testing](Technology/Testing/base.md)  
-   -  [Deployment](Technology/Deployment/base.md)
-   -  [AWS Notes](Technology/AWS/base.md)  
-   -  [Linux Commands](Technology/Linux/base.md)  
    -  [Shell Script Notes](Technology/Shell/base.md)  
-   -  [Git Notes](Technology/Git/base.md)  
+   -  [Deployment](Technology/Deployment/base.md)
+   -  [CI/CD](Technology/CICD/base.md)  
+      -  [Git](Technology/Git/base.md)  
+      -  [Jenkins](Technology/CICD/jenkins.md)  
+      -  [AWS Notes](Technology/AWS/base.md)  
+      -  [Linux Commands](Technology/Linux/base.md)  
+      
   
 
 - [Project Management](Management/base.md)  
