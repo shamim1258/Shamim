@@ -47,9 +47,11 @@
 
 ### EBS
 -  EBS stands for Elastic Block Store.
--  Network drive attached to your EC2 instance.
--  Can only be mounted to one instance at a time.
+-  Network drive attached to your EC2 instance so it uses the network to communicate the instance.
+-  Data exists even if instance in terminated.
 -  Bound to a specific availability zone.
+-  It can detached from one instace and attached to another instace in case when want to attach to instace in other availability zone than first take the snapshot of ebs and than create ebs in desired availability zone or region.
+-  Can only be mounted to one instance at a time.
 -  Analogy: Think of them as a “network USB stick”.
 -  Free tier: 30 GB of free EBS storage of type General Purpose (SSD) or 
 Magnetic per month.
