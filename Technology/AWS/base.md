@@ -43,6 +43,12 @@
 -  They authorize access to - IP range, Port, Inbound and Outbound network.
 -  If your application is not accessible (time out), then it’s a security group issue.
 
+### AMI
+-  AMI stands for Amazon Machine Image.
+-  It is customization of EC2 with added configuration, software installed and etc.
+-  It is created from EC2->template and Image and later using this we can create the instance same to this EC2 using this image.
+-  When creating EC2 instance instead of selecting OS Names we can select AMI and create EC2 using this and Instance startup time is also fast as all program already installed in this new instace from image.
+
 ## Storage
 
 ### EBS
@@ -55,8 +61,21 @@
 -  Analogy: Think of them as a “network USB stick”.
 -  Free tier: 30 GB of free EBS storage of type General Purpose (SSD) or 
 Magnetic per month.
+-  One EBS can be attached to multiple EC2 instance and maximum limit it 16 EC2 instances.
 
 ### EBS Snapshot
 -  It is backup(snapshot) of EBS volume at a point in time.
 -  Not necessary to detach volume to do snapshot, but recommended.
 -  Can copy snapshots across Availability Zones or Region
+
+### EC2 Instance Store
+-  It is high performance hardware disk.
+-  EC2 Instance Store lose their storage if they’re stopped.
+-  Backups and Replication are your responsibility.
+
+### EFS
+-  EFS stands for Elastic File System.
+-  It is network file system can be mounted to many EC2 instances.
+-  Highly available, scalabile and expensive.
+-  It uses Security Group for access control.
+-  Compatible with Linux based AMI (not windows).
