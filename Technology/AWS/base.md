@@ -14,7 +14,7 @@
 -  EC2, a Virtual Machine in the cloud on which you have OS-level control. You can run this cloud server whenever you want and can be used when you need to deploy your own servers in the cloud, similar to your on-premises servers, and when you want to have full control over the choice of hardware and the updates on the machine.
 -  It mainly consists of :
    -  EC2 - Renting Virtual Machines
-   -  EBS - Stroing data in virtual drives
+   -  [EBS](#ebs) - Stroing data in virtual drives
    -  ELB - Distributing load across machines
    -  ASG - Scaling the services using auto-scaling group
 -  EC2 sizing & configuration options
@@ -22,11 +22,11 @@
    -  How much compute power & cores (CPU)
    -  How much random-access memory (RAM)
    -  How much storage space:
-      -  Network-attached (EBS & EFS)
+      -  Network-attached ([EBS](#ebs) & EFS)
       -  hardware (EC2 Instance Store)
          -  One important thing to note here is the “delete on termination’ should be “Yes”. By default, it is enabled to yes, which means that once we terminate our EC2 instance, then this volume is also going to be deleted.
    -  Network card: speed of the card, Public IP address
-   -  Firewall rules: security group
+   -  Firewall rules: [Security Group](#security-group)
    -  Bootstrap script (configure at first launch): EC2 User Data
 -  Bootstraping or User Data - It is script or commands we specify which will run only once when the machine starts and it runs with root user.
 -  [Security Group](#security-group) are acting as a “firewall” on EC2 instances
@@ -42,3 +42,14 @@
 -  Security groups rules can reference by IP or by security group.
 -  They authorize access to - IP range, Port, Inbound and Outbound network.
 -  If your application is not accessible (time out), then it’s a security group issue.
+
+## Storage
+
+### EBS
+-  EBS stands for Elastic Block Store.
+-  Network drive attached to your EC2 instance.
+-  Can only be mounted to one instance at a time.
+-  Bound to a specific availability zone.
+-  Analogy: Think of them as a “network USB stick”.
+-  Free tier: 30 GB of free EBS storage of type General Purpose (SSD) or 
+Magnetic per month.
