@@ -29,7 +29,7 @@
    -  Firewall rules: security group
    -  Bootstrap script (configure at first launch): EC2 User Data
 -  Bootstraping or User Data - It is script or commands we specify which will run only once when the machine starts and it runs with root user.
--  [#Security groups] are acting as a “firewall” on EC2 instances
+-  [Security Group](#security-group) are acting as a “firewall” on EC2 instances
 
 **Links :**  
 -  [Policy](policy.md)  
@@ -41,3 +41,4 @@
 -  Security groups only contain **allow** rules.
 -  Security groups rules can reference by IP or by security group.
 -  They authorize access to - IP range, Port, Inbound and Outbound network.
+-  If your application is not accessible (time out), then it’s a security group issue.
