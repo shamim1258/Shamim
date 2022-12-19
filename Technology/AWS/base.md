@@ -55,3 +55,8 @@
 -  Analogy: Think of them as a “network USB stick”.
 -  Free tier: 30 GB of free EBS storage of type General Purpose (SSD) or 
 Magnetic per month.
+
+### EBS Snapshot
+-  It is backup(snapshot) of EBS volume at a point in time.
+-  Not necessary to detach volume to do snapshot, but recommended.
+-  Can copy snapshots across Availability Zones or Region
