@@ -1,5 +1,4 @@
 # AWS
-
 -  Link to check all AWS Regions, Availability Zones and Data-Center Location https://infrastructure.aws/
 -  AWS is divided in different regions.
 -  AWS Region Compliance with data governance and legal requirements.
@@ -97,3 +96,31 @@ Magnetic per month.
 ### High Availability
 -  High Availability usually goes hand in hand with horizontal scaling.
 -  The goal of high availability is to survive a data center loss.
+
+### Load Balancing
+-  Load Balances are servers that forward traffic to multiple servers (EC2 instances) downstream grouped together into Target Group.
+-  Target Group are group of EC2 intances which declared in Load Balancer.
+-  Security Group created at Load Balancer side to handle the public user traffic which is than forwarded to EC2 client and these EC2 instance Security Group 
+-  It benefits by getting single single point of access (DNS) to your applications connecting to more than one instances.
+-  Load Balancing server regularly does regular health checks of downstream instances.
+-  Enforce stickiness with cookies.
+-  High availability across zones.
+-  Separate public traffic from private traffic
+-  AWS has 4 kinds of managed Load Balancers :
+   -  Classic Load Balancer (v1 - old generation) – 2009 – CLB
+      -  HTTP, HTTPS, TCP, SSL (secure TCP)
+   -  Application Load Balancer (v2 - new generation) – 2016 – ALB 
+      -  HTTP, HTTPS, WebSocket
+   -  Network Load Balancer (v2 - new generation) – 2017 – NLB 
+      -  TCP, TLS (secure TCP), UDP
+   -  Gateway Load Balancer – 2020 – GWLB
+      -  Operates at layer 3 (Network layer) – IP Protocol
+
+#### Elastic Load Balancer
+-  An Elastic Load Balancer is a managed load balancer means it is managed by AWS.
+-  It costs less to setup your own load balancer but it will be a lot more effort on your end.
+-  It is integrated with many AWS offerings / services
+   -  EC2, EC2 Auto Scaling Groups, Amazon ECS
+   -  AWS Certificate Manager (ACM), CloudWatch
+   -  Route 53, AWS WAF, AWS Global Accelerator
+
