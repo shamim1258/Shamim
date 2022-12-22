@@ -20,7 +20,7 @@
    -  EC2 - Renting Virtual Machines
    -  [EBS](#ebs) - Stroing data in virtual drives
    -  ELB - Distributing load across machines
-   -  ASG - Scaling the services using auto-scaling group
+   -  [ASG](#asg) - Scaling the services using auto-scaling group
 -  EC2 sizing & configuration options
    -  Operating System (OS): Linux, Windows or Mac OS
    -  How much compute power & cores (CPU)
@@ -169,4 +169,26 @@ Magnetic per month.
 -  Traffic is distributed evenly across all EC2 instances in all Availability Zones even if they are linked with different Load Balancers.
 -  For ALB enabled by default (can be disabled at the Target Group level).
 -  For NLB and GWLB it is disabled by default.
--  
+
+### ASG
+-  ASG stands for Auto Scaling Group.
+-  It is used to :
+   -  Scale Out : Create new EC2 instances in case of increase of load.
+   -  Scale In : Remove existing EC2 instances when load reduces.
+   -  Automatically register new EC2 instances to load balancer.
+   -  Recreate new EC2 instance in case previous one is terminated (example if unhealty).
+   -  Ensure minimum and maximum number of instance are running.
+-  While creating ASG you have provide all detail required to create EC2 instance and also Min size / Max Mize / Initial Capacity.
+-  Scaling Policy : this is the criteria you set to Scale Out or Scale In example - Network traffic, Request count, CPU utilization and also on Cloudwatch alarm.
+-  Auto Scaling Group which is dynamically scaling policy :
+   -  Target Tracking Scale
+      -  Most simple and easy to set-up.
+      -  Example: I want the average ASG CPU to stay at around 40%
+   -  Simple / Step Scaling
+      -  When a CloudWatch alarm is triggered (example CPU > 70%), then add 2 units.
+      -  When a CloudWatch alarm is triggered (example CPU < 30%), then remove 1.
+   -  Scheduled Actions
+      -  Anticipate a scaling based on known usage patterns.
+      -  Example: increase the min capacity to 10 at 5 pm on Fridays
+
+-  It is free service you only for EC2 instance.
