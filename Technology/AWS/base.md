@@ -190,5 +190,40 @@ Magnetic per month.
    -  Scheduled Actions
       -  Anticipate a scaling based on known usage patterns.
       -  Example: increase the min capacity to 10 at 5 pm on Fridays
-
 -  It is free service you only for EC2 instance.
+
+### RDS
+-  RDS stands for Relational Database Service.
+-  It allows you to create databases in the cloud that are managed by AWS
+-  Database allowed - Postgres, MySQL, MariaDB, Oracle, Aurora (AWS Database).
+-  Advantages of RDS verses deploying DB on EC2 :
+   -  Continuous backups and restore to specific timestamp (Point in Time Restore)
+   -  Monitoring dashboards
+   -  **Read replicas** for improved read performance (upto 5 read replicas).
+      -  Replica can be created within AZ, cross AZ and cross Region.
+      -  Replication is async so reads are eventually consistent.
+   -  Multi AZ setup for DR (Disaster Recovery)
+   -  **Auto Scaling** capability (vertical and horizontal) : When RDS detects you are running out of free database storage, it scales automatically.
+   -  Storage backed by EBS (gp2 or io1)
+-  Disadvantage :
+   -  BUT you can’t SSH into your instances.
+
+### ElastiCache
+-  The same way RDS is to get managed Relational Databases.
+-  ElastiCache is to get managed Redis or Memcached
+-  Caches are in-memory databases with really high performance, low latency.
+-  Using ElastiCache involves heavy application code changes.
+-  Applications queries ElastiCache, if not available, get from RDS and store in ElastiCache.
+-  Cache must have an invalidation strategy to make sure only the most current data is used in there.
+-  Cache design patter :
+   -  Lazy Loading / Cache Aside / Lazy Population
+      -  Only requested data is cached.
+      -  Cache miss penalty that results in 3 round trips.
+   -  Write Through
+      -  Add or Update cache when database is updated.
+      -  Read are quick
+      -  Write operation will be slow
+
+### Route 53
+-  DNA stand for Domain Name System which human readable format of hostname which is translated to ip address.
+-  Route 53 is bascially used to register self owned hostname or using hostname or ip.
