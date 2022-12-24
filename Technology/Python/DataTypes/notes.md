@@ -6,6 +6,7 @@
 -  Convert data-type - ```str(123)```.
 -  `None` is real object managed by python memory manager and all objects assigned with None will have same memroy reference.
 -  Check the [Mutability](#mutability) section carefully than go through below point of deep understanding of variable assignment.
+-  `sorted(iterable, key=key, reverse=true)` Sorted method can be used to sort iterables return type is sorted list.
 -  A variable actually hold the memory reference and not the actual value whether mutable or immutable. `a = 10`
 -  Mutable object hold the memory address and the state or value of data this address hold can be changed keeping the same memory address of variable.
 -  Immutable object hold the memory address and state or value of data this address hold cannot be changed so when assigning new value it changes the memory reference to some other address where new value present and the previous memory address still having the previous value.
