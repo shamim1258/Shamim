@@ -115,7 +115,18 @@ Check the [Mutability](#mutability) on data-types.
 - Mapping data types are key, value pair types - dict.
 ^
 1.  **dict**
-- Methods - clear(), copy(), formkeys(), get(), items(), keys(), pop(), popitem(), setdefault(), update(), values()
+-  Methods - clear(), copy(), formkeys(), get(), items(), keys(), pop(), popitem(), setdefault(), update(), values()
+-  Few most common methods :
+   -  items
+      -  Syntax : `dict.items()`
+      -  Return object type is dict_item which is view of key,value pair
+      -  Example :
+^
+   d = {1: 300, 2:500, 3:100, 4: 200, 5:400}
+   i = d.items()
+   print(i)
+   Output :: [(1,300), (2,500), (3,100), (4,200), (5,400)]
+^
 
 ## Set
 1.  **Set**
