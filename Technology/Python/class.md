@@ -52,6 +52,7 @@
     class BaseClass():
     class ChildClass(BaseClass):
     class GrandChildClass(BaseClass):
+^
 -  **Hierarchical inheritance :**
    -  More than one derived classes are created from a single base.
 -  **Hybrid inheritance :**
