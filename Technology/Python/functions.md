@@ -26,7 +26,7 @@
    -  This specify there can be 0 or more arguments.
    -  \*arg is tradition name but it can have any name but '\*' is required '\*abc' this will also work.
 ^
-    def myfun(a, b, \*arg):
+    def myfun(a, b, *arg):
         pass
     myfun(1,2)
     myfun(1,2,3,4,5)
@@ -64,6 +64,7 @@
 ## Decorators
 -  Decorators are used to add addition function over the function without modifying our function.
 -  Decorators functions take our function as argument into another function(wrapper function) and this wrapper function takes arguments (\*args,\*\*kwargs) and returns the closure(our function which is given as argument in decorator function).
+-  **Closure :** Closure in Python is an inner function object, a function that behaves like an object, that remembers and has access to variables in the local scope in which it was created even after the outer function has finished executing.
 -  Example
 ^
     def decorator_fun(our_fun):
