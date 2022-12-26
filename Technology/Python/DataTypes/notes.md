@@ -39,7 +39,7 @@
    - [Text](#text)    : str
    - [Numeric](#numeric)    : int, float, complex
    - [Sequence](#sequence)    : list, tuple, range
-   - [Mapping](#mapping)    : dict
+   - [Mapping](#mapping)    : [dict](dictionary.md)
    - [Set](#set)    : set, frozenset
    - [Boolean](#boolean)    : bool
    - [Binary](#binary)    : bytes, bytearray, memoryview
@@ -115,7 +115,7 @@ Check the [Mutability](#mutability) on data-types.
 ## Mapping
 - Mapping data types are key, value pair types - dict.
 ^
-1.  **dict**
+1.  [Dictionary](dictionary.md)
 -  Methods - clear(), copy(), formkeys(), get(), items(), keys(), pop(), popitem(), setdefault(), update(), values()
 -  Few most common methods :
    -  items
