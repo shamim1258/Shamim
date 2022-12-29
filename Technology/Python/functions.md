@@ -115,10 +115,17 @@
   -  `zip()`&emsp;- Creates an iterator that aggregates elements from iterables.
      -  Example `zip([1, 2, 3], ['a', 'b', 'c', 'd'])` output will be `[(1, 'a'), (2, 'b'), (3, 'c')]`
 
-
 ### Input Output
   -  ```open()```&emsp;- Opens a file and returns a file object.
   -  ```print()```&emsp;- Prints to a text stream or the console.
+
+### Conditional
+-  `any()`
+   -  Input is iterables
+   -  Return boolean value True if any one of the given item in iterable is True else False.
+-  `all()`
+   -  Input is iterables.
+   -  Return boolean value True if all of the given item in iterable are True and False if atleast one of the item is False.
 
 **Reducing Function Build-In :**
 -  reduce, min, max, sum, any, all
