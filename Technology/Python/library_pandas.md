@@ -5,6 +5,7 @@
 -  Pandas Data Structure
    -  Series
    -  Dataframe
+      -  axis: {0 or 'index', 1 or 'columns'}, default value 0
 -  **Links :**
    -  [Syntax with Examples](pandas_example.md)
 
@@ -15,13 +16,24 @@
 -  It represents multi-dimentional array or table with multiple columns.
 -  Heterogeneous tabular data structure with labeled axes (rows and columns).
 -  Methods Used
-   -  General Summary or Aggregation
-      -  `describe()`
-         -  It returns the statistical summary of the Series and DataFrame i.e. count, mean, max, min aggregated over column with numeric values only.
+   -  General
+      -  `shape` - to number of row and column count in a dataframe.
+      -  `describe()` - It returns the statistical summary of the Series and DataFrame i.e. count, mean, max, min aggregated over column with numeric values only.
+      -  `head(n)` - It will return the first n rows from top, default value is 5.
+   -  Aggregation
+      -  `groupby()`
+         -  A groupby operation involves some combination of splitting the object, applying a function, and combining the results. This can be used to group large amounts of data and compute operations on these groups.
+         -  It will return the groupby object and we can you other aggregated function over the groupby object.
+         -  Example `df.groupby(["Share Id","Invenment","Profit"]).mean()`
+         -  `get_group()` to find the entries contained in any of the groups.
    -  Data Correlations
       -  `corr()`
          -  This will give output in tabular format with value range from -1 to 1 showing the relationship of columns.
    -  Graph
+      -  `hist()`
+         -  It is a quick way to understand the distribution of certain numerical variables from the dataset. It divides the values within a numerical variable into "bins". It counts the number of examinations that fall into each of the bin. These bins are responsible for a rapid and intuitive sense of the distribution of the values within a variable by visualizing bins.
+         -  We can create a histogram by using the DataFrame.hist() method, which is a wrapper for the matplotlib pyplot API.
+         -  It returns the matplotlib.AxesSubplot or numpy.ndarray
       -  `plot()`
          -  Pandas uses the plot() method to create diagrams. We can use Pyplot, a submodule of the Matplotlib library to visualize the diagram on the screen.
          
@@ -47,5 +59,4 @@
 ^
 -  Removing Duplicates
    -  Duplicate is said to occur when whole record is same any other record.
-   -  For comparing duplicate records we can use method `duplicated()` it will return True or False.
-   -  For removing duplicate use method `df.drop_duplicates(inplace = True)`
+   -  We can use method `drop_duplicates()`
