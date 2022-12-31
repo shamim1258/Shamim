@@ -36,9 +36,9 @@
    -  This occur when data only is given wrong and hard to detech.
    -  Loop through all values in the "Duration" column. If the value is higher than 120, set it to 120:
 ^
-for x in df.index:
-    if df.loc[x, "Duration"] > 120:
-    df.loc[x, "Duration"] = 120
+    for x in df.index:
+        if df.loc[x, "Duration"] > 120:
+        df.loc[x, "Duration"] = 120
 ^
 -  Removing Duplicates
    -  Duplicate is said to occur when whole record is same any other record.
