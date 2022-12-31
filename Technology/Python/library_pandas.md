@@ -5,6 +5,8 @@
 -  Pandas Data Structure
    -  Series
    -  Dataframe
+-  **Links :**
+   -  [Syntax with Examples](pandas_example.md)
 
 ### Series
 -  It is like a column in a table or one-dimensional array.
@@ -13,6 +15,9 @@
 -  It represents multi-dimentional array or table with multiple columns.
 -  Heterogeneous tabular data structure with labeled axes (rows and columns).
 -  Methods Used
+   -  General Summary or Aggregation
+      -  `describe()`
+         -  It returns the statistical summary of the Series and DataFrame i.e. count, mean, max, min aggregated over column with numeric values only.
    -  Data Correlations
       -  `corr()`
          -  This will give output in tabular format with value range from -1 to 1 showing the relationship of columns.
