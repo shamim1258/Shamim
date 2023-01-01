@@ -26,6 +26,14 @@
          -  It will return the groupby object and we can you other aggregated function over the groupby object.
          -  Example `df.groupby(["Share Id","Invenment","Profit"]).mean()`
          -  `get_group()` to find the entries contained in any of the groups.
+   -  Iteration
+      -  Pandas use three functions for iterating over the rows of the DataFrame - iterrows(), iteritems() and itertuples()
+      -  `iterrows()`
+         -  If you want to loop over the DataFrame for performing some operations on each of the rows.
+         -  It is used for iterating over the rows as (index, series) pairs.
+         -  It returns an iterator that contains index and data of each row as a Series.
+      -  `iteritems()` - used for iterating over the (key, value) pairs.
+      -  `itertuples()` - used for iterating over the rows as namedtuples.
    -  Data Correlations
       -  `corr()`
          -  This will give output in tabular format with value range from -1 to 1 showing the relationship of columns.
