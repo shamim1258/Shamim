@@ -18,6 +18,10 @@
 -  Methods Used
    -  General
       -  `shape` - to number of row and column count in a dataframe.
+      -  `columns` - to all column names and index.
+      -  `df.index.values`
+      -  `df.set_index('client',inplace=True)`
+      -  `transpose()` - To transponse the dataframe i.e. convert rows into columns and vice verse.
       -  `describe()` - It returns the statistical summary of the Series and DataFrame i.e. count, mean, max, min aggregated over column with numeric values only.
       -  `head(n)` - It will return the first n rows from top, default value is 5.
    -  Aggregation
