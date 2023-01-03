@@ -57,7 +57,7 @@
             -  Left Join
    -  Graph
       -  `hist()`
-         -  It is a quick way to understand the distribution of certain numerical variables from the dataset. It divides the values within a numerical variable into "bins". It counts the number of examinations that fall into each of the bin. These bins are responsible for a rapid and intuitive sense of the distribution of the values within a variable by visualizing bins.
+         -  Pandas.DataFrame.hist() function is useful in understanding the distribution of numeric variables. This function splits up the values into the numeric variables. Its main functionality is to make the Histogram of a given Data frame. The distribution of data is represented by Histogram. When Function Pandas DataFrame.hist() is used, it automatically calls the function `matplotlib.pyplot.hist()` on each series in the DataFrame. As the result, we obtained one histogram per column.
          -  We can create a histogram by using the DataFrame.hist() method, which is a wrapper for the matplotlib pyplot API.
          -  It returns the matplotlib.AxesSubplot or numpy.ndarray
       -  `plot()`
