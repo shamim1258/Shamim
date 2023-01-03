@@ -41,6 +41,12 @@
    -  Data Correlations
       -  `corr()`
          -  This will give output in tabular format with value range from -1 to 1 showing the relationship of columns.
+   -  Relationship
+      -  `join()`
+         -  The method of combining the DataFrame using common fields is called "joining". The method that we use for combining the DataFrame is a join() method. The columns that contain common values are called "join key".
+         -  Join Types
+            -  Inner Join
+            -  Left Join
    -  Graph
       -  `hist()`
          -  It is a quick way to understand the distribution of certain numerical variables from the dataset. It divides the values within a numerical variable into "bins". It counts the number of examinations that fall into each of the bin. These bins are responsible for a rapid and intuitive sense of the distribution of the values within a variable by visualizing bins.
