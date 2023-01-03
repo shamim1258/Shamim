@@ -21,6 +21,8 @@
       -  `columns` - to all column names and index.
       -  `df.index.values`
       -  `df.set_index('client',inplace=True)`
+      -  `loc()`
+      -  `iloc()`
       -  `transpose()` - To transponse the dataframe i.e. convert rows into columns and vice verse.
       -  `describe()` - It returns the statistical summary of the Series and DataFrame i.e. count, mean, max, min aggregated over column with numeric values only.
       -  `head(n)` - It will return the first n rows from top, default value is 5.
@@ -41,7 +43,13 @@
    -  Data Correlations
       -  `corr()`
          -  This will give output in tabular format with value range from -1 to 1 showing the relationship of columns.
+      -  `melt()`
+         -  Fomatting the dataframe resulting given field as variable name or key and other as its value.
    -  Relationship
+      -  `query()`
+      -  `merge()`
+         -  Pandas merge() is defined as the process of bringing the two datasets together into one and aligning the rows based on the common attributes or columns.
+         -  Example `pandas.merge(df1,df2,on='id')` where id is common index for both dataframe.
       -  `join()`
          -  The method of combining the DataFrame using common fields is called "joining". The method that we use for combining the DataFrame is a join() method. The columns that contain common values are called "join key".
          -  Join Types
