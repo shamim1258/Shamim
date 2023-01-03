@@ -2,6 +2,7 @@
 -  [NumPy](library_numpy.md)
 -  [Pandas](library_pandas.md)
 -  [Pandas Example](pandas_example.md)
+-  [Matplotlib](library_matplotlib.md)
 
 ## Modules
 -  Modules, in general, are simply Python files with a .py extension and can have a set of functions, classes, or variables defined and implemented. They can be imported and initialized once using the import statement.
@@ -125,6 +126,7 @@
 
 -  [Pandas](library_pandas.md)
 -  [NumPy](library_numpy.md)
+-  [Matplotlib](library_matplotlib.md)
 -  SciPy
    -  Algorithm to use with NumPy
 -  **openpyxl**
