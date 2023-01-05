@@ -20,7 +20,7 @@
    -  **PUT :**
       -  Use PUT when we want to modify a singular resource that is already a part of resources collection.
       -  PUT replaces the resource in its entirety meaning it does not update a one or few fields but replaces the entire object. Also the request contains the all the elements.
-      -  POST is idempotent. So if we retry a request multiple times, that should be equivalent to a single request invocation.
+      -  PUT is idempotent. So if we retry a request multiple times, that should be equivalent to a single request invocation.
       -  The main difference between POST and PUT is a different meaning of the request URI.
       -  Example `PUT /questions/{question-id}`
    -  **PATCH :**
