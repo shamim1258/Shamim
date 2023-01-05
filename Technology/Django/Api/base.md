@@ -11,6 +11,7 @@
    -  **GET :**
       -  This is used to get the resource from target.
       -  The URI contains the Id or any identification key in the request.  
+      -  It is idempotent.
    -  **POST :**
       -  This is used to create resources without knowing the URI for the new resource.  
       -  POST is not idempotent. So sending the same POST requests multiple times can result in the creation of multiple resources.
