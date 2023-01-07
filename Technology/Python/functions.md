@@ -131,25 +131,27 @@
 -  reduce, min, max, sum, any, all
 
 ### Miscellaneous
-  -  `eval()`&emsp;- Evaluates a Python expression.
-  -  `len()`&emsp;- Returns the length of an object.
-  -  `sorted()`
-     -  It sorts the given iterable default type is ascending.
-     -  Syntax `sorted(iterable, key=None, reverse=False)` where key and reverse are keyword arguments and reverse=False for ascending and reverse=True is decending.
-     -  This does not workon on original object it first copies the object and than sort the copied one.
-     -  This returns a list.
-     -  This uses sort algorithm called 'TimSort'
-  -  `filter()`
-     -  Syntax `filter (function, iterable)`
-     -  Takes input as list, tuple, set or container of iterator.
-     -  Takes each element of input and if evelautes to True or not.
-     -  **Returns iterator** that is filtered.
-     -  It is normally used with Lambda functions to separate list, tuple, or sets.
-     -  Example `filter(lambda x: x % 2 != 0, [0,1,2,3,4])`
+-  `eval()`&emsp;- Evaluates a Python expression.
+-  `len()`&emsp;- Returns the length of an object.
+-  `sorted()`
+   -  It sorts the given iterable default type is ascending.
+   -  Syntax `sorted(iterable, key=None, reverse=False)` where key and reverse are keyword arguments and reverse=False for ascending and reverse=True is decending.
+   -  This does not workon on original object it first copies the object and than sort the copied one.
+   -  This returns a list.
+   -  This uses sort algorithm called 'TimSort'
+-  `filter()`
+   -  Syntax `filter (function, iterable)`
+   -  Takes input as list, tuple, set or container of iterator.
+   -  Takes each element of input and if evelautes to True or not.
+   -  **Returns iterator** that is filtered.
+   -  filter items can be navigated only once.
+   -  It is normally used with Lambda functions to separate list, tuple, or sets.
+   -  Example `filter(lambda x: x % 2 != 0, [0,1,2,3,4])`
 -  `map()`
    -  `map(function, *iterables)`
    -  It takes input function and one or more iterables and pass first element of both iterable in first loop and end when shortest iterable ends.
    -  Returns a map object(which is an iterator) of the results after applying the given function to each item of a given iterable (list, tuple etc.).
+   -  map items can be navigated only once.
    -  It returns the values of the input function.
 -  `reduce()`
    -  This function is defined in “functools” module.
