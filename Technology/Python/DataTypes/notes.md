@@ -2,8 +2,8 @@
 
 -  Data type tells about type of value it can hold and also what [operations](#operations) can be performed on that value.
 -  Python sets the variable type based on the value that is assigned to it.
--  Use ```type()``` function to get the data-type of any variable.
--  Convert data-type - ```str(123)```.
+-  Use `type()` function to get the data-type of any variable.
+-  Convert data-type - `str(123)`.
 -  `None` is real object managed by python memory manager and all objects assigned with None will have same memroy reference.
 -  Check the [Mutability](#mutability) section carefully than go through below point of deep understanding of variable assignment.
 -  `sorted(iterable, key=key, reverse=true)` Sorted method can be used to sort iterables return type is sorted list.
