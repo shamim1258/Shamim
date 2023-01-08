@@ -79,6 +79,7 @@ Check the [Mutability](#mutability) on data-types.
 
 2.  **float**
     - float values are specified with a decimal point.
+    - To convert one place decimal float number to two place decimal number -  `'{:.2f}'.format(0.4)`
 
 
 ## Sequence
