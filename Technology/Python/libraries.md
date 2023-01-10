@@ -100,6 +100,9 @@
    -  keyword
       -  kwlist : To get all python reserved keywords
       -  iskeyword : To check if given string is python reserved keyword or not
+   -  json - for working on json files
+      -  load(file_object) :
+         -  items() : to read key, values
 
 ## Packages
 -  Package is directory with __init__.py file and other python files where name of directory is package name.
