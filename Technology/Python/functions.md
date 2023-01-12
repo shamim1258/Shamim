@@ -97,6 +97,7 @@
 
 ## Build-in Function
 - The Python interpreter supports many functions that are built-in: sixty-eight, as of Python 3.6.
+- To get all builtin function `dir(builtin)`
 - Few important function are : **map(), filter(), reduce()**
 
 ### Math
