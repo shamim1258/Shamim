@@ -104,10 +104,11 @@
   -  ```min()```&emsp;- Returns the smallest of the given arguments or items in an iterable.  
 
 
-### Type Conversion
-  -  ```str()```&emsp;- Returns a string version of an object.
-  -  ```ord()```&emsp;- Returns ASCII integer representation of a character.
-  -  ```type()```&emsp;- Returns the type of an object or creates a new type object.  
+### Type Conversion and Formatting
+  -  `str()`&emsp;- Returns a string version of an object.
+  -  `ord()`&emsp;- Returns ASCII integer representation of a character.
+  -  `type()`&emsp;- Returns the type of an object or creates a new type object.  
+  -  `<string object>.swapcase()` - on string object convert lower case to upper and vice versa.
 
 ### Iterables and Iterators
   -  `all()`&emsp;- Returns True if all elements of an iterable are true.
