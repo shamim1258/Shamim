@@ -19,6 +19,9 @@
    -  `ls -t` - sorts the file by modification time, showing the last edited file first.
    -  `ls -a` - to list all files including hidden files which start with dot.
    -  `ls -R` - to display the directory tree of files and folders.
+-  `grep`
+   -  The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression (grep stands for global search for regular expression and print out).
+   -  Example `grep "Order" *` to search files in all files and folder
 
 **Search :**
 - To find file with file name as testfile.txt in current and its sub-directories.
