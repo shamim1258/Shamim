@@ -146,7 +146,9 @@ print(students)
 
 1.  If API is slow how can we improve performance.
 &emsp;<details>
--  Check the database query and optimize if possible
+-  Cache - implement cache if not already using, check if cache expiration time increase will help.
+-  Check the database query and optimize if possible.
+   -  `db_index=True` - You should use db_index=True when you use unique=True. When we fire a query in SQL, finding starts from the top to bottom. Case: 'Without db_index=True': It will search and filter till all bottom rows even if we find the data. Case: 'With db_index=True': When Object finds it will just stop their.
 -  Use cache to increase performance
     
 ## AWS
