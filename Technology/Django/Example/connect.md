@@ -24,7 +24,7 @@
             self.safemail_password = None
             self.safemail_from = None
 
-            self.param_base_path = '/kpn/siebel/mufasa/production/'
+            self.param_base_path = '/siebel/mufasa/production/'
             self.read_parameter_values()
 
             d = datetime.datetime.now()
@@ -55,7 +55,7 @@
                 while nxt_tkn is not None:
                     ssm_details = ssm.get_parameters_by_path(Path=self.param_base_path, NextToken=nxt_tkn, WithDecryption=True)
                     for param in ssm_details['Parameters']:
-                        param_path = param['Name']  # e.g. /kpn/siebel/mufasa/production/db-host
+                        param_path = param['Name']  # e.g. /siebel/mufasa/production/db-host
                         param_value = param['Value']
                         if 'db-host' in param_path:
                             self.db_host = param_value
