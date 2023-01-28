@@ -37,6 +37,7 @@
 [Django File Structure](file-structure.md)  
 [Working on Projects](working-on-project.md)  
 [Django Models](models.md)  
+[Django Model Migration](model-migration.md)
 [Django ORM](orm.md)  
 [Django Signals](signals.md)  
 [Rest API](Api/base.md)  
@@ -77,7 +78,7 @@ Django responds back to the user and sends a template as a response.
 #### DTL
 DTL stand for Django Template Language.  
 Django template has its own syntax in rendering the data on to the web page.  
-- For displaying a dynamic variable, the variable name is written inside the curly braces; denoted by ```{{variable_name}}```.
+- For displaying a dynamic variable, the variable name is written inside the curly braces; denoted by `{{variable_name}}`.
 
 
 ### Django Server side and Client side rendering
