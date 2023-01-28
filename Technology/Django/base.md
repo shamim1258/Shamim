@@ -38,6 +38,7 @@
 [Working on Projects](working-on-project.md)  
 [Django Models](models.md)  
 [Django Model Migration](model-migration.md)
+[Django Commands](django-commands.md)
 [Django ORM](orm.md)  
 [Django Signals](signals.md)  
 [Rest API](Api/base.md)  
