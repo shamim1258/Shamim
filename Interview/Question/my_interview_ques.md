@@ -142,6 +142,16 @@ print(students)
     
 1.  Explain what is decorator and custom decorators.
     
+1.  Is django permanent redirect good or bad.
+&emsp;<details>
+^
+    from django.shortcuts import redirect
+    def my_view(request):
+        return redirect('/some/url/', permanent=True)
+    
+    One issue is with permanent redirect is google browser will save cookie and will redirect to this url for sometime.
+^
+    
 ## Rest API
 
 1.  If API is slow how can we improve performance.
