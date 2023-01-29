@@ -12,3 +12,9 @@
 ### Migrate
 -  Migrate command perform the operation of making changes in the database by reading the migration files.
 -  Syntax `python manage.py migrate`.
+-  `migrate --fake`
+
+### Scenario
+-  If multiple user have made changes to same models file but in different fields not the same field. How to handle this.
+   -  Solution 1 :
+      -  Make sure that both developer communicate so when one change gets committed to the main branch the other developer can pull those changes into their branch and re-create their migration files.
