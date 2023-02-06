@@ -120,9 +120,9 @@ Check the [Mutability](#mutability) on data-types.
 -  Methods - clear(), copy(), formkeys(), get(), items(), keys(), pop(), popitem(), setdefault(), update(), values()
 -  `dict.get('abc')` and if 'abc' is not found in keys of dict than it will not return error but None.
 -  Few most common methods :
-   -  items
-      -  Syntax : `dict.items()`
+   -  `d.items()`
       -  Return object type is dict_item which is view of key,value pair
+      -  If the list is updated at any time, the changes are reflected on the view object itself.
       -  Example :
 ^
    d = {1: 300, 2:500, 3:100, 4: 200, 5:400}
