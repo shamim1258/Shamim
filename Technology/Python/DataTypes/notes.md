@@ -124,6 +124,10 @@ Check the [Mutability](#mutability) on data-types.
       -  Return object type is dict_item which is view of key,value pair
       -  If the list is updated at any time, the changes are reflected on the view object itself.
       -  Example :
+   -  `d.pop(key)`
+      -  key is required argument in pop method for dictionary
+      -  if given key not exists in d than it will return key error.
+      -  Optional argument can given which will return this value if key not found `d.pop(key,defaultvalue)`
 ^
    d = {1: 300, 2:500, 3:100, 4: 200, 5:400}
    i = d.items()
