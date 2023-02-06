@@ -118,6 +118,7 @@ Check the [Mutability](#mutability) on data-types.
 ^
 1.  [Dictionary](dictionary.md)
 -  Methods - clear(), copy(), formkeys(), get(), items(), keys(), pop(), popitem(), setdefault(), update(), values()
+-  `dict.get('abc')` and if 'abc' is not found in keys of dict than it will not return error but None.
 -  Few most common methods :
    -  items
       -  Syntax : `dict.items()`
