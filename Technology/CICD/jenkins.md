@@ -1,6 +1,7 @@
 # Jenkins
 
--  Jenkins is open source Continous Integration and Continous Delivery tool written in java.
+-  Jenkins is open source tool for Continous Delivery tool written in java.
+-  Jenkins Pipeline is collection of job or events which are interlinked to one another in a sequence.
 -  Jenkins provides feedback loop to developer to fix the build errors.
 
 ### Script Methods
