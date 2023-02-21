@@ -155,3 +155,5 @@
 -  Django packages and libraries i have used.
    -  `from django.shortcuts import render`
    -  `from django.http import HttpResponse`
+   -  `django.contrib.admin.models`
+      -  `LogEntry`
