@@ -71,6 +71,9 @@
       -  sys.getrefcount(object) : To get the reference count of object and it will be incremented by 1 with this statement.
    -  functools
       -  reduce
+   -  os
+      -  os.getcwd() : to get present working directory path.
+      -  os.listdir() : to get a list of all files and folder in given directory.
    -  inspect
       -  isfunction(obj)
       -  ismethod(obj)
