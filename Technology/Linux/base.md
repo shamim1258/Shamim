@@ -25,7 +25,8 @@
    -  Example `grep "Order" *` to search files in all files and folder
 -  `chmod`
    -  To change the file permission - read(r), write(w) and execcute(x) for user or owner(u), group(g) and other(o) by using operator +,- and =.
-   -  Example `chmod +rwx filename`.
+   -  Example `chmod u+rwx filename`.
+   -  To change permission for all its sub-directories and files use `-R` example `chomod -R +rwx .`
    -  Permission calculation
 ^
     Numeric	Symbolic	Permission
