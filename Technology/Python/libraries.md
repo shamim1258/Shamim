@@ -106,7 +106,17 @@
    -  json - for working on json files
       -  load(file_object) :
          -  items() : to read key, values
-
+   -  difflib
+      -  SequenceMatcher : To get similarity between two strings.
+         -  `SequenceMatcher(a = str_1, b = str_2)`
+         -  Return object use `ratio()` to get similarity ratio.
+         -   ratio of identical characters in the two strings
+      -  Differ().compare(s1,s2) : To compare two strings and get the difference between them.
+      -  unified_diff : To compare two files
+         -  `unified_diff(str_1, str_2)`
+         -  class accepts two strings of data and then returns each word that was either inserted or deleted from the first.
+      -  context_diff(s1,s2) : Only difference from unified_diff method is that it returns changes lines with `!`
+.
 ## Packages
 -  Package is directory with __init__.py file and other python files where name of directory is package name.
 -  All packages are module but all modules are not necessary package.
