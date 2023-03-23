@@ -71,6 +71,7 @@ This folder contains all the packages of your project. Initially, it contains fo
     Use of this file is same as in Project Folder file.
   - **admin.py**
     - This file is used for registering the models into the Django administration.
+    - `admin.site.register(model_name)`
   - **apps.py**
     - This file deals with the application configuration of the apps.
     - The default configuration is sufficient enough in most of the cases and hence we won’t be doing anything here in the beginning.
