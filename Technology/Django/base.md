@@ -1,10 +1,9 @@
 # Django
 
-- Django is a Python-based web framework which allows you to quickly create web application.
-- Django is a back-end server side web framework.
+- Django is open source python-based web framework for back-end server side which allows you to quickly create web application.
 - Based on MVT (Model View Template) design pattern.
-- Open source.
-- The main python files are used to link with each other to display our web page are settings.py, view.py, and urls.py.
+- If follows its defined structure for building web apps.
+- The main files are - `settings.py, view.py, and urls.py, models.py, manage.py`.
 
 **Features of Django**
 - Admin Interface
@@ -15,22 +14,19 @@
 - A Session, user management, role-based permissions
 - Object-relational mapping (ORM)
 - Testing Framework
-- Fantastic Documentation
 
 **Advantages**
-- Django is python framework so it is easy to learn.
-- Clear and readable.
-- Versitile
-- Secure
-- Scalable
-- Django is a rapid web development framework.
-- It is very easy to switch database in Django framework.
-- It has built-in admin interface which makes easy to work with it.
+-  ORM is very powerful and singly allow working on multiple database.
+-  ORM add an extra security layer like db injection prevention.
+-  Security - Security Token, CSRF, ORM.
+-  Django is a rapid web development framework.
+-  It is very easy to switch database in Django framework.
+-  It has built-in admin interface which makes easy to work with it.
 
 **Disadvantages**
 - You must know the full structure to work.
 - Django module are bulky
-- Completely based on django ORM.
+- Completely based on django ORM, which adds extra processing for running db query.
 - Components are deployed together.
     
 **Links**  
