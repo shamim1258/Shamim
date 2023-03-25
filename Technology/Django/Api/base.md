@@ -254,4 +254,7 @@
 
 ## Other
 
--  When site A wants to access content from another site B, it is called a Cross-Origin request. As it is disabled for security reasons, B sends an Access-Control-Allow-Origin header in the response. By default, a domain is not allowed to access an API hosted on another domain.  If we want to allow our REST API (say backend) hosted in our Django application to be accessed from other applications (say front-end) hosted on another server, we must enable CORS (Cross-Origin Resource Sharing).
+-  CORS : Cross-Origin Resource Sharing
+   -  When site A wants to access content from another site B, it is called a Cross-Origin request. As it is disabled for security reasons, B sends an Access-Control-Allow-Origin header in the response. By default, a domain is not allowed to access an API hosted on another domain.  If we want to allow our REST API (say backend) hosted in our Django application to be accessed from other applications (say front-end) hosted on another server, we must enable CORS.
+   -  [Library for CORS](../../../libraries/#django-libraries.md)
+   -  For enabling add this in settings.py under INSTALLED_APPS, MIDDLEWARE and `CORS_ORIGIN_ALLOW_ALL = True`.
