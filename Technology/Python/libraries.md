@@ -119,7 +119,7 @@
    -  shutil : To perform basic operation on file like copy, move, delete etc.
       -  shutil.copy(source, destination) : Copy file from source file to destination file or path
       -  shutil.copy2(source, destination) : Same as above copy method only difference is this also copy the file metadata.
-.
+
 ## Packages
 -  Package is directory with __init__.py file and other python files where name of directory is package name.
 -  All packages are module but all modules are not necessary package.
