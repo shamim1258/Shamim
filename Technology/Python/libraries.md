@@ -173,3 +173,4 @@
    -  `from django.http import HttpResponse`
    -  `django.contrib.admin.models`
       -  `LogEntry`
+   -  `django-cors-headers`
