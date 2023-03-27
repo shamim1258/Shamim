@@ -49,6 +49,10 @@
 -  `top`
    -  To get all running process in dynamic format
 
+**Service :**
+-  `systemctl`
+   -  To manage services and reboot or shutdown system.
+
 **Customize :**
 -  `alias`
    -  To create alias of a command example `alias="ls -l"`
