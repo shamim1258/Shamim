@@ -26,14 +26,14 @@
            if (env.BRANCH_NAME == 'master'){
                 namespace = 'prod'
                 tag='22.05.10'
-                package_url = "artifacts.kpn.org/docker-local/cm_northbound/awstools/" + namespace
+                package_url = "artifacts.abc.org/docker-local/cm_northbound/awstools/" + namespace
                 img = docker.build("${package_url}")
                 img.tag("${tag}")
            }
            if (env.BRANCH_NAME == 'dev'){
                 namespace = 'dev'
                 tag='21.6.42'
-                package_url = "artifacts.kpn.org/docker-local/cm_northbound/awstools/" + namespace
+                package_url = "artifacts.abc.org/docker-local/cm_northbound/awstools/" + namespace
                 img = docker.build("${package_url}")
                 img.tag("${tag}")
            }
@@ -42,7 +42,7 @@
         stage('Docker Push') {
                 echo "push docker image to artifacts"
                 
-                docker.withRegistry('https://artifacts.kpn.org', 'artifacts.kpn.org') {
+                docker.withRegistry('https://artifacts.abc.org', 'artifacts.abc.org') {
                 img.push("${tag}") // Pushing the image
                 }
                 currentBuild.result = 'SUCCESS'
