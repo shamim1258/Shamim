@@ -40,7 +40,7 @@
       -  [Docker Container](Technology/CICD/docker.md)  
       -  [Linux Commands](Technology/Linux/base.md)  
       
-  
+-  [Concept](Concept/base.md)  
 
 - [Project Management](Management/base.md)  
 
