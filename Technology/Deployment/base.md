@@ -24,9 +24,9 @@
     4.  Stage Docker Build  
         1.  Checks the branch working on `env.BRANCH_NAME`.  
         2.  `docker.build("${package_url}")` this line will build the docker image (docker image contains the application file/code along with dependencies).
-        3.  Internally above step will run the command ```docker build -t artifacts.kpn.org/docker-local/cm_northbound/awstools/dev .```
+        3.  Internally above step will run the command ```docker build -t artifacts.abc.org/docker-local/cm_northbound/awstools/dev .```
         4.  By default setting above command will run the [DockerFile](dockerfile.md) from jenkins logs ```[internal] load build definition from Dockerfile```. The DockerFile execution explained in step-6 and after executing DockerFile than it will run the below steps.
-        5.  ```docker.withRegistry('https://artifacts.kpn.org', 'artifacts.kpn.org') { img.push("${tag}") // Pushing the image }```  
+        5.  ```docker.withRegistry('https://artifacts.abc.org', 'artifacts.abc.org') { img.push("${tag}") // Pushing the image }```  
 This line will publish docker build image to the artifactory where withRegistry method takes 1 arguments as customer artifactory url and 2nd argument is the credentials which are coming from Jenkins Credential Manager. ```img.push``` for pushing image with the latest tag.
 6.  [JenkinsFile](jenkinsfile.md) run the [DockerFile](dockerfile.md) at step 5-iv-c.
     1.  DockerFile download the oracle client for linux library and copy the below 2 files
