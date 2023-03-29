@@ -1,6 +1,8 @@
 # Multi Threading
 -  Thread : A thread is an entity within a process that can be scheduled for execution. Also, it is the smallest unit of processing that can be performed in an OS (Operating System). In simple words, a thread is a sequence of such instructions within a program that can be executed independently of other code.
--  The `threading` module provides a very simple and intuitive API for spawning multiple threads in a program.
+-  Advantages :
+   -  Multiple threads within a process share the same data space with the main thread and can therefore share information or communicate with each other more easily than if they were separate processes.
+   -  Threads sometimes called light-weight processes and they do not require much memory overhead; they are cheaper than processes.
 -  Example
 ^
     import threading
@@ -28,5 +30,4 @@
 
     # both threads completely executed
     print("Done!")
-
 ^
