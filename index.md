@@ -12,6 +12,8 @@
       - [Working on File](Technology/Python/working_on_files.md)  
       - [Advance Python Concept](Technology/Python/advance_python.md)  
       - [Multi Threading](Technology/Python/multi-threading.md)
+   -  [Flask Notes](Technology/Flask/base.md)  
+      -  
    -  [Django Notes](Technology/Django/base.md)  
       -  [Django Models](Technology/Django/models.md)  
       -  [Django Model Migration](Technology/Django/model-migration.md)  
