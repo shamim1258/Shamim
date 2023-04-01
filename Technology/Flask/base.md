@@ -14,3 +14,4 @@
    -  The debugger allows executing arbitrary Python code from the browser. It is protected by a pin, but still represents a major security risk. Do not run the development server or debugger in a production environment.
    -  To enable debug mode, use the --debug option.
 -  `SQLAlchemy(app)` this creates SQLAlchemy object which contains an auxiliary function for the ORM operation.It also provides a parent Model class that uses it to declare a user-defined model.In the code snippet below, the studients model is created.
+-  Database migration commands : `flask db init` and `flask db migrate`
