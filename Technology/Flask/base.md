@@ -15,6 +15,10 @@
    -  To enable debug mode, use the --debug option.
 -  `SQLAlchemy(app)` this creates SQLAlchemy object which contains an auxiliary function for the ORM operation.It also provides a parent Model class that uses it to declare a user-defined model.In the code snippet below, the studients model is created.
 -  `url_for(function_name,arguments)` this method is used to generate url dynamically.
+-  **Links :**
+   -  [Project File Structure](file_structure.md)
+   -  [Example Project](simpleexample.md)
+   -  [Rest API](resp_api.md)
 
 ## Database Migration
 -  `flask db init`
