@@ -104,7 +104,20 @@
       -  kwlist : To get all python reserved keywords
       -  iskeyword : To check if given string is python reserved keyword or not
    -  json - for working on json files
-      -  load(file_object) :
+      -  load(file_object) : It takes input a json file object and convert it into respective python object list or dict.
+      -  loads(content_string) : It takes input a string containing json data but not file and convert it into respective python object.
+      -  dumps(python_object) : It is used to convert or serialize python object into json object.
+      -  dump(python_object) : It is used to convert or serialize python object and write it into a json file.
+         -  For above both methods load and load conversion or serialization from json to python done as below :
+            -  JSON OBJECT	PYTHON OBJECT
+               object	dict
+               array	list
+               string	str
+               null	None
+               number (int)	int
+               number (real)	float
+               true	True
+               false	False
          -  items() : to read key, values
    -  difflib
       -  SequenceMatcher : To get similarity between two strings.
