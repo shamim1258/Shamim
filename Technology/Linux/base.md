@@ -53,6 +53,9 @@
 -  `systemctl`
    -  To manage services and reboot or shutdown system.
 
+**User :**
+-  To associate current logged in user with docker group : `sudo usermod -aG docker $USER`
+
 **Customize :**
 -  `alias`
    -  To create alias of a command example `alias="ls -l"`
