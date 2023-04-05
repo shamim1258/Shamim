@@ -42,6 +42,7 @@
       -  [AWS Notes](Technology/AWS/base.md)  
       -  [Docker Container](Technology/CICD/docker.md)  
       -  [Linux Commands](Technology/Linux/base.md)  
+      -  [Web Server](Technology/web_server.md)
       
 -  [Concept](Concept/base.md)  
 
