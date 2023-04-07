@@ -9,7 +9,7 @@ import csv
 
 def lambda_handler(event, context):
     filename = ""
-	destination_bucket = 'kpn-voip-update-input-prod'
+	destination_bucket = 'voip-update-input-prod'
     s3 = boto3.resource('s3')
     s3_client = boto3.client('s3')
 	try:
